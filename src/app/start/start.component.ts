@@ -25,9 +25,9 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.deckId = parseInt(urlParameters['id']);
+      this.deckId = parseInt(urlParameters['deckId']);
     })
-    this.currentDeck = this.deckService.getDeckById(this.deckId);
+    this.currentDeck = this.deckService.getDeckByDeckId(this.deckId);
     this.currentDeck.questions.map(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
   }

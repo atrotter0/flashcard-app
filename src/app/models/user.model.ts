@@ -1,8 +1,8 @@
-import { Decks } from './decks.model';
+import { Deck } from './deck.model';
 
 export class User {
+  public decks: Deck[]
   constructor(
     public email: string,
-    public decks: Decks
   ) { }
 }

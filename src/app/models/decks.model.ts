@@ -1,3 +1,3 @@
 import { Deck } from './deck.model';
 
-export class Decks {constructor(public decks: Deck[]) { }}
+export let Decks: Deck[] = [];

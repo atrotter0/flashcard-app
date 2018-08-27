@@ -1,15 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Deck } from './models/deck.model';
 import { Decks } from './models/decks.model';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class DeckService {
+  decks: FirebaseListObservable<any[]>;
+  constructor(private database: AngularFireDatabase) {
+    this.decks = database.list('decks');
+  }
 
-  constructor() { }
+  getDeckByDeckId(deckId: number) {
+    return Decks[deckId];
+  }
 
-  getDeckById(deckId: number) {
-    for (let i = 0; i < Decks.length; i++) {
-      return Decks[i];
-    }
+  getDecksByUserId(userId: string) {
+    const user = this.database.object('users/' + userId);
+    let decks: Deck[];
+    user.subscribe(data => {
+      decks = data.decks;
+    });
+    return decks;
   }
 }
