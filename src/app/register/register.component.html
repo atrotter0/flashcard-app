@@ -1,5 +1,5 @@
 <h3>Register</h3>
-<form [formGroup]="registrationForm" novalidate (ngSubmit)="onSubmitRegistration(registrationForm.value)">
+<form [formGroup]="registrationForm" novalidate (ngSubmit)="runRegisterUser(email.value, password.value)">
   <div class="form-group">
     <label for="email">Email</label>
     <input #email class="form-control" type="text" formControlName="email" name="email" required>
@@ -41,10 +41,7 @@
     </div>
   </div>
 
-  <!-- <button
-    type="button"
-    name="button"
-    (click)="runRegisterUser(email.value, password.value); email.value=''; password.value=''; confirmPassword.value='';">
-    Register
-  </button> -->
+  <button class="submit-btn" color="primary" mat-raised-button type="submit" [disabled]="!registrationForm.valid">
+         Submit
+       </button>
 </form>

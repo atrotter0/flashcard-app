@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmitRegistration(value){
-    console.log(value);
+    
   }
 
   runRegisterUser(email: string, password: string) {
