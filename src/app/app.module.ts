@@ -24,7 +24,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    StartComponent
+    StartComponent,
     SideNavComponent,
     TopNavComponent,
     BodyComponent,
