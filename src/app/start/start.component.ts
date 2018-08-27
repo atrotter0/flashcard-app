@@ -4,7 +4,6 @@ import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
-import { Router } from '@angular/router';
 import { DeckService } from '../deck.service';
 
 @Component({
@@ -19,7 +18,6 @@ export class StartComponent implements OnInit {
   deckId: number;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private deckService: DeckService
@@ -30,6 +28,16 @@ export class StartComponent implements OnInit {
       this.deckId = parseInt(urlParameters['id']);
     })
     this.currentDeck = this.deckService.getDeckById(this.deckId);
+    this.currentDeck.questions.map(question => question.viewed === false);
+    this.currentQuestion = this.getRandomQuestion();
   }
+
+  getRandomQuestion() {
+    let question = this.currentDeck.questions[Math.floor(Math.random() * this.currentDeck.questions.length)];
+    return question;
+  }
+
+
+
 
 }
