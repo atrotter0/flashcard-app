@@ -7,9 +7,11 @@ export class DeckService {
 
   constructor() { }
 
-  getDeckById(deckId: number) {
+  getDeckByDeckId(deckId: number) {
     for (let i = 0; i < Decks.length; i++) {
       return Decks[i];
     }
   }
+
+
 }
