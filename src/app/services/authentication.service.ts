@@ -13,12 +13,16 @@ export class AuthenticationService {
     this.user = afAuth.authState;
   }
 
+  registerUser(email: string, password: string) {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+  }
+
   loginWithGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   loginWithEmail(email: string, password: string) {
-    //do something
+    this.afAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
   logout() {

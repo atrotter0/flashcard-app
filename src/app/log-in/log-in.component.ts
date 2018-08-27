@@ -18,8 +18,8 @@ export class LogInComponent implements OnInit {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.displayName;
-        console.log(this.userName);
+        this.user = user;
+        console.log(user);
       }
     });
   }

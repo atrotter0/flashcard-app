@@ -1,7 +1,8 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LogInComponent } from '../app/log-in/log-in.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const appRoutes: Routes = [
   {
   path: 'log-in',
   component: LogInComponent
+  },
+  {
+  path: 'register',
+  component: RegisterComponent
   }
 ];
 
