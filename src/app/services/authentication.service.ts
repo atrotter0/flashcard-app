@@ -8,13 +8,21 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class AuthenticationService {
   user: Observable<firebase.User>;
+  registrationSuccess: boolean = false;
 
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
 
   registerUser(email: string, password: string) {
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+    let errorMessage: string;
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // Handle Errors here.
+      errorMessage = error.message;
+    });
+    if (errorMessage === undefined) {
+      this.registrationSuccess = true;
+    }
   }
 
   loginWithGoogle() {
@@ -28,5 +36,4 @@ export class AuthenticationService {
   logout() {
     this.afAuth.auth.signOut();
   }
-
 }

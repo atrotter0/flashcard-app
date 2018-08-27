@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { PasswordValidator } from '../validators/password.validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,6 @@ import { PasswordValidator } from '../validators/password.validator';
   providers: [AuthenticationService]
 })
 export class RegisterComponent implements OnInit {
-
   registrationForm: FormGroup;
   matching_passwords_group: FormGroup;
 
@@ -30,8 +30,7 @@ export class RegisterComponent implements OnInit {
     ]
   }
 
-
-  constructor(public authService: AuthenticationService, private fb: FormBuilder) { }
+  constructor(public authService: AuthenticationService, private fb: FormBuilder, public router: Router) { }
 
   ngOnInit() {
     this.createForms();
@@ -60,10 +59,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmitRegistration(value){
-    
+
   }
 
   runRegisterUser(email: string, password: string) {
     this.authService.registerUser(email, password);
+
+    if (this.authService.registrationSuccess) {
+      this.router.navigate(['']);
+    }
   }
 }

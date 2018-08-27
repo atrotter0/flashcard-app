@@ -18,10 +18,10 @@
       <div *ngFor="let validation of registration_validation_messages.password">
         <div
           class="error-message"
-           *ngIf="registrationForm.get('matching_passwords').get('password').hasError(validation.type)
-           && (registrationForm.get('matching_passwords').get('password').dirty
-           || registrationForm.get('matching_passwords').get('password').touched)">
-           {{validation.message}}
+          *ngIf="registrationForm.get('matching_passwords').get('password').hasError(validation.type)
+          && (registrationForm.get('matching_passwords').get('password').dirty
+          || registrationForm.get('matching_passwords').get('password').touched)">
+          {{validation.message}}
         </div>
       </div>
     </div>
@@ -40,8 +40,7 @@
       </div>
     </div>
   </div>
-
   <button class="submit-btn" color="primary" mat-raised-button type="submit" [disabled]="!registrationForm.valid">
-         Submit
-       </button>
+    Submit
+  </button>
 </form>
