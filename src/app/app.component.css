@@ -1,0 +1,41 @@
+.layout {
+  max-height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 50px auto 100px;
+  grid-template-areas: "top top"
+                       "side body"
+                       "side footer";
+}
+.top-nav {
+  grid-area: top;
+  background-color: #69b7e6;
+  color: white;
+}
+.side-nav {
+  grid-area: side;
+}
+.body {
+  grid-area: body;
+  background-color: #303335;
+}
+.footer {
+  grid-area: footer;
+  background-color: #303335;
+  color: white;
+}
+
+@media screen and (max-height: 630px), screen and (max-width: 800px) {
+  .layout {
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto 100px;
+    grid-template-areas: "top"
+                         "body"
+                         "footer";
+  }
+  .side-nav {
+    display: none;
+  }
+}

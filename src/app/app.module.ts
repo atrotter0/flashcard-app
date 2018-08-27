@@ -8,6 +8,10 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { BodyComponent } from './body/body.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -20,6 +24,10 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     StartComponent
+    SideNavComponent,
+    TopNavComponent,
+    BodyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
