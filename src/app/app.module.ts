@@ -7,6 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { BodyComponent } from './body/body.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -17,7 +21,11 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideNavComponent,
+    TopNavComponent,
+    BodyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
