@@ -47,5 +47,15 @@ export class StartComponent implements OnInit {
     return this.currentQuestion.answerText;
   }
 
+  checkRemainingQuestions() {
+    let remaining = this.currentDeck.questions.filter(question => question.viewed === false)
+    return (remaining.length > 0 ? true : false);
+  }
+
+  startAgain() {
+    this.currentDeck.questions.map(question => question.viewed === false);
+    this.currentQuestion = this.getRandomQuestion();
+  }
+
 
 }
