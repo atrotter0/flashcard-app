@@ -3,6 +3,7 @@ import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
 import { Router } from '@angular/router';
+import { DeckService } from '../deck.service';
 
 @Component({
   selector: 'app-start',
@@ -12,11 +13,15 @@ import { Router } from '@angular/router';
 export class StartComponent implements OnInit {
   currentDeck: Deck;
   currentQuestion: Question;
+  deckId: number;
 
   constructor(private router: Router, private deckService: DeckService) { }
 
   ngOnInit() {
-    this.currentDeck = this.deckService.getDeck();
+    this.route.params.forEach((urlParameters) => {
+      this.deckId = parseInt(urlParameters['id']);
+    })
+    this.currentDeck = this.deckService.getDeckById(this.deckId);
   }
 
 }
