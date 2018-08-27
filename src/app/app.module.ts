@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { StartComponent } from './start/start.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { BodyComponent } from './body/body.component';
@@ -22,6 +23,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    StartComponent
     SideNavComponent,
     TopNavComponent,
     BodyComponent,
