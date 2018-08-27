@@ -8,15 +8,17 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class SideNavComponent implements OnInit {
   categories: FirebaseListObservable<any[]>;
-
+  selected: string;
 
   constructor(private database: AngularFireDatabase) {
     this.categories = database.list('categories');
-
   }
 
   ngOnInit() {
+  }
 
+  select(index) {
+    this.selected = index;
   }
 
 }
