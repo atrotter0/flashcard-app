@@ -37,6 +37,12 @@ export class StartComponent implements OnInit {
     return question;
   }
 
+  nextQuestion() {
+    this.currentQuestion.viewed = true;
+    this.currentDeck.questions = this.currentDeck.questions.filter(question => question.viewed === false);
+    this.currentQuestion = this.getRandomQuestion();
+  }
+
   showAnswer() {
     return this.currentQuestion.answerText;
   }
