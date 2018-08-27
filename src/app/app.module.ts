@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
@@ -24,8 +26,10 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     routing
   ],
   providers: [],
