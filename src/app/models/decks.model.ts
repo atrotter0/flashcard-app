@@ -1,5 +1,3 @@
 export class Decks {
-  constructor(
-    public decks = Deck[];
-  ) { }
+  constructor(public decks = Deck[];) { }
 }
