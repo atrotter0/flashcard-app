@@ -37,7 +37,9 @@ export class StartComponent implements OnInit {
     return question;
   }
 
-
+  showAnswer() {
+    return this.currentQuestion.answerText;
+  }
 
 
 }
