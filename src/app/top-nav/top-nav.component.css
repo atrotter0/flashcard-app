@@ -1,0 +1,61 @@
+.container-fluid {
+  position: relative;
+}
+
+.row {
+  position: absolute;
+  align-items: center;
+  height: 50px;
+  right: 50px;
+  width: 100%;
+}
+
+button span {
+  position: relative;
+  left: -28px;
+  top: -7px;
+  color: white;
+}
+
+button {
+  height: 19px;
+  width: 18px;
+  border-color: white;
+  position: absolute;
+  right: 30px;
+}
+
+button:hover {
+  background-color: #3d8fa285;
+  border-color: white;
+}
+
+#settings {
+  margin-left: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+#collapse {
+  display: none;
+}
+
+#logo {
+  display: inline;
+  position: absolute;
+  left: 100px;
+}
+
+@media screen and (max-height: 630px), screen and (max-width: 800px) {
+  #collapse {
+    display: inline;
+    position: absolute;
+    left: 100px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+}
