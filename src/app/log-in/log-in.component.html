@@ -9,5 +9,10 @@
     <input #password class="form-control" type="password" name="password" value="">
   </div>
   <button type="button" name="button" (click)="runLoginWithEmail(email.value, password.value); email.value=''; password.value='';">Login</button>
-  <button type="button" name="button" (click)="runLoginWithGoogle()">Log-In with Google</button>
+  <button type="button" name="button" (click)="runLoginWithGoogle()" *ngIf="!isLoggedIn">
+    Log-In with Google
+  </button>
+  <button type="button" name="button" (click)="runLogOut()" *ngIf="isLoggedIn">
+    Logout
+  </button>
 </form>

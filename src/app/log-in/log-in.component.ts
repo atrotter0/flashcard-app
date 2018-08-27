@@ -8,10 +8,19 @@ import { AuthenticationService } from '../services/authentication.service';
   providers: [AuthenticationService]
 })
 export class LogInComponent implements OnInit {
+  user;
+  private isLoggedIn: Boolean;
+  private userName: String;
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user => {
-      console.log(user);
+      if (user == null) {
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+        this.userName = user.displayName;
+        console.log(this.userName);
+      }
     });
   }
 
@@ -24,5 +33,9 @@ export class LogInComponent implements OnInit {
 
   runLoginWithEmail(email: string, password: string) {
     this.authService.loginWithEmail(email, password);
+  }
+
+  runLogOut(){
+    this.authService.logout();
   }
 }
