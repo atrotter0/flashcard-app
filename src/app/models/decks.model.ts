@@ -1,3 +1,1 @@
-export class Decks {
-  constructor(public decks = Deck[];) { }
-}
+export class Decks {constructor(public decks = Deck[];) { }}
