@@ -6,6 +6,7 @@ public viewed: boolean = false;
     public difficulty: number,
     public bookmark: boolean,
     public category: string,
-    public adminCreated: boolean
+    public adminCreated: boolean,
+    public viewed: boolean
   ) { }
 }
