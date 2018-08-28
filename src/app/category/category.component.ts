@@ -67,4 +67,14 @@ export class CategoryComponent implements OnInit {
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
+  runDeleteAllQuestionsFromDeck() {
+    for (let i = 0; i < this.categoryQuestions.length; i++) {
+      for (let j = 0; j < this.chosenDeck.questions.length; j++) {
+        if (this.chosenDeck.questions[j] === this.categoryQuestions[i]) {
+          this.chosenDeck.questions.splice(j, 1);
+        }
+      }
+    }
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
+  }
 }
