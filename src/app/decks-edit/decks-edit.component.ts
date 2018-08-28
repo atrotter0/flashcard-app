@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DeckService } from '../deck.service';
+import { DeckService } from '../services/deck.service';
 import { Deck } from '../models/deck.model';
 
 @Component({
