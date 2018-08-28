@@ -48,14 +48,23 @@ export class CategoryComponent implements OnInit {
 
   runAddQuestionToDeck(question: Question) {
     this.chosenDeck.questions.push(question);
-    this.deckService.addQuestionToDeck(this.chosenDeck);
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
+  }
+
+  runDeleteQuestionFromDeck(question: Question) {
+    for (let i = 0; i < this.chosenDeck.questions.length; i++) {
+      if (this.chosenDeck.questions[i] === question) {
+        this.chosenDeck.questions.splice(i, 1);
+      }
+      this.deckService.updateQuestionsInDeck(this.chosenDeck);
+    }
   }
 
   runAddAllQuestionsToDeck() {
     for (let i = 0; i < this.categoryQuestions.length; i++) {
       this.chosenDeck.questions.push(this.categoryQuestions[i]);
     }
-    this.deckService.addQuestionToDeck(this.chosenDeck);
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
 }
