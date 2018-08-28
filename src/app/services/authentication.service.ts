@@ -27,14 +27,15 @@ export class AuthenticationService {
   }
 
   loginWithGoogle() {
-    let errorMessage: string;
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch((error) => {
-      errorMessage = error.message;
-
+    let userData;
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(() =>{
+      this.user.subscribe((data) => {
+        userData = data;
+        if (userData.email !== null) {
+          this.redirectToDecks();
+        }
+      });
     });
-    if (errorMessage === undefined) {
-      this.googleLoginSuccess = true;
-    }
 
   }
 
