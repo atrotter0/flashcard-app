@@ -1,0 +1,12 @@
+<h2>New Deck</h2>
+<div>
+  <form (ngSubmit)="runCreateDeck(newName.value); newName.value='';">
+    <div>
+      <label>Name: </label>
+      <br>
+      <input type="text" #newName>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>

@@ -5,6 +5,7 @@ import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
 import { DeckService } from '../services/deck.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-start',
@@ -24,12 +25,17 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let deckObserbable: FirebaseObjectObservable<any>;
+
     this.route.params.forEach((urlParameters) => {
       this.deckId = parseInt(urlParameters['deckId']);
-    })
-    this.currentDeck = this.deckService.getDeckByDeckId(this.deckId);
-    this.currentDeck.questions.map(question => question.viewed === false);
-    this.currentQuestion = this.getRandomQuestion();
+    });
+    deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
+    deckObserbable.subscribe((data) => {
+      this.currentDeck = data;
+      this.currentDeck.questions.map(question => question.viewed === false);
+      this.currentQuestion = this.getRandomQuestion();
+    });
   }
 
   getRandomQuestion() {
