@@ -15,7 +15,7 @@ import {
   MatDatepickerModule,
   MatNativeDateModule
 } from '@angular/material';
-import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
