@@ -1,11 +1,11 @@
 import { Question } from './question.model';
 
 export class Deck {
-  constructor(public name: string){}
-  
+  //add this back to constructor when user is wired up
+  public userId: string;
+  public questions: Question[];
+
   constructor(
     public name: string,
-    public userId: string,
-    public questions: Question[]
   ) { }
 }

@@ -6,12 +6,13 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class DeckService {
   decks: FirebaseListObservable<any[]>;
+
   constructor(private database: AngularFireDatabase) {
     this.decks = database.list('decks');
   }
 
   getDeckByDeckId(deckId: number) {
-    return Decks[deckId];
+    return this.database.object('decks/' + deckId);
   }
 
   getDecksByUserId(userId: string) {
@@ -29,6 +30,6 @@ export class DeckService {
 
   editDeck(localEditedDeck){
     let deckEntryInFirebase = this.getDeckByDeckId(localEditedDeck.$key);
-    deckEntryInFirebase.update({name: localEditedDeck.name})
+    deckEntryInFirebase.update({name: localEditedDeck.name});
   }
 }

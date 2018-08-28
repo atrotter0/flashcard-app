@@ -17,7 +17,7 @@ export class DecksEditComponent implements OnInit {
   }
 
   runEditDeck(){
-    this.deckService.editDeck(deckToEdit);
+    //this.deckService.editDeck(deckToEdit);
   }
 
 }
