@@ -1,12 +1,23 @@
 .container-fluid {
-  height: 250px;
+  height: 230px;
   margin: 10px;
+}
+
+div#tags {
+  position: relative;
+  top: 10px;
+  width: 200px;
+}
+
+.btn-link {
+  color: #69b7e6;
 }
 
 .tag {
   display: flex;
   top: -3px;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .triangle {
