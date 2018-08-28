@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
@@ -22,6 +22,7 @@ export class DecksComponent implements OnInit {
   private user;
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private deckService: DeckService,
@@ -33,7 +34,11 @@ export class DecksComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.user !== null) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
+    if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
+  }
+
+  goToDeckDetail(deck){
+    this.router.navigate(['decks', deck.$key]);
   }
 
 }
