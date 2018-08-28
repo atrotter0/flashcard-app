@@ -3,20 +3,30 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
-import { BodyComponent } from './body/body.component';
+import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: BodyComponent
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
-  path: 'log-in',
-  component: LogInComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
-  path: 'register',
-  component: RegisterComponent
+    path: 'log-in',
+    component: LogInComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: ':category',
+    component: CategoryComponent
   }
 ];
 

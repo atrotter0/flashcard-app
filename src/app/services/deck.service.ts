@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class DeckService {
   decks: FirebaseListObservable<any[]>;
+
   constructor(private database: AngularFireDatabase) {
     this.decks = database.list('decks');
   }
 
   getDeckByDeckId(deckId: number) {
-    return Decks[deckId];
+    return this.database.object('decks/' + deckId);
   }
 
   getDecksByUserId(userId: string) {
@@ -29,6 +29,11 @@ export class DeckService {
 
   editDeck(localEditedDeck){
     let deckEntryInFirebase = this.getDeckByDeckId(localEditedDeck.$key);
-    deckEntryInFirebase.update({name: localEditedDeck.name})
+    deckEntryInFirebase.update({name: localEditedDeck.name});
+  }
+
+  addQuestionToDeck(localDeck) {
+    let deckEntryInFirebase = this.getDeckByDeckId(localDeck.$key);
+    deckEntryInFirebase.update({questions: localDeck.questions});
   }
 }

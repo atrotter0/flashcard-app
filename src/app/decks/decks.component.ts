@@ -5,6 +5,7 @@ import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
 import { DeckService } from '../services/deck.service';
 import { AuthenticationService } from '../services/authentication.service';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-decks',
@@ -28,7 +29,7 @@ export class DecksComponent implements OnInit {
   ) { }
 
   ngDoCheck() {
-    this.user = firebase.auth().currentUser;
+    // this.user = firebase.auth().currentUser;
   }
 
   ngOnInit() {
