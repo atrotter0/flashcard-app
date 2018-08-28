@@ -1,11 +1,17 @@
-.row {
+.container-fluid {
   height: 250px;
-  align-items: center;
-  justify-content: center;
+  margin: 10px;
+}
+
+.tag {
+  display: flex;
+  top: -3px;
+  position: relative;
 }
 
 .triangle {
   border: 15px solid;
+  height: 0;
   border-color: transparent;
   border-right-color: #69b7e6;
 }
@@ -26,4 +32,5 @@
     border-radius: 50%;
     position: relative;
     left: -52px;
+    top: 12px;
 }
