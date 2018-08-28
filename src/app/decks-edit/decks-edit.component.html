@@ -1,3 +1,12 @@
-<p>
-  decks-edit works!
-</p>
+<h1>Edit Deck</h1>
+<form (ngSubmit)="runEditDeck(selectedDeck)">
+  <div>
+    <label for="name">Deck Name</label>
+    <input [(ngModel)]="selectedDeck.name" class="form-control" name="name" id="name" >
+  </div>
+  <div>
+    <label for="questions">Questions</label>
+    <input [(ngModel)]="selectedDeck.questions" type="text" class="form-control" name="questions" id="questions">
+  </div>
+  <button type="submit">Submit</button>
+</form>

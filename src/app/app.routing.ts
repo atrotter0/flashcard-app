@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
+import { BodyComponent } from './body/body.component';
+import { DecksComponent } from './decks/decks.component';
+import { DeckDetailsComponent } from './deck-details/deck-details.component';
+import { DecksAddComponent } from './decks-add/decks-add.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 
@@ -13,6 +17,26 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'log-in',
+    component: LogInComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'decks/new',
+    component: DecksAddComponent
+
+  },
+  {
+    path: 'decks',
+    component: DecksComponent
+  },
+  {
+    path: 'decks/:id',
+    component: DeckDetailsComponent
+  },
     path: 'home',
     component: HomeComponent
   },
@@ -28,6 +52,7 @@ const appRoutes: Routes = [
     path: ':category',
     component: CategoryComponent
   }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
