@@ -10,21 +10,29 @@ import { AuthenticationService } from '../services/authentication.service';
   selector: 'app-decks',
   templateUrl: './decks.component.html',
   styleUrls: ['./decks.component.css'],
-  providers: [DeckService]
+  providers: [
+    DeckService,
+    AuthenticationService
+  ]
 })
 export class DecksComponent implements OnInit {
   userDecks: Deck[];
   userId: string;
+  private user;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private deckService: DeckService
+    private deckService: DeckService,
+    public authService: AuthenticationService
   ) { }
 
-  ngOnInit() {
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
+  }
 
-    this.userDecks = this.deckService.getDecksByUserId(this.userId);
+  ngOnInit() {
+    if (this.user !== null) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
   }
 
 }
