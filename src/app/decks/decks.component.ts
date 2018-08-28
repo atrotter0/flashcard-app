@@ -3,7 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
-import { DeckService } from '../deck.service';
+import { DeckService } from '../services/deck.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-decks',
@@ -22,9 +23,7 @@ export class DecksComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.userId = urlParameters['userId'];
-    })
+
     this.userDecks = this.deckService.getDecksByUserId(this.userId);
   }
 
