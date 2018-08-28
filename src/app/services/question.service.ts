@@ -18,7 +18,7 @@ export class QuestionService {
     this.questions.subscribe((data) => {
       localQuestions = data;
       for (let i = 0; i < localQuestions.length; i++) {
-        if (localQuestions[i].category.toLowerCase === category.toLowerCase) {
+        if (localQuestions[i].category.toLowerCase() === category.toLowerCase()) {
           categoryQuestions.push(localQuestions[i]);
         }
       }

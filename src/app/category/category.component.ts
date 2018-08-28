@@ -35,12 +35,11 @@ export class CategoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.user !== null) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
+    if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
     this.route.params.subscribe(param => {
-      console.log(param);
       this.categoryName = param.category;
+      this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName);
     })
-    this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName);
   }
 
   setChosenDeck(deck: Deck) {
@@ -49,7 +48,6 @@ export class CategoryComponent implements OnInit {
 
   addQuestionToDeck(question: Question) {
     this.chosenDeck.questions.push(question);
-
   }
 
 }
