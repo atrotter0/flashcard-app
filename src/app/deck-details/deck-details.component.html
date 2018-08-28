@@ -1,3 +1,11 @@
-<p>
-  deck-details works!
-</p>
+<div>
+  <h3>{{deckToDisplay?.name}}</h3>
+  <h4>Starters:</h4>
+  <div *ngFor="let question of deckToDisplay?.questions">
+    <h4>{{question}}</h4>
+  </div>
+  <hr>
+</div>
+<div *ngIf="deckToDisplay">
+  <app-decks-edit [selectedProject]="deckToDisplay"></app-decks-edit>
+</div>
