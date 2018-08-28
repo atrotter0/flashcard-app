@@ -52,7 +52,7 @@ export class CategoryComponent implements OnInit {
   }
 
   runAddAllQuestionsToDeck() {
-    for (let i = 0; i < this.categoryQuestions; i++) {
+    for (let i = 0; i < this.categoryQuestions.length; i++) {
       this.chosenDeck.questions.push(this.categoryQuestions[i]);
     }
     this.deckService.addQuestionToDeck(this.chosenDeck);

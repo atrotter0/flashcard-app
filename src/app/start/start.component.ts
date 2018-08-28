@@ -28,7 +28,7 @@ export class StartComponent implements OnInit {
     let deckObserbable: FirebaseObjectObservable<any>;
 
     this.route.params.forEach((urlParameters) => {
-      this.deckId = parseInt(urlParameters['deckId']);
+      this.deckId = parseInt(urlParameters['id']);
     });
     deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
     deckObserbable.subscribe((data) => {

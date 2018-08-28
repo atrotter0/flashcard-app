@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Location } from '@angular/common';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DeckService } from '../services/deck.service';
 
 @Component({
@@ -14,7 +14,11 @@ export class DeckDetailsComponent implements OnInit {
   deckId;
   deckToDisplay;
 
-  constructor(private route: ActivatedRoute, private deckService: DeckService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private deckService: DeckService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -23,6 +27,10 @@ export class DeckDetailsComponent implements OnInit {
     this.deckService.getDeckByDeckId(this.deckId).subscribe((dataLastEmittedFromObserver) => {
       this.deckToDisplay = dataLastEmittedFromObserver;
     })
+  }
+
+  goToDeckStart(deck){
+    this.router.navigate(['decks/start', this.deckToDisplay.$key]);
   }
 
 }
