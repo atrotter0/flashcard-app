@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -11,7 +10,7 @@ export class DeckService {
   }
 
   getDeckByDeckId(deckId: number) {
-    return Decks[deckId];
+    return this.decks[deckId];
   }
 
   getDecksByUserId(userId: string) {

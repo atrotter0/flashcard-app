@@ -11,10 +11,16 @@ import { QuestionService } from '../services/question.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-
+  categoryName: string;
+  categoryQuestions: Question[];
   constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.categoryName = urlParameters['category'];
+    });
+    this.categoryQuestions = this.QuestionService.getQuestionsByCategory(this.categoryName);
   }
+
 
 }

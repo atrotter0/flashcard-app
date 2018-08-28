@@ -8,13 +8,22 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class QuestionService {
   questions: FirebaseListObservable<any[]>;
-  constructor() {
+  constructor(private database: AngularFireDatabase) {
     this.questions = database.list('questions');
   }
 
   getQuestionsByCategory(category: string) {
+    let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
-
+    this.questions.subscribe((data) => {
+      localQuestions = data;
+    });
+    for (let i = 0; i < localQuestions.length; i++) {
+      if (localQuestions[i].category.toLowerCase === category.toLowerCase) {
+        categoryQuestions.push(localQuestions[i]);
+      }
+    }
+    return categoryQuestions;
   }
 
 }
