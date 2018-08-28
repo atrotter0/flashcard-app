@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
-import { DeckService } from '../deck.service';
+import { DeckService } from '../services/deck.service';
 
 @Component({
   selector: 'app-start',

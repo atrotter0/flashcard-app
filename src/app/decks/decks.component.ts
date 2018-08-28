@@ -3,29 +3,36 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
-import { DeckService } from '../deck.service';
+import { DeckService } from '../services/deck.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-decks',
   templateUrl: './decks.component.html',
   styleUrls: ['./decks.component.css'],
-  providers: [DeckService]
+  providers: [
+    DeckService,
+    AuthenticationService
+  ]
 })
 export class DecksComponent implements OnInit {
   userDecks: Deck[];
   userId: string;
+  private user;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private deckService: DeckService
+    private deckService: DeckService,
+    public authService: AuthenticationService
   ) { }
 
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
+  }
+
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.userId = urlParameters['userId'];
-    })
-    this.userDecks = this.deckService.getDecksByUserId(this.userId);
+    if (this.user !== null) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
   }
 
 }
