@@ -23,8 +23,9 @@ import { StartComponent } from './start/start.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { BodyComponent } from './body/body.component';
-import { FooterComponent } from './footer/footer.component';
+import { BottomDockComponent } from './bottom-dock/bottom-dock.component';
 import { DecksComponent } from './decks/decks.component';
+import { CategoryComponent } from './category/category.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -42,8 +43,9 @@ export const firebaseConfig = {
     SideNavComponent,
     TopNavComponent,
     BodyComponent,
-    FooterComponent,
-    DecksComponent
+    BottomDockComponent,
+    DecksComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
