@@ -22,8 +22,8 @@ import { RegisterComponent } from './register/register.component';
 import { StartComponent } from './start/start.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
-import { BodyComponent } from './body/body.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { BottomDockComponent } from './bottom-dock/bottom-dock.component';
 import { DecksComponent } from './decks/decks.component';
 import { CategoryComponent } from './category/category.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
@@ -44,12 +44,12 @@ export const firebaseConfig = {
     StartComponent,
     SideNavComponent,
     TopNavComponent,
-    BodyComponent,
-    FooterComponent,
-    DecksComponent,
-    CategoryComponent,
     DecksAddComponent,
-    DecksEditComponent
+    DecksEditComponent,
+    HomeComponent,
+    BottomDockComponent,
+    DecksComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
