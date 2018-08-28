@@ -7,11 +7,14 @@ import { BodyComponent } from './body/body.component';
 import { DecksComponent } from './decks/decks.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
+import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: BodyComponent
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'log-in',
@@ -33,6 +36,21 @@ const appRoutes: Routes = [
   {
     path: 'decks/:id',
     component: DeckDetailsComponent
+  },
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'log-in',
+    component: LogInComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: ':category',
+    component: CategoryComponent
   }
 
 ];

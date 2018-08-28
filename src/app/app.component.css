@@ -6,7 +6,7 @@
   grid-template-rows: 50px auto 100px;
   grid-template-areas: "top top"
                        "side body"
-                       "side footer";
+                       "side bottom-dock";
 }
 .top-nav {
   grid-area: top;
@@ -20,8 +20,8 @@
   grid-area: body;
   background-color: #303335;
 }
-.footer {
-  grid-area: footer;
+.bottom-dock {
+  grid-area: bottom-dock;
   background-color: #303335;
   color: white;
 }
@@ -33,7 +33,7 @@
     grid-template-rows: 50px auto 100px;
     grid-template-areas: "top"
                          "body"
-                         "footer";
+                         "bottom-dock";
   }
   .side-nav {
     display: none;
