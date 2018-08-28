@@ -41,6 +41,10 @@ export class DecksComponent implements OnInit {
     this.router.navigate(['decks', deck.$key]);
   }
 
+  goToDeckStart(deck) {
+    this.router.navigate(['decks/start', deck.$key])
+  }
+
   runDeleteDeck(deck: Deck) {
     this.deckService.deleteDeck(deck);
   }

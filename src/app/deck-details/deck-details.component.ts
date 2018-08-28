@@ -29,7 +29,7 @@ export class DeckDetailsComponent implements OnInit {
     })
   }
 
-  goToDeckStart(deck){
+  goToDeckStart(){
     this.router.navigate(['decks/start', this.deckToDisplay.$key]);
   }
 
