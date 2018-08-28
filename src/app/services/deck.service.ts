@@ -22,4 +22,13 @@ export class DeckService {
     });
     return decks;
   }
+
+  createDeck(newDeck){
+    this.decks.push(newDeck);
+  }
+
+  editDeck(localEditedDeck){
+    let deckEntryInFirebase = this.getDeckByDeckId(localEditedDeck.$key);
+    deckEntryInFirebase.update({name: localEditedDeck.name})
+  }
 }
