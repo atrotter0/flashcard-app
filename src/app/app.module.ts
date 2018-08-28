@@ -47,7 +47,7 @@ export const firebaseConfig = {
     BodyComponent,
     FooterComponent,
     DecksComponent,
-    CategoryComponent
+    CategoryComponent,
     DecksAddComponent,
     DecksEditComponent
   ],

@@ -17,12 +17,12 @@ export class QuestionService {
     let categoryQuestions: Question[] = [];
     this.questions.subscribe((data) => {
       localQuestions = data;
-    });
-    for (let i = 0; i < localQuestions.length; i++) {
-      if (localQuestions[i].category.toLowerCase === category.toLowerCase) {
-        categoryQuestions.push(localQuestions[i]);
+      for (let i = 0; i < localQuestions.length; i++) {
+        if (localQuestions[i].category.toLowerCase === category.toLowerCase) {
+          categoryQuestions.push(localQuestions[i]);
+        }
       }
-    }
+    });
     return categoryQuestions;
   }
 
