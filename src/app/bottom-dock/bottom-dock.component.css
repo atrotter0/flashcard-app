@@ -1,5 +1,29 @@
 .row {
-  height: 100px;
+  height: 250px;
   align-items: center;
   justify-content: center;
+}
+
+.triangle {
+  border: 15px solid;
+  border-color: transparent;
+  border-right-color: #69b7e6;
+}
+
+.rectangle {
+  background-color: #69b7e6;
+  height: 30px;
+  width: 45px;
+  color: #303335;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.circle {
+    background-color: #303335;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: relative;
+    left: -52px;
 }
