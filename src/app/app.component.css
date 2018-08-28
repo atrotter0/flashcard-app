@@ -3,7 +3,7 @@
   display: grid;
   overflow-x: hidden;
   grid-template-columns: 200px auto;
-  grid-template-rows: 50px auto 100px;
+  grid-template-rows: 50px auto 250px;
   grid-template-areas: "top top"
                        "side body"
                        "side bottom-dock";
@@ -30,7 +30,7 @@
   .layout {
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 50px auto 100px;
+    grid-template-rows: 50px auto 250px;
     grid-template-areas: "top"
                          "body"
                          "bottom-dock";

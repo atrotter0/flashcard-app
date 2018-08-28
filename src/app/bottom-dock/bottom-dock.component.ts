@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-bottom-dock',

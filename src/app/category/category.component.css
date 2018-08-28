@@ -2,3 +2,7 @@
   color: white;
   margin: 10px;
 }
+
+p {
+  display: inline-block;
+}
