@@ -5,6 +5,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { DecksComponent } from './decks/decks.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
+import { StartComponent } from './start/start.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
@@ -26,7 +27,6 @@ const appRoutes: Routes = [
   {
     path: 'decks/new',
     component: DecksAddComponent
-
   },
   {
     path: 'decks',
@@ -35,6 +35,10 @@ const appRoutes: Routes = [
   {
     path: 'decks/:id',
     component: DeckDetailsComponent
+  },
+  {
+    path: 'decks/start/:id',
+    component: StartComponent
   },
   {
     path: 'home',

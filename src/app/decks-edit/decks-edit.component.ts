@@ -8,9 +8,9 @@ import { Deck } from '../models/deck.model';
   styleUrls: ['./decks-edit.component.css'],
   providers: [DeckService]
 })
+
 export class DecksEditComponent implements OnInit {
   @Input() selectedDeck;
-
   constructor(public deckService: DeckService) { }
 
   ngOnInit() {
