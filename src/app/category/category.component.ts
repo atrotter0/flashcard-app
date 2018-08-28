@@ -3,7 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
-import { DeckService } from '../services/deck.service';
+import { QuestionService } from '../services/question.service';
 
 @Component({
   selector: 'app-category',
