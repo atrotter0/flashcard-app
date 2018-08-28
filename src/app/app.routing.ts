@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { BodyComponent } from './body/body.component';
+import { CategoryComponent } from './category/category.component';
 
 const appRoutes: Routes = [
   {
@@ -11,12 +12,16 @@ const appRoutes: Routes = [
     component: BodyComponent
   },
   {
-  path: 'log-in',
-  component: LogInComponent
+    path: 'log-in',
+    component: LogInComponent
   },
   {
-  path: 'register',
-  component: RegisterComponent
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: ':category',
+    component: CategoryComponent
   }
 ];
 
