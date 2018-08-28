@@ -19,5 +19,4 @@ export class DecksEditComponent implements OnInit {
   runEditDeck(deckToEdit){
     this.deckService.editDeck(deckToEdit);
   }
-
 }

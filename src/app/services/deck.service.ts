@@ -35,6 +35,7 @@ export class DeckService {
   deleteDeck(deckToDelete) {
     let deckEntryInFirebase = this.getDeckByDeckId(deckToDelete.$key);
     deckEntryInFirebase.remove();
+  }
 
   addQuestionToDeck(localDeck) {
     let deckEntryInFirebase = this.getDeckByDeckId(localDeck.$key);
