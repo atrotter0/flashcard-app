@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Deck } from '../models/deck.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class DeckService {
@@ -40,5 +41,10 @@ export class DeckService {
   updateQuestionsInDeck(localDeck) {
     let deckEntryInFirebase = this.getDeckByDeckId(localDeck.$key);
     deckEntryInFirebase.update({questions: localDeck.questions});
+  }
+
+  addDeckToUser(user: User) {
+    // let deckEntryInFirebase = this.getUserById(user.$key);
+    // this.database.object('users/' + user.email).push(newDeck);
   }
 }

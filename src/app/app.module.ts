@@ -30,6 +30,7 @@ import { CategoryComponent } from './category/category.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
 import { DecksEditComponent } from './decks-edit/decks-edit.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
+import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -52,7 +53,8 @@ export const firebaseConfig = {
     HomeComponent,
     BottomDockComponent,
     DecksComponent,
-    CategoryComponent
+    CategoryComponent,
+    RestrictedAccessComponent
   ],
   imports: [
     BrowserModule,
