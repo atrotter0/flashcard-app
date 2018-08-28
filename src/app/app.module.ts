@@ -27,6 +27,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DecksComponent } from './decks/decks.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
 import { DecksEditComponent } from './decks-edit/decks-edit.component';
+import { DeckDetailsComponent } from './deck-details/deck-details.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -47,7 +48,8 @@ export const firebaseConfig = {
     FooterComponent,
     DecksComponent,
     DecksAddComponent,
-    DecksEditComponent
+    DecksEditComponent,
+    DeckDetailsComponent
   ],
   imports: [
     BrowserModule,

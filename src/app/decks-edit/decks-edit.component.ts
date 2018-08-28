@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DeckService } from '../services/deck.service';
 import { Deck } from '../models/deck.model';
 
@@ -9,15 +9,15 @@ import { Deck } from '../models/deck.model';
   providers: [DeckService]
 })
 export class DecksEditComponent implements OnInit {
-  selectedDeck: null;
+  @Input() selectedDeck;
 
   constructor(public deckService: DeckService) { }
 
   ngOnInit() {
   }
 
-  runEditDeck(){
-    //this.deckService.editDeck(deckToEdit);
+  runEditDeck(deckToEdit){
+    this.deckService.editDeck(deckToEdit);
   }
 
 }
