@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
-import { BodyComponent } from './body/body.component';
 import { DecksComponent } from './decks/decks.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
@@ -37,6 +36,7 @@ const appRoutes: Routes = [
     path: 'decks/:id',
     component: DeckDetailsComponent
   },
+  {
     path: 'home',
     component: HomeComponent
   },
