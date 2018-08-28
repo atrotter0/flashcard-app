@@ -30,18 +30,10 @@ export class LogInComponent implements OnInit {
 
   runLoginWithGoogle() {
     this.authService.loginWithGoogle();
-
-    if (this.authService.googleLoginSuccess) {
-      this.redirectToDecks();
-    }
   }
 
   runLoginWithEmail(email: string, password: string) {
     this.authService.loginWithEmail(email, password);
-
-    // if (this.authService.emailLoginSuccess) {
-    //   this.redirectToDecks();
-    // }
   }
 
   runLogOut(){
@@ -51,5 +43,4 @@ export class LogInComponent implements OnInit {
   redirectToDecks() {
     this.router.navigate(['decks']);
   }
-
 }

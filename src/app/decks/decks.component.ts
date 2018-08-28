@@ -30,7 +30,7 @@ export class DecksComponent implements OnInit {
   ) { }
 
   ngDoCheck() {
-    // this.user = firebase.auth().currentUser;
+    this.user = firebase.auth().currentUser;
   }
 
   ngOnInit() {

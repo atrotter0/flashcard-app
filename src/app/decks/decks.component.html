@@ -1,12 +1,19 @@
-<h2>Decks</h2>
+<div *ngIf="!user">
+  <app-restricted-access></app-restricted-access>
+</div>
 
-<button routerLink="/decks/new">Add Deck</button>
+<div *ngIf="user">
+  <h2>Decks</h2>
 
-<div *ngFor="let deck of decks | async" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDeckDetail(deck)"><em>{{deck.name}}</em></h3>
-    <button (click)="runDeleteDeck(deck)">Delete</button>
-    <hr>
-    <br>
-    <br>
+  <button routerLink="/decks/new">Add Deck</button>
+
+  <div *ngFor="let deck of decks | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3 (click)="goToDeckDetail(deck)"><em>{{deck.name}}</em></h3>
+      <button (click)="runDeleteDeck(deck)">Delete</button>
+      <hr>
+      <br>
+      <br>
+    </div>
+  </div>
 </div>
