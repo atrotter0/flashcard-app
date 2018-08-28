@@ -46,8 +46,9 @@ export class CategoryComponent implements OnInit {
     this.chosenDeck = deck;
   }
 
-  addQuestionToDeck(question: Question) {
+  runAddQuestionToDeck(question: Question) {
     this.chosenDeck.questions.push(question);
+    this.deckService.addQuestionToDeck(this.chosenDeck);
   }
 
 }
