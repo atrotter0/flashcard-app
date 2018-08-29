@@ -1,7 +1,7 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LogInComponent } from './log-in/log-in.component';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DecksComponent } from './decks/decks.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
@@ -17,8 +17,8 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'log-in',
-    component: LogInComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'register',
@@ -43,14 +43,6 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: 'log-in',
-    component: LogInComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
   },
   {
     path: ':category',

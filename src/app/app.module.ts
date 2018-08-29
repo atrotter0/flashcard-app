@@ -18,7 +18,7 @@ import {
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { LogInComponent } from './log-in/log-in.component';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { StartComponent } from './start/start.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -42,7 +42,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    LogInComponent,
+    LoginComponent,
     RegisterComponent,
     StartComponent,
     SideNavComponent,
