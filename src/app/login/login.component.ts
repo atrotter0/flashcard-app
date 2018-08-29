@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
   providers: [AuthenticationService]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   user;
   private isLoggedIn: Boolean;
   private userName: String;
@@ -25,9 +25,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
   runLoginWithGoogle() {
     this.authService.loginWithGoogle();
   }
@@ -38,9 +35,5 @@ export class LoginComponent implements OnInit {
 
   runLogOut(){
     this.authService.logout();
-  }
-
-  redirectToDecks() {
-    this.router.navigate(['decks']);
   }
 }
