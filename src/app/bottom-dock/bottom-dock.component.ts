@@ -4,7 +4,7 @@ import { DeckService } from '../services/deck.service';
 import { Deck } from '../models/deck.model';
 import { Question } from '../models/question.model';
 import { AuthenticationService } from '../services/authentication.service';
-import * as firebase from "firebase";
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-bottom-dock',

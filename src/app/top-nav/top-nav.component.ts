@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-top-nav',
@@ -9,28 +10,13 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class TopNavComponent implements OnInit {
   private user;
-  private isLoggedIn: Boolean;
 
-  constructor(public authService: AuthenticationService) {
-    this.authService.user.subscribe(user => {
-      if (user == null) {
-        this.isLoggedIn = false;
-        console.log("nobody");
-      } else {
-        this.isLoggedIn = true;
-        this.user = user;
-        console.log("i'm logged in yay");
-      }
-    })
+  constructor(public authService: AuthenticationService) {}
+
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
   }
 
   ngOnInit() {
-
-
   }
-
-
-
-
-
 }
