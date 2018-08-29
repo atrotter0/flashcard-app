@@ -1,0 +1,2986 @@
+{
+  "categories" : [ {
+    "name" : "Intro"
+  }, {
+    "name" : "CSharp"
+  }, {
+    "name" : "Ruby"
+  }, {
+    "name" : "JavaScript"
+  }, {
+    "name" : "React"
+  }, {
+    "name" : "Rails"
+  } ],
+  "decks" : {
+    "-LL5Wyx-lLygr1ED27xz" : "testDeck",
+    "-LL5XDhzbuC1LjZkaYSK" : "testDeck2",
+    "-LL5XyMU8nCxniGkO_Fp" : {
+      "name" : "test"
+    },
+    "-LL5YDeT1bfDv0JEHXhb" : {
+      "name" : "test"
+    },
+    "-LL5YNyeHaT1FR0FWAGp" : {
+      "name" : "test"
+    },
+    "-LL5YqsEq7oMvq4KvDQ4" : {
+      "name" : "test"
+    },
+    "-LL5Z-9xDfLoi165uoz_" : {
+      "name" : "test"
+    },
+    "-LL5Z76Z1mw7wCTxeIm_" : {
+      "name" : "test"
+    },
+    "-LL5b5TM7z7Mys-3ttG8" : {
+      "name" : "test"
+    },
+    "-LL5bJ4-JVDIKylYkPcJ" : {
+      "name" : "test"
+    },
+    "-LL5bzvX5TBE5Fbb1gyl" : {
+      "name" : "test"
+    },
+    "-LL5cA4b92aqfkddLwhy" : {
+      "name" : "test"
+    },
+    "-LL5eKonjbHbtKBa7qXm" : {
+      "name" : "test"
+    },
+    "-LL5eiyrvBXki2R0dREt" : {
+      "name" : "test"
+    },
+    "-LL5n3QBnYkG6Pj2i06P" : {
+      "name" : "test"
+    },
+    "-LL5nLlGwDuMGbMOcdgV" : {
+      "name" : "test"
+    },
+    "-LL5nq6LfzECBOakTbrI" : "sdfg",
+    "-LL5nvsq-2L9tBajUHE-" : {
+      "name" : "test2"
+    },
+    "-LL5o36INpET9YeSSCd2" : {
+      "name" : "test"
+    },
+    "-LL5o4MxbNu8YkCPjpvb" : "test",
+    "-LL5oUelwTXopoPiJ5yu" : {
+      "name" : "234"
+    },
+    "-LL5oZg7uAZ9yk67y16T" : {
+      "name" : "123"
+    },
+    "-LL5pHOkYea1-4WOi9HP" : {
+      "name" : "1234"
+    },
+    "-LL5pLzT-8lmmDX9zYrD" : {
+      "name" : "reseee"
+    },
+    "-LL5p_ug81oi8_BOIqui" : {
+      "name" : "test"
+    },
+    "-LL5pgLCrKY6SXi4U22f" : {
+      "name" : ""
+    },
+    "-LL5pnnJP5wmf29AJqeB" : {
+      "name" : ""
+    },
+    "-LL5ppAQAOqoOR32KpR6" : {
+      "name" : "123"
+    },
+    "-LL5pwyufaoasTurcV9X" : {
+      "name" : "test"
+    },
+    "-LL5pyYlz9gHN7QNdmap" : {
+      "name" : "test"
+    },
+    "-LL5q5QD44nJxVSE1y6Y" : {
+      "name" : "123"
+    },
+    "-LL5qArrsqQ9MFuFv2oS" : {
+      "name" : ""
+    },
+    "-LL5qJuwguZIJiYG0TRo" : {
+      "name" : "test1"
+    },
+    "-LL5qUnf3zuBnLXci4Xe" : {
+      "name" : "ert"
+    },
+    "-LL5qVzeNjqODrwXfdCQ" : {
+      "name" : "ertttt"
+    },
+    "-LL5qauYeajmPWcGehKf" : {
+      "name" : "erttt"
+    },
+    "-LL5qo3IcsFyiSoAt_Pc" : {
+      "name" : "test"
+    },
+    "-LL5ryUDaFCiGNMNqwG6" : {
+      "name" : "123"
+    },
+    "-LL5szM_LR_AhmNzXJ5b" : {
+      "name" : "test1"
+    },
+    "-LL5t2hmcAEQW8ewSBct" : {
+      "name" : "1234"
+    },
+    "-LL5tv4NUMQ4PiAGSDNV" : {
+      "name" : "1234"
+    },
+    "-LL5uCju0XfCNsdEy0V2" : {
+      "name" : "123"
+    },
+    "-LL5uYr6V7XSbT5OEnW4" : {
+      "name" : "123"
+    },
+    "-LL5vPJ0zJE6YYt9WsOX" : {
+      "name" : ""
+    },
+    "-LL5vQpmqlH-wOKRTKSc" : {
+      "name" : "dn-test0"
+    },
+    "-LL5vbQfCbhxDhTit42p" : {
+      "name" : "123"
+    },
+    "-LL5vdaWCmsiXIaf1Mnu" : {
+      "name" : "dn-test0"
+    },
+    "-LL5vtR0QIFW4nyrfW0B" : {
+      "name" : "dn-test0"
+    },
+    "-LL5wC_Q8Qu_4pFhZBjh" : {
+      "name" : "1234"
+    },
+    "-LL5wIaxq-hQgII-SL6H" : {
+      "name" : "dn0"
+    },
+    "-LL5wIf3G3vDDo9urY9T" : {
+      "name" : "1234"
+    },
+    "-LL5wmn1yxZ672yiPtmD" : {
+      "name" : "1234At"
+    },
+    "-LL5wxRObZ_yZu79GKxj" : {
+      "name" : "werrrere"
+    },
+    "-LL5xR91Ree-xhg-gM6o" : {
+      "name" : "kur"
+    },
+    "-LL5yLM7vFHNRzPwngZ6" : {
+      "name" : "123"
+    },
+    "-LL5yPBsAQ1ktaYtQPVi" : {
+      "name" : "1234"
+    },
+    "-LL5yQEkgUPrz8IDSADX" : {
+      "name" : "1234"
+    },
+    "-LL5yYvs7zBvZeUA6YpW" : {
+      "name" : "test"
+    },
+    "-LL5ye7zu7yJz3EPw-tu" : {
+      "name" : "1234"
+    }
+  },
+  "users" : {
+    "-LL5dORJzQs7JMLx3PA4" : {
+      "decks" : [ {
+        "name" : "ert"
+      }, {
+        "name" : "ertttt"
+      }, {
+        "name" : "test1"
+      }, {
+        "name" : "1234"
+      }, {
+        "name" : "123"
+      }, {
+        "name" : "123"
+      }, {
+        "name" : "123"
+      }, {
+        "name" : "werrrere"
+      }, {
+        "name" : "1234"
+      }, {
+        "name" : "1234"
+      } ],
+      "email" : "atrotter0@gmail.com"
+    },
+    "-LL5vaSH8RGO9_YWGQfk" : {
+      "email" : "luandavidn@gmail.com"
+    },
+    "-LL5yXakxEDBt4F3y-ov" : {
+      "decks" : [ {
+        "name" : "test"
+      } ],
+      "email" : "devinmounts@gmail.com"
+    }
+  },
+  "questions" : [ {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Intro",
+    "difficulty" : 1,
+    "questionText" : "How does the process of making a Git commit differ when working in pairs, versus when working independently?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Intro",
+    "difficulty" : 1,
+    "questionText" : "What is the significance of the word 'master' in the command $ git push al master?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Intro",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between the local .git repository, and the repository created on Github?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How are the local .git repository, and the repository created on Github 'connected'?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby  ",
+    "difficulty" : 1,
+    "questionText" : "What does it mean that web development can be behavior-driven?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is represented in a specification?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the purpose of refactoring? Why is refactoring ideally completed before moving on to the next specification?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a key-value pair? What does a key represent? How about the value?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When might we use a hash? What's the difference between a Hash and an Array?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How does inheritance work in Ruby? How is it useful?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a module and a class?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When should we use a mixin instead of class inheritance?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is an attr method and why are these methods useful?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the Enumerable module and what are some of its most useful methods? (Take some time to look over the Enumerable documentation if you haven’t already.)",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between map() and an each() loop?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a GET request?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is an embedded Ruby tag?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How is the form action in a form important to a Sinatra application?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How does Sinatra know which route to execute?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Describe how app.rb routes are used to manage data between models (classes and methods) and views (.erb files).",
+    "bookmark": false
+
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between GET and POST requests?",
+    "bookmark": false
+
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is an integration test?",
+    "bookmark": false
+
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is Capybara?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a class variable and an instance variable?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why would you create a class method instead of an instance method?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why should you generally avoid class variables?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is dynamic routing and why is it useful?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is namespacing? How can we use modules to namespace classes?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How do we look up constants in Ruby?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when there is a colon in a Sinatra app.rb route? (ie: get('/users/:id') do)? What does the :id portion of the route represent?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between local, instance, class and global variables? This may be review, but at this point, the differences should be very clear!",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "In BDD, why is it important to begin by testing the simplest possible behavior?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why should we write tests for our code? What can happen if we do not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the initialize() method? What is it responsible for? When does it run?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a local and instance variable? What about an instance variable and a class variable?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a class? What benefits do they offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is an object?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a module and why should we use them?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a class method? When should we define a class method instead of an instance method?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a GET and POST request? Provide an example use case of each.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why is a primary key important for database records?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a primary key and a foreign key?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What has to be done to make two tables become related in a database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a one-to-one, one-to-many, and many-to-many database relationship?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Come up with an example use case for each of the three database relationships listed in the previous question.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When would we use a hidden form field? What functionality would this offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "What does CRUD stand for?",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a PATCH and POST request?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the purpose of RESTful routing? What benefit does it offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What special value, type and name must be added to a form in order to successfully execute a DELETE request in Sinatra?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why do we execute many-to-many relationships with a join table?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When might we use a join statement? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between postgres and psql? What is each responsible for? How does a developer interact with each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What does the term relational database mean? How does a relational database structure its data?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a primary key and a foreign key? What is each used for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How can we locate a specific object or database entry in an SQL database? What does this SQL query look like? Construct one using a whiteboard, scratch paper, or directly in an Atom text editor.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Why is it important that the ID value of objects in our application match the ID of that information's entry in our database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How can we ensure the ID value of objects in our application match the ID of that information's entry in our database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "In a one-to-many relationship, how do we associate a new object with its parent object in the database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Walk through each of the following types of HTTP requests, describe what they do, and when you would use each: PATCH, POST, GET, DELETE",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "Walk through each of the following types of standard database relationships, describe what they do, and when you would use each: One-to-One, One-to-Many, Many-to-Many",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "In a one-to-many relationship, why does the 'many' contain the ID value of the 'one' it belongs to? Why not the other way around? What do you think?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is a migration? What can be accomplished with migrations? What can't be?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How do we configure our application to use Active Record?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How do we instruct one class to inherit from another? What benefit does this offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is rake?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a validation and a callback?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When would you use a validation? What benefit does it offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When would you use a callback? What benefit do they offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "When might we use a redirect in Sinatra? How does this differ from other methods of navigation?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between declaring a has_and_belongs_to_many relationship, and a has_many :through relationship? Come up with an example use case for each.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Ruby",
+    "difficulty" : 1,
+    "questionText" : "How can we delete an entry from a join table using Active Record? What does this code look like?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is C#? What is .NET Core 1.1?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Review the data types in C# with your pair. What are they, and how are they different?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How are classes declared? What are the benefits of using classes?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is encapsulation and why is it important?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What are namespaces?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is MS Test? What is a testing framework?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What process should we follow when designing our specs?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why should we use plain-English specs when we begin our specs?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Explain the process of turning a spec into a test.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why is the 'red-green-refactor' method so important to behavior-driven development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we say interfaces before implementation? Why do we say that?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is a static property? How do we use it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "When would we use an instance method instead of a static method?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What kind of objects can be stored within other objects? Where have we seen this concept before?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "When is the appropriate time to use a try/catch block? What benefit do they offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we state that a program threw an exception'? What occurs when this happens?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we say 'Interfaces before implementation'? What does the term interface refer to? What about implementation?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What 'Interfaces before implementation' considerations do we need to take into account while building an application? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is an exception? When do they occur?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "When something throws an exception, what must we do to handle it? If nothing handles it, what will happen?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "In BDD, why is it important to begin by testing the simplest possible behavior?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is a stack trace? What would a developer use one for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Discuss the benefits of testing. Why should we write tests for our code? What can happen if we do not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What do the terms arrange, act and assert mean, in terms of testing?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Pretend you've encountered a bug in your MVC application. What steps would you go through to attempt debugging it? In what order would you try each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Discuss the basic parts of a project in MVC. What are Views? What is the Controller responsible for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is Razor, and how is it designed to save us time?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What are the steps for setting up an ASP.NET MVC project?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is Visual Studio?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why is it a good idea to use multiple controllers?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Can you explain the HTTP process? Define the terms post and get.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Describe a Find() method. Why might we write one, and what are the uses of this method?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How are RESTful routes declared in MVC? What do these routes correspond to?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "In the previous lesson, what is the purpose of the Category class? How does it relate to our Item class?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How do we pass multiple objects into our View?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between a database row, and a database column? When might you use each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What's a primary key? What's it used for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What's a database schema? Why would we use one?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Give an example of a one-to-many relationship. How can you determine this is the correct relationship?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why is an IDENTITY column important for database records?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How do we create C# objects in our applications using database queries?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why do we need to override the Equals property for objects?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between SqlCommand and SqlDataReader?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a primary key and a foreign key?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What has to be done to make two tables become related in a database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "When we delete a record, what happens to the IDENTITY column in the database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why do we use a test database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What does CRUD stand for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a PATCH and POST request?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the purpose of RESTful routing? What benefit does it offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Discuss the difference between POST and GET. When do we use a POST route, when a GET?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Walk through each of the following types of HTTP requests, describe what they do, and when you would use each: PATCH, POST, GET, DELETE",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Walk through each of the following types of standard database relationships, describe what they do, and when you would use each: One-to-One, One-to-Many, Many-to-Many",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How can we locate a specific object or database entry in an SQL database? What does this SQL query look like? Construct one for your partner using a whiteboard, scratch paper, or directly in an Atom text editor.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Why is it important that the ID ID value of objects in our application match the ID of that information's entry in our database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How can we ensure the ID value of objects in our application match the ID of that information's entry in our database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "In a one-to-many relationship, how do we associate a new object with its parent object in the database?",
+    "bookmark": false
+
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Talk about a project you created recently that you're proud of. What skills does it demonstrate? What challenges did you face during the course of development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What are you looking forward to learning most?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Describe a challenge you faced in a group or partner project, and explain what you did to resolve this issue.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What are some real-life examples of many-to-many relationships?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Make a schema of some of these relationships using the SQL Designer. How is a join table used to create a relationship between two tables?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What changes were made to turn the to do list into a many-to-many relationship between items and categories?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a join STATEMENT and a join TABLE?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How is the query from a join statement returned? How do join statements make our lives easier?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a join STATEMENT and a join TABLE?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What information do you need to know to make a join statement?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How is the query from a join statement returned?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How do join statements make our lives easier?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Walk through the differences between a one-to-many and a many-to-many database relationship.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Describe a use case for a many-to-many relationship. What about a one-to-many?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the purpose of a join table? What should be included in a join table? What shouldn't be?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "hat is a join statement? Is it related to a join table? Why or why not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "How does a PATCH request differ from a POST request? When would we use one over the other?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What does REST stand for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is the benefit to following RESTful conventions when defining routes?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "What is encapsulation? How is this used in C#?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "When we say a variable has 'scope' what are we referring to?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "C#",
+    "difficulty" : 1,
+    "questionText" : "Can the keyword this be used within a static method? Why or why not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is npm? Why would we want to use it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is webpack and what is it used for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is a dependency graph?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between concatenation and minification?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is linting? Why is it useful in development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is Jasmine? Why is unit testing important?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between Karma and Jasmine? What benefits does Karma provide?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Why should we use before and after blocks?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between let and const? How are they an improvement over var?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is Babel? What is a transpiler and why is it important to use one with ES6?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What new features are being considered for ES7?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Why would we use the class keyword in our code? What does it do?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between synchronous and asynchronous code?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What does it mean for JavaScript to be single-threaded?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between setInterval() and setTimeout()?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is a good example of an exception in a JavaScript application and how would we handle an exception?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "In terms of API calls, what's a parameter? What does it look like? Where do we put one? What's its purpose?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How do we ensure our API keys aren't published publicly to GitHub? Walk through how you'll do this in today's projects with your partner.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What's the purpose of a JavaScript promise? Describe an instance in which you'd use one.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Is TypeScript JavaScript? Is JavaScript TypeScript? Explain the relationship between these two languages.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What are the benefits of using TypeScript over JavaScript?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the root component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How is the selector used with a template?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How does Angular use the MVC pattern?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "In event bindings, how do target events and template statements work together to create interactivity? What's the difference between the two?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between property binding and event binding?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between one-way and two-way data binding? Walk through example use cases for each.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How do we know whether a new feature or area of our site requires a new component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What does 'Data down, actions up' mean, and how does it apply to Angular components?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between an @Input and an @Output? What are each used for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What does an EventEmitter do? Where would we use one?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is the MVC pattern?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "The MVC pattern is used throughout many different frameworks in many different languages. Why do you think it's considered so useful?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "In terms of an MVC, what is a component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How do you decide what content should reside in a component, versus what content should reside in a template?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when something is a compiled language?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Why is TypeScript considered a compiled language?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is ECMAScript? How does it relate to web development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is a module? What purpose does it serve?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is two-way binding, and when should it be utilized?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Describe an appropriate use-case for a child component.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Discuss how to communicate between the modules of your Angular application.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Describe the type of project you might utilize the Angular framework for.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is a <router-outlet></router-outlet> responsible for? How do we determine where to place it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Walk through the process of defining a new route with your partner. What needs to change? Where?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How can we navigate to a new route? What's different about navigating to a page in Angular, versus other web frameworks?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is different about a dynamic route, as opposed to a static route?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How does a dynamic route fill its dynamic segment?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What are the three primary parts of dependency injection? How do they work together?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Walk through the process of injecting a service into a component with your partner. What code needs to be inserted where?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What benefits does 'fat arrow syntax' offer? When should we use fat arrow syntax to reap these benefits?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Do we have to use services to interact with Firebase? Why or why not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How do we instruct AngularFire where to save a specific record in our database? Where is this code? What does it look like?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is a FirebaseListObservable object?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Discuss the differences between SQL databases, and non-SQL databases (like Firebase). Do you prefer one over the other? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Walk through the process of dependency injection, as if you were explaining it to an interviewer. How does it work? Why is it special? Walk through how Angular in specific utilizes the dependency injection process.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Why might we use a dynamic segment in a URL? What does it contain, and why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What is fat arrow notation? How does it affect scope? And the keyword this? Why is this functionality beneficial?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Describe the process by which components pass data down to one another. What tools need to be in place to do this?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Describe the process by which components pass actions upwards to one another? Again, what tools need to be in place to do this?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "How do we decide when to make a new component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "What are services used for? Where can we place them? Do they have to pass data down, and actions up too?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Walk through the MVC (model-view-controller/component) design pattern with your partner again. What is a model? A view? How about a controller/component? What is each responsible for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "JavaScript",
+    "difficulty" : 1,
+    "questionText" : "Now, describe how Angular fits the MVC (model-view-controller/component) design pattern.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How will Ruby on Rails be different than using Ruby, Active Record and Sinatra?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe an MVC framework.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between routes and RESTful routes?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Why is integration testing important? How much testing should we have in our application?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the application layout? Where is it located?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is a flash message? Where do we insert them? How are they implemented?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What happens if we don't explicitly call render in our controller entries?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the asset pipeline? What does it do for our Rails applications?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How are Ruby and Rails related?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What kind of project, application, or website would be best created in the Rails framework?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What does Object-relational mapping mean?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What object-relational mapping (ORM) frameworks do you have experience with?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How do we render dynamic data in a layout? What occurs to get this data into the layout, and visible to the user?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe the appropriate time to generate new database migrations.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between ActiveRecord's new(), create(), and save() methods?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How do we determine whether code belongs in the model or the controller?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How does an asset pipeline function? What benefits does it offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is FactoryBot? How does it help with testing?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What purpose does a 'factory' serve? Where do we create our factories?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What does SimpleCov do? Why would we use it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How can we thoroughly test user authentication capabilities in our applications?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What's a password hash? How does it differ from a password salt? How do the two work together to authenticate users?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How do we securely store user passwords in our database?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "In Rails applications that send emails to users, why is it preferable to send emails from the model instead of the controller? Do you agree or disagree?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between bcrypt and Devise? Describe your experience using both. Which do you prefer? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How do we ensure user authentication via Devise is accurately tested with Capybara?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between the terms 'authentication' and 'authorization'? Similarities? When do we use each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe how you'd go about implementing Paperclip photo uploading capabilities into a Rails application.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is seeding a database? Why would we do this?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "When do you use AJAX in a Rails application? How do you decide whether to use AJAX or not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What does AJAX stand for?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How does an AJAX request interact with the server?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is unique about an AJAX request, compared to a normal HTTP request?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How does an AJAX request know where to go?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe some of your go-to methods and approaches to refactoring?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What new concepts are you looking forward to learning?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe a time when you struggled with a new concept this week; what was the issue? How did you resolve it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Why is integration testing important?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "How can we write integration tests for AJAX?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Talk about a project you created recently that you're proud of. What skills does it demonstrate? What challenges did you face during the course of development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What makes Ruby an object-oriented programming language?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is a Gem? What are some of your favorite Gems and why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a class and instance variable? When is each used?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a public and private method?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is self in Ruby? Where might we use it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe an HTTP GET request. Also describe an HTTP POST request.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "Describe the differences between an HTTP POST request, and a GET request. When would you use one over the other?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "When we say an HTTP request includes headers, what are we referring to? What information is included in a header? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a 500 HTTP response and a 400 HTTP response? What about a 200 response?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "When we use the term 'payload' in terms of interacting with APIs and making HTTP requests, what are we talking about? What does a payload contain?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What information might be sent in a query string?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "Rails",
+    "difficulty" : 1,
+    "questionText" : "What are your favorite API resources for Ruby and/or Ruby on Rails? What APIs have you worked with? How did it go?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a framework and a library? Which is React? How can you tell?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the virtual DOM? How does React use it? What benefits does it offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why might a developer choose React over another library or framework? What type of projects do you think are best suited to the React library?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why do JSX loops require a special key? What is this for? What can we use as a key?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How might using CSS objects differ from creating one central CSS stylesheet? What extra considerations are there, if any? How will this differ how you approach integrating styles?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : " Is there a concept or two you feel 'stuck' on? ",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How does client-side routing differ from 'traditional' routing in which a new GET request is made for each page?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does React-Router's <Switch> component do? What about the <Route> component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "When should we declare a route as exact? Why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Discuss how you go about breaking a larger page or app into multiple smaller React components. How is this process similar or different to technologies and frameworks you've used in the past. (Angular? Atomic Design?)",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a library and a framework? Can you list an example of each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we say a programming library or language is declarative? How can we tell React components are declarative?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between declarative and imperative programming?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the benefit of using JSX? Make a case for (or against) this technology.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe the process by which JSX, Babel, and Webpack all work together in our projects.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe what Webpack does in our projects.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What are keys in React, and why are they important?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe React's reconciliation process used to update the DOM.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between state and props? When do we use one over the other?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does 'lifting state' refer to? Why is this process so important to React development?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between local and/or component state and application state? Give an example of each.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do we decide where state values should reside in a component tree?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Walk through all React lifecycle methods with your partner. Discuss what each does. If you can't remember feel free to reference documentation or homework.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when a lifecycle method's name is preceded with will?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when a lifecycle methods' name is preceded with did?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between mounting, updating, and unmounting. When do each occur? Give an example.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How does setState() interact with a component's lifecycle? Is it a lifecycle method? Why or why not?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How has working in React been for you this week? Do you have any tips or tricks to share with your partner? Or is there anything you still can't get the hang of, that your partner could help you with? Discuss now!",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's a 'slice' of state refer to?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why is it important that state always comes from a 'single source of truth'?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between a library and a framework? Can you list an example of each?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we say a programming library or language is declarative? How can we tell React components are declarative?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the difference between declarative and imperative programming?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between the 'data down, actions up' paradigm from Angular, and the unidirectional data flow used in React? Give a specific example how these differences express themselves in our code.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the benefit of using JSX? Make a case for (or against) this technology.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What types of applications are best served by React? What types aren't? Explain your reasoning.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe the process by which JSX, Babel, and Webpack all work together in our projects.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between a Webpack plugin, and a Webpack loader? Give an example of each.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "When is it appropriate to use state?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Where should state reside?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What are refs, and how do they work?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does it mean when we say React applications should have an 'unidirectional data flow'?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What purpose do React's lifecycle methods offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What happens when you call setState()? (Hint: When state is updated, React automatically updates the UI. What series of events occur to make this happen?)",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What happens when you call setState()? (Hint: When state is updated, React automatically updates the UI. What series of events occur to make this happen?)",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What are keys in React, and why are they important?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe React's reconciliation process used to update the DOM.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do actions, reducers, and stores all work together in Redux? Walk through the process with your partner. Draw out the process on a whiteboard. Refer to the weekend homework if necessary.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do we determine when an application needs multiple reducers?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How does combining reducers's with Redux's combineReducer() method inform our state structure? (Or, in other words, how to state slices and combineReducer() relate to one another?)",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why do we need to unit test reducers?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How does the Expect library stack up to testing tools you've used before?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What benefit does the React-Redux package offer? How does it make working in Redux easier?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What information do we compare to unit test reducers?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's a higher-order component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between a presentational and container component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do you decide when to use a presentational component, and when to use a container component?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do we determine what state to store in Redux, and what state values to keep local to React?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the benefit of using constants in Redux actions?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "How do we determine when to create a new state 'slice'? What considerations should we take when structuring our state?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Walk through how Redux reducers, actions, and stores all work together to manage application state (again).",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between Flux and Redux? How are they related? How are they different?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Explain Flux as if you were teaching your partner the concept for the first time. What's the general idea? How does it generally work? What problems does it solve?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between a presentational and container component? Why might you chose to use one over the other?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's the difference between Flux and the standard MVC structure seen in other frameworks and tools?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What are the component lifecycle methods? Briefly list each, when they're called, and what we might use them for.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What is the purpose of Redux When would we use it?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What do you know about structuring Redux state trees. What should we keep in mind when deciding how to structure state in our store?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Explain the difference between server-side and client-side routing.",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Describe your usual React development environment? What tools do you use, and why?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why combine reducers?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's an action creator?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's an async action? How can we tell if something is an async action?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why might we use a Redux action creator instead of plopping action literal objects wherever we need them? What benefit do they offer?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "Why would an application require middleware?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What does middleware actually do?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "What's it called when a function returns a function that returns yet another function?",
+    "bookmark": false
+  }, {
+    "viewed": false,
+    "adminCreated" : true,
+    "answerText" : "",
+    "category" : "React",
+    "difficulty" : 1,
+    "questionText" : "When saving data to a Firebase database in a React project, what part does Redux play? Why? How?",
+    "bookmark": false
+ } ]
+}
