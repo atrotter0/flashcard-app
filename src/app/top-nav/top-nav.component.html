@@ -2,7 +2,7 @@
   <div class="row">
     <span id="collapse">Courses</span>
     <span id="logo" routerLink="">Flashcards</span>
-    <span id="email" *ngIf="email != null">{{email}}</span>
+    <span id="email" *ngIf="email">{{email}}</span>
     <button *ngIf="!user" id="login" class="btn btn-outline-secondary btn-sm" routerLink="/login"><span>login</span></button>
     <button *ngIf="user" id="logout" class="btn btn-outline-secondary btn-sm" (click)="runLogOut(); email = ''"><span>logout</span></button>
     <span id="settings">. . .</span>
