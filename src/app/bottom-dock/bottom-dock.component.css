@@ -2,6 +2,13 @@ form {
   display: inline-block;
 }
 
+select {
+  background-color: transparent;
+  border: none;
+  color: #69b7e6;
+  margin-right: 40px;
+}
+
 #tags {
   position: relative;
   top: 10px;

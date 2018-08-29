@@ -11,8 +11,12 @@
       </select>
       <button class="btn btn-outline-danger btn-sm" [hidden]="creatingDeck">Remove Deck</button>
       <form [hidden]="!creatingDeck">
-        <input type="text" placeholder="Deck name" #deckName>
-        <button class="btn btn-info btn-sm" (click)="createDeck(deckName.value); deckName.value= ''">Create</button>
+        <div class="input-group">
+          <input type="text" placeholder="Deck name" #deckName>
+          <div class="input-group-append">
+            <button class="btn btn-info btn-sm" (click)="createDeck(deckName.value); deckName.value= ''">Create</button>
+          </div>
+        </div>
       </form>
     </div>
 
