@@ -1,12 +1,23 @@
-.container-fluid {
-  height: 230px;
-  margin: 10px;
+form {
+  display: inline-block;
 }
 
-div#tags {
+select {
+  background-color: transparent;
+  border: none;
+  color: #69b7e6;
+  margin-right: 40px;
+}
+
+#tags {
   position: relative;
   top: 10px;
   width: 200px;
+}
+
+.container-fluid {
+  height: 230px;
+  margin: 10px;
 }
 
 .btn-link {

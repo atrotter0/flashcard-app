@@ -9,13 +9,13 @@
     <div id="strikethrough"></div>
   </div>
   <div class="row">
-    <div class="col-3">
+    <div class="col-4">
       <div id="greeting">
         <p>Greeting box</p>
         <p>Babbling about something or another since login page's doubling as our landing home page. Words, words, words. How ya goin'.
       </div>
     </div>
-    <div class="col-9">
+    <div id="login" class="col-8">
       <form>
         <h3>Log in</h3>
         <div class="form-group">
@@ -28,7 +28,8 @@
         </div>
         <button type="button" class="btn btn-info" name="button" (click)="runLoginWithEmail(email.value, password.value); email.value=''; password.value='';">Login</button>
         <button type="button" name="button" (click)="runLogOut()" *ngIf="isLoggedIn">Logout</button>
-        <p>Otherwise, you can <button class="btn btn-outline-info" routerLink="/register">sign up here</button></p>
+        <p>or</p>
+        <button class="btn btn-outline-info" routerLink="/register">sign up here</button>
       </form>
     </div>
   </div>
