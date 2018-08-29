@@ -19,11 +19,13 @@ export class BottomDockComponent implements OnInit {
   ngOnInit() {
   }
 
-  createDeck(value) {
+  select(value) {
     if (value == '$creating') this.creatingDeck = true;
     else this.creatingDeck = false;
-    
-    console.log("gotten here, " + value);
+  }
+
+  createDeck(name) {
+    this.service.createDeck(name);
   }
 
 }

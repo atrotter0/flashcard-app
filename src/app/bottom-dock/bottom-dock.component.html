@@ -4,14 +4,15 @@
 
 
 
-      <select (change)="createDeck($event.target.value)">
+      <select (change)="select($event.target.value)">
         <option>Deck 2</option>
         <option>Deck 3</option>
         <option value="$creating">Create New Deck</option>
       </select>
       <button class="btn btn-outline-danger btn-sm" [hidden]="creatingDeck">Remove Deck</button>
-      <form>
-        <input type="text" placeholder="Deck name" [hidden]="!creatingDeck">
+      <form [hidden]="!creatingDeck">
+        <input type="text" placeholder="Deck name" #deckName>
+        <button class="btn btn-info btn-sm" (click)="createDeck(deckName.value); deckName.value= ''">Create</button>
       </form>
     </div>
 
