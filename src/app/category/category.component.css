@@ -14,3 +14,9 @@ ul { padding-top: 30px; }
   top: 40px;
   right: -2px;
 }
+
+@media screen and (max-width: 800px) {
+  #header {
+    width: 100%;
+  }
+}
