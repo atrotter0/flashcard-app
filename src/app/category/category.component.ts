@@ -46,33 +46,41 @@ export class CategoryComponent implements OnInit {
     this.chosenDeck = deck;
   }
 
+  getCategoryAndLowerCase(question: Question) {
+    return question.category.toLowerCase();
+  }
+
+  getCategoryFromCategoryQuestionsAndLowerCase() {
+    return this.categoryQuestions[0].category.toLowerCase();
+  }
+
   runAddQuestionToDeck(question: Question) {
-    if (question.category.toLowerCase() in this.chosenDeck.questions) {
-      this.chosenDeck.questions[question.category.toLowerCase()].push(question);
+    if (this.getCategoryAndLowerCase(question) in this.chosenDeck.questions) {
+      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].push(question);
     } else {
-      this.chosenDeck.questions[question.category.toLowerCase()] = [question];
+      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)] = [question];
     }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteQuestionFromDeck(question: Question) {
-    let categoryArray = this.chosenDeck.questions[question.category.toLowerCase()];
+    let categoryArray = this.chosenDeck.questions[this.getCategoryAndLowerCase(question)];
     let indexOfQuestionToRemove = categoryArray.indexOf(question);
-    this.chosenDeck.questions[question.category.toLowerCase()].splice(indexOfQuestionToRemove, 1);
+    this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].splice(indexOfQuestionToRemove, 1);
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runAddAllQuestionsToDeck() {
     if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
-      this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()].push(this.categoryQuestions);
+      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()].push(this.categoryQuestions);
     } else {
-      this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()] = [this.categoryQuestions];
+      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()] = [this.categoryQuestions];
     }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteAllQuestionsFromDeck() {
-    delete this.chosenDeck.questions[this.categoryQuestions[0].category];
+    delete this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()];
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 }

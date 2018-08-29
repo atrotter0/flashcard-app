@@ -37,13 +37,23 @@ export class StartComponent implements OnInit {
       for (var category in this.currentDeck.questions) {
         this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
       }
-      this.currentQuestions.map(question => question.viewed === false);
+      this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
     });
   }
 
+  resetQuestions() {
+    for (let i = 0; i < this.currentQuestions.length; i++) {
+      this.currentQuestions[i].viewed = false;
+    }
+  }
+
+  randomNumberForRandomQuestions() {
+    return Math.floor(Math.random() * this.currentQuestions.length);
+  }
+
   getRandomQuestion() {
-    let question = this.currentQuestions[Math.floor(Math.random() * this.currentQuestions.length)];
+    let question = this.currentQuestions[this.randomNumberForRandomQuestions()];
     return question;
   }
 
@@ -63,7 +73,7 @@ export class StartComponent implements OnInit {
   }
 
   startAgain() {
-    this.currentQuestions.map(question => question.viewed === false);
+    this.resetQuestions();
     this.currentQuestion = this.getRandomQuestion();
   }
 
