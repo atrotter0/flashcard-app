@@ -42,10 +42,6 @@ export class AuthenticationService {
     }
   }
 
-  returnUser(foundUser) {
-    return foundUser;
-  }
-
   registerUser(email: string, password: string) {
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
       this.registrationSuccess = true;

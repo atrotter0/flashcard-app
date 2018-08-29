@@ -16,9 +16,10 @@ export class DecksAddComponent implements OnInit {
   private user;
   localUser: User;
 
-  constructor(public deckService: DeckService, public authService: AuthenticationService) { }
+  constructor(public deckService: DeckService, public authService: AuthenticationService) {}
 
   ngOnInit() {
+    this.user = firebase.auth().currentUser;
     this.authService.getUserByEmail(this.user.email);
     this.localUser = this.authService.localUser;
   }
@@ -30,8 +31,7 @@ export class DecksAddComponent implements OnInit {
   runCreateDeck(newName: string) {
     let newDeck = new Deck(newName);
     this.deckService.createDeck(newDeck);
-    console.log("localUser in decks-add: " + this.localUser);
-    if (this.localUser.decks == undefined) {
+    if (this.localUser.decks === undefined) {
       this.localUser.decks = [];
     }
     this.localUser.decks.push(newDeck);
