@@ -17,7 +17,6 @@ export class TopNavComponent implements OnInit {
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
     if (this.user) this.email = this.user.email;
-
   }
 
   ngOnInit() {

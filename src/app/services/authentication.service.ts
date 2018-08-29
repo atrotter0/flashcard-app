@@ -55,9 +55,11 @@ export class AuthenticationService {
   }
 
   checkForValidUser(userData: User) {
-    if (userData.email !== null) {
-      this.subscribeAndStartUserSearch();
-      this.redirectToDecks();
+    if (userData) {
+      if (userData.email !== null) {
+        this.subscribeAndStartUserSearch();
+        this.redirectToDecks();
+      }
     }
   }
 
@@ -81,14 +83,18 @@ export class AuthenticationService {
   findUser(usersFromDb: User[], localUser: User) {
     let userFound = false;
     for (let i = 0; i < usersFromDb.length; i++) {
-      if (usersFromDb[i].email === localUser.email) { userFound = true; }
+      if( localUser) {
+        if (usersFromDb[i].email === localUser.email) { userFound = true; }
+      }
     }
     if (!userFound) { this.createUser(localUser); }
   }
 
   createUser(userObject) {
-    const newUser = new User(userObject.email);
-    this.users.push(newUser);
+    if (userObject) {
+      const newUser = new User(userObject.email);
+      this.users.push(newUser);
+    }
   }
 
   redirectToDecks() {
