@@ -37,7 +37,7 @@ export class StartComponent implements OnInit {
       for (let i = 0; i < this.currentDeck.questions.length; i++) {
         let categoryname = Object.getOwnPropertyNames(this.currentDeck.questions[i])[0];
         let arrayOfCategoryQuestions = this.currentDeck.questions[categoryname];
-        this.currentQuestions.concat(...arrayOfCategoryQuestions);
+        this.currentQuestions = this.currentQuestions.concat(...arrayOfCategoryQuestions);
       }
       this.currentQuestions.map(question => question.viewed === false);
       this.currentQuestion = this.getRandomQuestion();

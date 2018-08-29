@@ -48,10 +48,10 @@ export class CategoryComponent implements OnInit {
 
   runAddQuestionToDeck(question: Question) {
     for (let i = 0; i < this.chosenDeck.questions.length; i++) {
-      if (Object.keys(this.chosenDeck.questions[i])[0].toLowerCase() === question.category.toLowerCase()) {
-        this.chosenDeck[question.category.toLowerCase()].push(question);
+      if (Object.getOwnPropertyNames(this.chosenDeck.questions[i])[0].toLowerCase() === question.category.toLowerCase()) {
+        this.chosenDeck.questions[question.category.toLowerCase()].push(question);
       } else {
-        this.chosenDeck[question.category.toLowerCase()] = [question];
+        this.chosenDeck.questions[question.category.toLowerCase()] = [question];
       }
     }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
@@ -66,23 +66,16 @@ export class CategoryComponent implements OnInit {
     }
   }
 
-  // runAddAllQuestionsToDeck() {
-  //   for (let i = 0; i < this.categoryQuestions.length; i++) {
-  //     this.chosenDeck.questions.push(this.categoryQuestions[i]);
-  //   }
-  //   this.deckService.updateQuestionsInDeck(this.chosenDeck);
-  // }
-
-  // runAddAllQuestionsToDeck() {
-  //   for (let i = 0; i < chosenDeck.questions.length; x++) {
-  //     if (Object.keys(chosenDeck.questions[i])[0].toLowerCase() === this.categoryQuestions[0].category.toLowerCase()) {
-  //       this.chosenDeck[question.category.toLowerCase()].push(question);
-  //     } else {
-  //       this.chosenDeck[question.category.toLowerCase()] = [question];
-  //     }
-  //   }
-  //   this.deckService.updateQuestionsInDeck(this.chosenDeck);
-  // }
+  runAddAllQuestionsToDeck() {
+    for (let i = 0; i < this.chosenDeck.questions.length; i++) {
+      if (Object.getOwnPropertyNames(this.chosenDeck.questions[i])[0].toLowerCase() === this.categoryQuestions[0].category.toLowerCase()) {
+        this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()].push(this.categoryQuestions);
+      } else {
+        this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()] = [this.categoryQuestions];
+      }
+    }
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
+  }
 
   runDeleteAllQuestionsFromDeck() {
     for (let i = 0; i < this.categoryQuestions.length; i++) {
