@@ -39,7 +39,7 @@ export class CategoryComponent implements OnInit {
     this.route.params.subscribe(param => {
       this.categoryName = param.category;
       this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName);
-    })
+    });
   }
 
   setChosenDeck(deck: Deck) {

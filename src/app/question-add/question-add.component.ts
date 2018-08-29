@@ -9,25 +9,33 @@ import * as firebase from "firebase";
   selector: 'app-question-add',
   templateUrl: './question-add.component.html',
   styleUrls: ['./question-add.component.css'],
-  providers: [QuestionService]
+  providers: [QuestionService, AuthenticationService]
 })
 export class QuestionAddComponent implements OnInit {
+  userQuestions: Question[];
   private user;
 
-
   constructor(public qService: QuestionService, public authService: AuthenticationService) { }
-
-  ngOnInit() {
-  }
 
   ngDoCheck(){
     this.user = firebase.auth().currentUser;
   }
 
+  ngOnInit() {
+    if (this.user !== undefined) { this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email);
+    console.log("user email: " + this.user.email); }
+  }
+
+
+
   runCreateQuestion(newQText: string, newQAnswer: string, newQCategory: string, newQDifficulty: number){
+
     let newQuestion = new Question(newQText, newQAnswer, newQDifficulty, newQCategory, this.user.email);
     this.qService.createQuestion(newQuestion);
+
   }
+
+
 
 
 }

@@ -12,9 +12,10 @@ export class QuestionService {
     this.questions = database.list('questions');
   }
 
-  getAllQuestions(){
+  getAllQuestions() {
     return this.database.list('questions');
   }
+
   getQuestionsByCategory(category: string) {
     let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
@@ -29,8 +30,21 @@ export class QuestionService {
     return categoryQuestions;
   }
 
+  getQuestionsByUserEmail(userEmail) {
+    let localQuestions: Question[];
+    let userQuestions: Question[] = [];
+    this.questions.subscribe((data) =>{
+      localQuestions = data;
+      for (let i = 0; i < localQuestions.length; i++){
+        if(localQuestions[i].userEmail === userEmail){
+          userQuestions.push(localQuestions[i]);
+        }
+      }
+    });
+    return userQuestions;
+  }
+
   createQuestion(newQuestion){
     this.questions.push(newQuestion)
   }
-
 }
