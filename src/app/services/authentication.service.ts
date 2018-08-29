@@ -23,12 +23,10 @@ export class AuthenticationService {
 
   registerUser(email: string, password: string) {
     let errorMessage: string;
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-      errorMessage = error.message;
-    });
-    if (errorMessage === undefined) {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
       this.registrationSuccess = true;
-    }
+      this.loginWithEmail(email, password);
+    });
   }
 
   loginWithGoogle() {
