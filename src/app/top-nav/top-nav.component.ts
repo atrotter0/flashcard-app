@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from 'firebase';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-top-nav',
@@ -11,8 +12,11 @@ import * as firebase from 'firebase';
 export class TopNavComponent implements OnInit {
   private user;
   email: string;
+  categories: FirebaseListObservable<any[]>;
 
-  constructor(public authService: AuthenticationService) {}
+  constructor(public authService: AuthenticationService, private database: AngularFireDatabase) {
+    this.categories = database.list('categories');
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;

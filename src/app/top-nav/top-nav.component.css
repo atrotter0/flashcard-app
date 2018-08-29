@@ -10,7 +10,11 @@
   width: 100%;
 }
 
-button {
+.btn-link {
+  color: white;
+}
+
+#login, #logout {
   height: 19px;
   width: 18px;
   border-color: white;
@@ -69,6 +73,7 @@ button:hover {
 
 #collapse {
   display: none;
+  cursor: pointer;
 }
 
 #logo {
@@ -81,7 +86,7 @@ button:hover {
   #collapse {
     display: inline;
     position: absolute;
-    left: 100px;
+    left: 40px;
   }
 
   #logo {
