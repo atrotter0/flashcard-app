@@ -37,7 +37,6 @@ export class DecksComponent implements OnInit {
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
-    console.log("user in decks/ :" + this.user);
   }
 
   ngOnInit() {

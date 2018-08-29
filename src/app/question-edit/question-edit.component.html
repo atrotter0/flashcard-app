@@ -1,0 +1,32 @@
+<h1>Edit Question</h1>
+<form (ngSubmit)="runEditQuestion(selectedQuestion)">
+  <div>
+    <label for="name">Question</label>
+    <input [(ngModel)]="selectedQuestion.questionText" class="form-control" name="question" id="question" >
+  </div>
+  <div>
+    <label for="name">Answer</label>
+    <input [(ngModel)]="selectedQuestion.answerText" class="form-control" name="answer" id="answer" >
+  </div>
+  <div>
+    <label>Category: </label>
+    <br>
+    <select [(ngModel)]="selectedQuestion.category">
+      <option value="CSharp">CSharp</option>
+      <option value="Javascript">Javascript</option>
+      <option value="Ruby">Ruby</option>
+      <option value="React">React</option>
+      <option value="Rails">Rails</option>
+    </select>
+  </div>
+  <div>
+    <label>Difficulty: </label>
+    <br>
+    <select [(ngModel)]="selectedQuestion.difficulty">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </div>
+  <button type="submit">Submit</button>
+</form>
