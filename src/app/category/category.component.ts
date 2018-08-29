@@ -59,11 +59,13 @@ export class CategoryComponent implements OnInit {
 
   runDeleteQuestionFromDeck(question: Question) {
     for (let i = 0; i < this.chosenDeck.questions.length; i++) {
-      if (this.chosenDeck.questions[i] === question) {
-        this.chosenDeck.questions.splice(i, 1);
+      for (let j = 0; j < Object.values(this.chosenDeck.questions[i]).length; j++) {
+        if (Object.values(this.chosenDeck.questions[i])[j] === question) {
+          this.chosenDeck.questions[i][Object.getOwnPropertyNames(this.chosenDeck.questions[i])[0]].splice(j, 1);
+        }
       }
-      this.deckService.updateQuestionsInDeck(this.chosenDeck);
     }
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runAddAllQuestionsToDeck() {
