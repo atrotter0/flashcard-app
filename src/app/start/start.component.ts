@@ -15,6 +15,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class StartComponent implements OnInit {
   currentDeck: Deck;
+  currentQuestions: Question[];
   currentQuestion: Question;
   deckId: number;
 
@@ -33,19 +34,24 @@ export class StartComponent implements OnInit {
     deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
     deckObserbable.subscribe((data) => {
       this.currentDeck = data;
-      this.currentDeck.questions.map(question => question.viewed === false);
+      for (let i = 0; i < this.currentDeck.questions.length; i++) {
+        let categoryname = Object.getOwnPropertyNames(this.currentDeck.questions[i])[0];
+        let arrayOfCategoryQuestions = this.currentDeck.questions[categoryname];
+        this.currentQuestions.concat(...arrayOfCategoryQuestions);
+      }
+      this.currentQuestions.map(question => question.viewed === false);
       this.currentQuestion = this.getRandomQuestion();
     });
   }
 
   getRandomQuestion() {
-    let question = this.currentDeck.questions[Math.floor(Math.random() * this.currentDeck.questions.length)];
+    let question = this.currentQuestions[Math.floor(Math.random() * this.currentQuestions.length)];
     return question;
   }
 
   nextQuestion() {
     this.currentQuestion.viewed = true;
-    this.currentDeck.questions = this.currentDeck.questions.filter(question => question.viewed === false);
+    this.currentQuestions = this.currentQuestions.filter(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
   }
 
@@ -54,12 +60,12 @@ export class StartComponent implements OnInit {
   }
 
   checkRemainingQuestions() {
-    let remaining = this.currentDeck.questions.filter(question => question.viewed === false)
+    let remaining = this.currentQuestions.filter(question => question.viewed === false)
     return (remaining.length > 0 ? true : false);
   }
 
   startAgain() {
-    this.currentDeck.questions.map(question => question.viewed === false);
+    this.currentQuestions.map(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
   }
 
