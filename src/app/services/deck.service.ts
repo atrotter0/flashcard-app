@@ -24,6 +24,10 @@ export class DeckService {
     return decks;
   }
 
+  getUserById(userId: string) {
+    return this.database.object('users/' + userId);
+  }
+
   createDeck(newDeck){
     this.decks.push(newDeck);
   }
@@ -43,8 +47,8 @@ export class DeckService {
     deckEntryInFirebase.update({questions: localDeck.questions});
   }
 
-  addDeckToUser(user: User) {
-    // let deckEntryInFirebase = this.getUserById(user.$key);
-    // this.database.object('users/' + user.email).push(newDeck);
+  addDeckToUser(localUser) {
+    let userInFirebase = this.getUserById(localUser.$key);
+    userInFirebase.update(localUser);
   }
 }

@@ -6,6 +6,7 @@ import { Decks } from '../models/decks.model';
 import { DeckService } from '../services/deck.service';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-decks',
@@ -20,17 +21,23 @@ export class DecksComponent implements OnInit {
   userDecks: Deck[];
   userId: string;
   private user;
+  decks: FirebaseListObservable<any[]>;
+
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private deckService: DeckService,
-    public authService: AuthenticationService
-  ) { }
+    public authService: AuthenticationService,
+    private database: AngularFireDatabase
+  ) {
+  this.decks = database.list('decks');
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
+    console.log("user in decks/ :" + this.user);
   }
 
   ngOnInit() {
