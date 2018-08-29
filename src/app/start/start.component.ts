@@ -34,10 +34,8 @@ export class StartComponent implements OnInit {
     deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
     deckObserbable.subscribe((data) => {
       this.currentDeck = data;
-      for (let i = 0; i < this.currentDeck.questions.length; i++) {
-        let categoryname = Object.getOwnPropertyNames(this.currentDeck.questions[i])[0];
-        let arrayOfCategoryQuestions = this.currentDeck.questions[categoryname];
-        this.currentQuestions = this.currentQuestions.concat(...arrayOfCategoryQuestions);
+      for (var category in this.currentDeck.questions) {
+        this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
       }
       this.currentQuestions.map(question => question.viewed === false);
       this.currentQuestion = this.getRandomQuestion();
