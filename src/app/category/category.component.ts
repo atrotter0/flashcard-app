@@ -38,7 +38,7 @@ export class CategoryComponent implements OnInit {
     if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
     this.route.params.subscribe(param => {
       this.categoryName = param.category;
-      this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName);
+      this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName, user);
     })
   }
 
