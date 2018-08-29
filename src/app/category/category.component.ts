@@ -46,10 +46,23 @@ export class CategoryComponent implements OnInit {
     this.chosenDeck = deck;
   }
 
+  // runAddQuestionToDeck(question: Question) {
+  //   this.chosenDeck.questions.push(question);
+  //   this.deckService.updateQuestionsInDeck(this.chosenDeck);
+  // }
+
   runAddQuestionToDeck(question: Question) {
-    this.chosenDeck.questions.push(question);
+    for (let i = 0; i < chosenDeck.questions.length; x++) {
+      if (Object.keys(chosenDeck.questions[i])[0].toLowerCase() === question.category.toLowerCase()) {
+        this.chosenDeck[question.category.toLowerCase()].push(question);
+      } else {
+        this.chosenDeck[question.category.toLowerCase()] = [question];
+      }
+    }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
+
+
 
   runDeleteQuestionFromDeck(question: Question) {
     for (let i = 0; i < this.chosenDeck.questions.length; i++) {
