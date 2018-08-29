@@ -9,6 +9,7 @@
 
   <div *ngFor="let deck of decks | async" class="panel panel-default">
     <div class="panel-body">
+      <h3>Test</h3>
       <h3 (click)="goToDeckDetail(deck)"><em>{{deck.name}}</em></h3>
       <button (click)="runDeleteDeck(deck)">Delete</button>
       <hr>
