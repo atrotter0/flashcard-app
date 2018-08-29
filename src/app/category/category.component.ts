@@ -56,18 +56,14 @@ export class CategoryComponent implements OnInit {
   }
 
   runDeleteQuestionFromDeck(question: Question) {
-    for (let i = 0; i < this.chosenDeck.questions.length; i++) {
-      for (let j = 0; j < Object.values(this.chosenDeck.questions[i]).length; j++) {
-        if (Object.values(this.chosenDeck.questions[i])[j] === question) {
-          this.chosenDeck.questions[i][Object.getOwnPropertyNames(this.chosenDeck.questions[i])[0]].splice(j, 1);
-        }
-      }
-    }
+    let categoryArray = this.chosenDeck.questions[question.category.toLowerCase()];
+    let indexOfQuestionToRemove = categoryArray.indexOf(question);
+    this.chosenDeck.questions[question.category.toLowerCase()].splice(indexOfQuestionToRemove, 1);
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runAddAllQuestionsToDeck() {
-    if (question.category.toLowerCase() in this.chosenDeck.questions) {
+    if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
       this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()].push(this.categoryQuestions);
     } else {
       this.chosenDeck.questions[this.categoryQuestions[0].category.toLowerCase()] = [this.categoryQuestions];
@@ -76,11 +72,7 @@ export class CategoryComponent implements OnInit {
   }
 
   runDeleteAllQuestionsFromDeck() {
-    for (let i = 0; i < this.chosenDeck.questions.length; i++) {
-      if (Object.getOwnPropertyNames(this.chosenDeck.questions[i])[0].toLowerCase() === this.categoryQuestions[0].category.toLowerCase()) {
-        this.chosenDeck.questions.splice(i, 1);
-      }
-    }
+    delete this.chosenDeck.questions[this.categoryQuestions[0].category];
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 }
