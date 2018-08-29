@@ -10,6 +10,7 @@ import { User } from '../models/user.model';
 export class AuthenticationService {
   user: Observable<firebase.User>;
   users: FirebaseListObservable<any[]>;
+  localUser: User;
   registrationSuccess: boolean = false;
 
   constructor(public afAuth: AngularFireAuth, public router: Router, private database: AngularFireDatabase) {
@@ -21,8 +22,31 @@ export class AuthenticationService {
     return this.users;
   }
 
+  getUserById(userId: string) {
+    return this.database.object('users/' + userId);
+  }
+
+  getUserByEmail(email: string) {
+    let usersFromDb;
+    this.getAllUsers().subscribe((data) => {
+      usersFromDb = data;
+      this.searchForEmail(usersFromDb, email);
+    });
+  }
+
+  searchForEmail(usersFromDb, email: string) {
+    for (let i = 0; i < usersFromDb.length; i++) {
+      if (usersFromDb[i].email === email) {
+        this.localUser = usersFromDb[i];
+      }
+    }
+  }
+
+  returnUser(foundUser) {
+    return foundUser;
+  }
+
   registerUser(email: string, password: string) {
-    let errorMessage: string;
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
       this.registrationSuccess = true;
       this.loginWithEmail(email, password);
@@ -81,7 +105,11 @@ export class AuthenticationService {
   findUser(usersFromDb: User[], localUser: User) {
     let userFound = false;
     for (let i = 0; i < usersFromDb.length; i++) {
-      if (usersFromDb[i].email === localUser.email) { userFound = true; }
+      if (usersFromDb[i].email === localUser.email) {
+        userFound = true;
+        this.localUser = usersFromDb[i];
+        console.log("checking localUser in authService: " + localUser.email);
+      }
     }
     if (!userFound) { this.createUser(localUser); }
   }
@@ -89,6 +117,7 @@ export class AuthenticationService {
   createUser(userObject) {
     const newUser = new User(userObject.email);
     this.users.push(newUser);
+    this.getUserByEmail(newUser.email);
   }
 
   redirectToDecks() {
