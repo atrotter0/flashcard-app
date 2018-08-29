@@ -42,10 +42,6 @@ const appRoutes: Routes = [
     component: StartComponent
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
     path: 'questions',
     component: QuestionsComponent
   },
