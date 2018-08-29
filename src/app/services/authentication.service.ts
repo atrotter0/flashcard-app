@@ -11,8 +11,6 @@ export class AuthenticationService {
   user: Observable<firebase.User>;
   users: FirebaseListObservable<any[]>;
   registrationSuccess: boolean = false;
-  googleLoginSuccess: boolean = false;
-  emailLoginSuccess: boolean = false;
 
   constructor(public afAuth: AngularFireAuth, public router: Router, private database: AngularFireDatabase) {
     this.user = afAuth.authState;
@@ -22,7 +20,6 @@ export class AuthenticationService {
   registerUser(email: string, password: string) {
     let errorMessage: string;
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
       errorMessage = error.message;
     });
     if (errorMessage === undefined) {
