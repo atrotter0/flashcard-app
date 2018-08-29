@@ -1,10 +1,9 @@
 h3, label, p { color: white; }
-
-input {
-  max-width: 500px;
-  width: 90%;
-
+form p {
+  display: inline-block;
+  margin: 0 10px;
 }
+form button { margin-top: 10px; }
 
 #top-row {
   justify-content: center;
@@ -35,8 +34,15 @@ input {
 
 .fa-google { padding-right: 20px; }
 
-@media screen and (min-width: 870px) {
+.col-9 { max-width: 60%; }
 
+@media screen and (min-width: 870px) {
+  .container-fluid {
+    width: 70%;
+  }
+  .col-9 {
+    max-width: 70%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -46,7 +52,8 @@ input {
 
   .col-9 {
     position: relative;
-    margin-left: -20%
+    margin-left: -20%;
+    max-width: 75%;
   }
 
   input {

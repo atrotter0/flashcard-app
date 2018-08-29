@@ -28,7 +28,8 @@
         </div>
         <button type="button" class="btn btn-info" name="button" (click)="runLoginWithEmail(email.value, password.value); email.value=''; password.value='';">Login</button>
         <button type="button" name="button" (click)="runLogOut()" *ngIf="isLoggedIn">Logout</button>
-        <p>Otherwise, you can <button class="btn btn-outline-info" routerLink="/register">sign up here</button></p>
+        <p>or</p>
+        <button class="btn btn-outline-info" routerLink="/register">sign up here</button>
       </form>
     </div>
   </div>
