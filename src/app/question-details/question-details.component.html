@@ -1,9 +1,9 @@
 <div>
   <h3>{{questionToDisplay?.questionText}}</h3>
-  <h3>{{questionToDisplay?.questionAnswer}}</h3>
+  <h3>{{questionToDisplay?.answerText}}</h3>
   <h3>{{questionToDisplay?.difficulty}}</h3>
   <h3>{{questionToDisplay?.category}}</h3>
 
-<div *ngIf="deckToDisplay">
-  <app-decks-edit [selectedQuestion]="questionToDisplay"></app-decks-edit>
+<div *ngIf="questionToDisplay">
+  <app-question-edit [selectedQuestion]="questionToDisplay"></app-question-edit>
 </div>

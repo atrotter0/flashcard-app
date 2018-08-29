@@ -56,4 +56,12 @@ export class QuestionService {
     let questionEntryInFirebase = this.getQuestionByQuestionKey(questionToDelete.$key);
     questionEntryInFirebase.remove();
   }
+
+  editQuestion(localQuestionToEdit){
+    let questionEntryInFirebase = this.getQuestionByQuestionKey(localQuestionToEdit.$key);
+    questionEntryInFirebase.update({questionText: localQuestionToEdit.questionText,
+                                    answerText: localQuestionToEdit.answerText,
+                                    category: localQuestionToEdit.category,
+                                    difficulty: localQuestionToEdit.difficulty})
+  }
 }

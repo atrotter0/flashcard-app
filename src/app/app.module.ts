@@ -34,6 +34,7 @@ import { RestrictedAccessComponent } from './restricted-access/restricted-access
 import { QuestionAddComponent } from './question-add/question-add.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
+import { QuestionEditComponent } from './question-edit/question-edit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -60,7 +61,8 @@ export const firebaseConfig = {
     RestrictedAccessComponent,
     QuestionAddComponent,
     QuestionsComponent,
-    QuestionDetailsComponent
+    QuestionDetailsComponent,
+    QuestionEditComponent
   ],
   imports: [
     BrowserModule,
