@@ -12,6 +12,9 @@ export class QuestionService {
     this.questions = database.list('questions');
   }
 
+  getAllQuestions(){
+    return this.database.list('questions');
+  }
   getQuestionsByCategory(category: string) {
     let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
@@ -24,6 +27,10 @@ export class QuestionService {
       }
     });
     return categoryQuestions;
+  }
+
+  createQuestion(newQuestion){
+    this.questions.push(newQuestion)
   }
 
 }

@@ -1,0 +1,36 @@
+<h2>New Question</h2>
+<div>
+  <form (ngSubmit)="runCreateQuestion(newQText.value, newQAnswer.value, newQCategory.value, newQDifficulty.value); newQText.value=''; newQAnswer.value=''; newQAnswer.value='';">
+    <div>
+      <label>Question: </label>
+      <br>
+      <input type="text" #newQText>
+    </div>
+    <div>
+      <label>Answer: </label>
+      <br>
+      <input type="text" #newQAnswer>
+    </div>
+    <div>
+      <label>Category: </label>
+      <br>
+      <select #newQCategory>
+        <option value="CSharp">CSharp</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Ruby">Ruby</option>
+        <option value="React">React</option>
+        <option value="Rails">Rails</option>
+      </select>
+    </div>
+    <div>
+        <label>Difficulty: </label>
+        <br>
+        <select #newQDifficulty>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    <button type="submit">Submit</button>
+  </form>
+<div>

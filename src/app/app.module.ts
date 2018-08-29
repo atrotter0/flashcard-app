@@ -31,6 +31,7 @@ import { DecksAddComponent } from './decks-add/decks-add.component';
 import { DecksEditComponent } from './decks-edit/decks-edit.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
 import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
+import { QuestionAddComponent } from './question-add/question-add.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -54,7 +55,8 @@ export const firebaseConfig = {
     BottomDockComponent,
     DecksComponent,
     CategoryComponent,
-    RestrictedAccessComponent
+    RestrictedAccessComponent,
+    QuestionAddComponent
   ],
   imports: [
     BrowserModule,
