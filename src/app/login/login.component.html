@@ -16,7 +16,7 @@
       </div>
     </div>
     <div id="login" class="col-8">
-      <form>
+      <form *ngIf="!user">
         <h3>Log in</h3>
         <div class="form-group">
           <label for="email">Email</label>
@@ -27,10 +27,10 @@
           <input #password class="form-control" type="password" name="password">
         </div>
         <button type="button" class="btn btn-info" name="button" (click)="runLoginWithEmail(email.value, password.value); email.value=''; password.value='';">Login</button>
-        <button type="button" name="button" (click)="runLogOut()" *ngIf="isLoggedIn">Logout</button>
         <p>or</p>
         <button class="btn btn-outline-info" routerLink="/register">sign up here</button>
       </form>
+      <h3 id="loggedInMessage" *ngIf="user">Note to self: add redirect to create a deck info here.</h3>
     </div>
   </div>
 </div>

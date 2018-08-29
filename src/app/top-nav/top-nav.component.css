@@ -10,19 +10,28 @@
   width: 100%;
 }
 
-button span {
-  position: relative;
-  left: -28px;
-  top: -7px;
-  color: white;
-}
-
 button {
   height: 19px;
   width: 18px;
   border-color: white;
   position: absolute;
   right: 30px;
+}
+
+button span {
+  position: relative;
+  left: -28px;
+  top: -7px;
+  color: white;
+  top: -6px;
+}
+
+button#logout {
+  right: 50px;
+}
+
+button#logout span {
+  left: -7px;
 }
 
 button:hover {
