@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
   providers: [AuthenticationService]
 })
-export class LogInComponent implements OnInit {
+export class LoginComponent implements OnInit {
   user;
   private isLoggedIn: Boolean;
   private userName: String;
