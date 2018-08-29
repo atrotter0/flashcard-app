@@ -12,14 +12,16 @@ export class QuestionService {
     this.questions = database.list('questions');
   }
 
-  getQuestionsByCategory(category: string) {
+  getQuestionsByCategory(category: string, user: User) {
     let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
     this.questions.subscribe((data) => {
       localQuestions = data;
       for (let i = 0; i < localQuestions.length; i++) {
         if (localQuestions[i].category.toLowerCase() === category.toLowerCase()) {
-          categoryQuestions.push(localQuestions[i]);
+          if (localQuestions[i].adminCreated || localQuestions[i].userEmail === user.email) {
+            categoryQuestions.push(localQuestions[i]);
+          }  
         }
       }
     });
