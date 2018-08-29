@@ -33,6 +33,7 @@ import { DeckDetailsComponent } from './deck-details/deck-details.component';
 import { RestrictedAccessComponent } from './restricted-access/restricted-access.component';
 import { QuestionAddComponent } from './question-add/question-add.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { QuestionDetailsComponent } from './question-details/question-details.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -58,7 +59,8 @@ export const firebaseConfig = {
     CategoryComponent,
     RestrictedAccessComponent,
     QuestionAddComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    QuestionDetailsComponent
   ],
   imports: [
     BrowserModule,

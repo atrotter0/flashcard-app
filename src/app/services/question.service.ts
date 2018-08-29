@@ -16,6 +16,10 @@ export class QuestionService {
     return this.database.list('questions');
   }
 
+  getQuestionByQuestionKey(questionKey: string){
+    return this.database.object('questions/' + questionKey);
+  }
+
   getQuestionsByCategory(category: string) {
     let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
@@ -46,5 +50,10 @@ export class QuestionService {
 
   createQuestion(newQuestion){
     this.questions.push(newQuestion)
+  }
+
+  deleteQuestion(questionToDelete){
+    let questionEntryInFirebase = this.getQuestionByQuestionKey(questionToDelete.$key);
+    questionEntryInFirebase.remove();
   }
 }

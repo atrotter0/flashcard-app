@@ -16,22 +16,29 @@ import * as firebase from "firebase";
   providers: [QuestionService, AuthenticationService]
 })
 export class QuestionsComponent implements OnInit {
+  userQuestions: Question[];
   private user;
 
   constructor(
-      private router: Router,
-      private route: ActivatedRoute,
-      private location: Location,
-      private qService: QuestionService,
-      public authService: AuthenticationService) { }
-
-  ngOnInit() {
-  }
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location,
+    private qService: QuestionService,
+    public authService: AuthenticationService) { }
 
   ngDoCheck(){
     this.user = firebase.auth().currentUser;
   }
 
-  
+  ngOnInit() {
+      if (this.user !== undefined) { this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email); }
+  }
 
+  goToQuestionDetail(question){
+    this.router.navigate(['questions', question.$key]);
+  }
+
+  runDeleteQuestion(deck: Deck){
+    this.qService.deleteQuestion(deck)
+  }
 }
