@@ -13,6 +13,14 @@ export class QuestionService {
     this.questions = database.list('questions');
   }
 
+  getAllQuestions() {
+    return this.database.list('questions');
+  }
+
+  getQuestionByQuestionKey(questionKey: string){
+    return this.database.object('questions/' + questionKey);
+  }
+
   getQuestionsByCategory(category: string, user: User) {
     let localQuestions: Question[];
     let categoryQuestions: Question[] = [];
@@ -29,4 +37,34 @@ export class QuestionService {
     return categoryQuestions;
   }
 
+  getQuestionsByUserEmail(userEmail) {
+    let localQuestions: Question[];
+    let userQuestions: Question[] = [];
+    this.questions.subscribe((data) =>{
+      localQuestions = data;
+      for (let i = 0; i < localQuestions.length; i++){
+        if(localQuestions[i].userEmail === userEmail){
+          userQuestions.push(localQuestions[i]);
+        }
+      }
+    });
+    return userQuestions;
+  }
+
+  createQuestion(newQuestion){
+    this.questions.push(newQuestion)
+  }
+
+  deleteQuestion(questionToDelete){
+    let questionEntryInFirebase = this.getQuestionByQuestionKey(questionToDelete.$key);
+    questionEntryInFirebase.remove();
+  }
+
+  editQuestion(localQuestionToEdit){
+    let questionEntryInFirebase = this.getQuestionByQuestionKey(localQuestionToEdit.$key);
+    questionEntryInFirebase.update({questionText: localQuestionToEdit.questionText,
+                                    answerText: localQuestionToEdit.answerText,
+                                    category: localQuestionToEdit.category,
+                                    difficulty: localQuestionToEdit.difficulty})
+  }
 }
