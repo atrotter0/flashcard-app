@@ -36,8 +36,4 @@ export class LoginComponent {
   runLogOut(){
     this.authService.logout();
   }
-
-  logged() {
-    return this.isLoggedIn;
-  }
 }
