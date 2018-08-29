@@ -11,18 +11,19 @@ export class AuthenticationService {
   user: Observable<firebase.User>;
   users: FirebaseListObservable<any[]>;
   registrationSuccess: boolean = false;
-  googleLoginSuccess: boolean = false;
-  emailLoginSuccess: boolean = false;
 
   constructor(public afAuth: AngularFireAuth, public router: Router, private database: AngularFireDatabase) {
     this.user = afAuth.authState;
     this.users = this.database.list('users');
   }
 
+  getAllUsers() {
+    return this.users;
+  }
+
   registerUser(email: string, password: string) {
     let errorMessage: string;
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
       errorMessage = error.message;
     });
     if (errorMessage === undefined) {
@@ -31,29 +32,15 @@ export class AuthenticationService {
   }
 
   loginWithGoogle() {
-    let userData;
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(() =>{
-      this.user.subscribe((data) => {
-        userData = data;
-        if (userData.email !== null) {
-          this.addUserToDb();
-          this.redirectToDecks();
-        }
-      });
+      this.subscribeAndCheckUsers();
     });
 
   }
 
   loginWithEmail(email: string, password: string) {
-    let userData;
     this.afAuth.auth.signInWithEmailAndPassword(email, password).then(() => {
-      this.user.subscribe((data) => {
-        userData = data;
-        if (userData.email !== null) {
-          this.addUserToDb();
-          this.redirectToDecks();
-        }
-      });
+      this.subscribeAndCheckUsers();
     });
   }
 
@@ -61,41 +48,50 @@ export class AuthenticationService {
     this.afAuth.auth.signOut();
   }
 
-  addUserToDb() {
-    let usersObservable = this.getAllUsers();
-    let users;
-    usersObservable.subscribe((data) => {
-      users = data;
-      this.findAndCreateUser(users);
-    });
-  }
-
-  getAllUsers() {
-    return this.users;
-  }
-
-  findAndCreateUser(users: User[]) {
-    let userObject;
-    let userFound = false;
+  subscribeAndCheckUsers() {
+    let userData;
     this.user.subscribe((data) => {
-      for (let i = 0; i < users.length; i++) {
-        userObject = data;
-        if (users[i].email === userObject.email) {
-          userFound = true;
-          console.log("user found!");
-        }
-      }
-      if (!userFound) {
-        this.createUser(userObject);
-      }
+      userData = data;
+      this.checkForValidUser(userData);
     });
+  }
+
+  checkForValidUser(userData: User) {
+    if (userData.email !== null) {
+      this.subscribeAndStartUserSearch();
+      this.redirectToDecks();
+    }
+  }
+
+  subscribeAndStartUserSearch() {
+    let usersObservable = this.getAllUsers();
+    let usersFromDb;
+    usersObservable.subscribe((data) => {
+      usersFromDb = data;
+      this.findAndCreateUser(usersFromDb);
+    });
+  }
+
+  findAndCreateUser(usersFromDb: User[]) {
+    let localUser;
+    this.user.subscribe((data) => {
+      localUser = data;
+      this.findUser(usersFromDb, localUser);
+    });
+  }
+
+  findUser(usersFromDb: User[], localUser: User) {
+    let userFound = false;
+    for (let i = 0; i < usersFromDb.length; i++) {
+      if (usersFromDb[i].email === localUser.email) { userFound = true; }
+    }
+    if (!userFound) { this.createUser(localUser); }
   }
 
   createUser(userObject) {
     const newUser = new User(userObject.email);
     this.users.push(newUser);
   }
-
 
   redirectToDecks() {
     this.router.navigate(['decks']);
