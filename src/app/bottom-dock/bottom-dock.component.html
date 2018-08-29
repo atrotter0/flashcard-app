@@ -1,5 +1,6 @@
-<div class="container-fluid">
-  <div class="row">
+<div *ngIf="user">
+  <div class="container-fluid">
+    <div class="row">
       <select (change)="select($event.target.value)" #selection>
         <option>Deck 2</option>
         <option>Deck 3</option>
@@ -15,11 +16,13 @@
         </div>
       </form>
     </div>
-  <div id="tags" class="row">
-    <!-- <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">Intro</div>
-      <div class="circle"></div>
-    </div> -->
+ 
+    <div id="tags" class="row">
+      <!-- <div class="tag">
+        <div class="triangle"></div>
+        <div class="rectangle">Intro</div>
+        <div class="circle"></div>
+      </div> -->
+    </div>
   </div>
 </div>

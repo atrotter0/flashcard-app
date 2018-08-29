@@ -16,12 +16,9 @@ export class BottomDockComponent implements OnInit {
   private user;
   creatingDeck: boolean = false;
 
-  constructor(private deckService: DeckService, public authService: AuthenticationService) {
+  constructor(private deckService: DeckService, public authService: AuthenticationService) { }
 
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
@@ -44,5 +41,4 @@ export class BottomDockComponent implements OnInit {
   tossDeck(deckId) {
     console.log(deckId);
   }
-
 }

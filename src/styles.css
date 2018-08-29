@@ -4,3 +4,7 @@ body {
   font-family: 'Alegreya Sans', cursive;
   user-select: none;
 }
+
+.center {
+  text-align: center;
+}
