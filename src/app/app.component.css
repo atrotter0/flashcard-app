@@ -3,7 +3,7 @@
   display: grid;
   overflow-x: hidden;
   grid-template-columns: 200px auto;
-  grid-template-rows: 50px auto 250px;
+  grid-template-rows: 50px calc(100vh - 300px) 250px;
   grid-template-areas: "top top"
                        "side body"
                        "side bottom-dock";
@@ -19,7 +19,10 @@
 .body {
   grid-area: body;
   background-color: #303335;
+  overflow-y: auto;
 }
+::-webkit-scrollbar { width: .5em; }
+::-webkit-scrollbar-thumb { background-color: #69b7e6; }
 .bottom-dock {
   grid-area: bottom-dock;
   background-color: #303335;

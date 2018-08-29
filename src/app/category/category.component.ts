@@ -38,43 +38,49 @@ export class CategoryComponent implements OnInit {
     if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
     this.route.params.subscribe(param => {
       this.categoryName = param.category;
-      this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName);
-    });
+      this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName, this.user);
+    })
   }
 
   setChosenDeck(deck: Deck) {
     this.chosenDeck = deck;
   }
 
+  getCategoryAndLowerCase(question: Question) {
+    return question.category.toLowerCase();
+  }
+
+  getCategoryFromCategoryQuestionsAndLowerCase() {
+    return this.categoryQuestions[0].category.toLowerCase();
+  }
+
   runAddQuestionToDeck(question: Question) {
-    this.chosenDeck.questions.push(question);
+    if (this.getCategoryAndLowerCase(question) in this.chosenDeck.questions) {
+      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].push(question);
+    } else {
+      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)] = [question];
+    }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteQuestionFromDeck(question: Question) {
-    for (let i = 0; i < this.chosenDeck.questions.length; i++) {
-      if (this.chosenDeck.questions[i] === question) {
-        this.chosenDeck.questions.splice(i, 1);
-      }
-      this.deckService.updateQuestionsInDeck(this.chosenDeck);
-    }
+    let categoryArray = this.chosenDeck.questions[this.getCategoryAndLowerCase(question)];
+    let indexOfQuestionToRemove = categoryArray.indexOf(question);
+    this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].splice(indexOfQuestionToRemove, 1);
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runAddAllQuestionsToDeck() {
-    for (let i = 0; i < this.categoryQuestions.length; i++) {
-      this.chosenDeck.questions.push(this.categoryQuestions[i]);
+    if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
+      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()].push(this.categoryQuestions);
+    } else {
+      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()] = [this.categoryQuestions];
     }
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteAllQuestionsFromDeck() {
-    for (let i = 0; i < this.categoryQuestions.length; i++) {
-      for (let j = 0; j < this.chosenDeck.questions.length; j++) {
-        if (this.chosenDeck.questions[j] === this.categoryQuestions[i]) {
-          this.chosenDeck.questions.splice(j, 1);
-        }
-      }
-    }
+    delete this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()];
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 }

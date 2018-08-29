@@ -1,10 +1,11 @@
 h3, label, p { color: white; }
-
-input {
-  max-width: 500px;
-  width: 90%;
-
+form p {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  top: 5px;
 }
+form button { margin-top: 10px; }
 
 #top-row {
   justify-content: center;
@@ -12,7 +13,7 @@ input {
 }
 
 #or {
-    margin-left: 20%;
+    margin-left: 30%;
     background-color: #303335;
     z-index: 1;
     text-align: center;
@@ -29,14 +30,21 @@ input {
 }
 
 #greeting {
-  margin-left: 15%;
-  margin-right: 17%;
+  margin-left: 16%;
+  margin-right: 10%;
 }
 
 .fa-google { padding-right: 20px; }
 
-@media screen and (min-width: 870px) {
+#login { max-width: 60%; }
 
+@media screen and (min-width: 870px) {
+  .container-fluid {
+    max-width: 800px;
+  }
+  #login {
+    max-width: 60%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -44,9 +52,10 @@ input {
     display: none;
   }
 
-  .col-9 {
+  #login {
     position: relative;
-    margin-left: -20%
+    margin-left: -20%;
+
   }
 
   input {

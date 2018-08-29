@@ -3,6 +3,14 @@
   margin: 10px;
 }
 
-p {
-  display: inline-block;
+p { display: inline-block; }
+ul { padding-top: 30px; }
+
+#header {
+  background-color: #303335;
+  position: fixed;
+  width: calc(100% - 208px);
+  height: 300;
+  top: 40px;
+  right: -2px;
 }

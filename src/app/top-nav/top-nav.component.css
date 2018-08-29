@@ -10,13 +10,6 @@
   width: 100%;
 }
 
-button span {
-  position: relative;
-  left: -28px;
-  top: -7px;
-  color: white;
-}
-
 button {
   height: 19px;
   width: 18px;
@@ -25,9 +18,32 @@ button {
   right: 30px;
 }
 
+button span {
+  position: relative;
+  left: -28px;
+  top: -7px;
+  color: white;
+  top: -6px;
+}
+
+button#logout {
+  right: 50px;
+}
+
+button#logout span {
+  left: -7px;
+}
+
 button:hover {
   background-color: #3d8fa285;
   border-color: white;
+}
+
+#email {
+  position: absolute;
+  right: 83px;
+  top: 15px;
+  font-size: 14px;
 }
 
 #settings {

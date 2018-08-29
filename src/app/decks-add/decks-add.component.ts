@@ -5,6 +5,7 @@ import { User } from '../models/user.model';
 import { Question } from '../models/question.model';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-decks-add',
@@ -16,7 +17,11 @@ export class DecksAddComponent implements OnInit {
   private user;
   localUser: User;
 
-  constructor(public deckService: DeckService, public authService: AuthenticationService) {}
+  constructor(
+    public deckService: DeckService,
+    public authService: AuthenticationService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.user = firebase.auth().currentUser;
@@ -36,5 +41,10 @@ export class DecksAddComponent implements OnInit {
     }
     this.localUser.decks.push(newDeck);
     this.deckService.addDeckToUser(this.localUser);
+    this.goToDeckDetail();
+
+  }
+  goToDeckDetail(){
+    this.router.navigate(['decks']);
   }
 }

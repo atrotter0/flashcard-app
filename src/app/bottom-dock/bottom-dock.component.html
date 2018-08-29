@@ -1,39 +1,28 @@
-<div class="container-fluid">
-  <div class="row">
-    <div ngbDropdown>
-      <button class="btn btn-link" ngbDropdownToggle>Deck 1</button><button class="btn btn-outline-danger btn-sm">Remove Deck</button>
-      <div ngbDropdownMenu>
-        <button class="dropdown-item">Deck 2</button>
-        <button class="dropdown-item">Deck 3</button>
-        <button class="dropdown-item">Create New Deck +</button>
-      </div>
+<div *ngIf="user">
+  <div class="container-fluid">
+    <div class="row">
+      <select (change)="select($event.target.value)" #selection>
+        <option>Deck 2</option>
+        <option>Deck 3</option>
+        <option value="$creating">Create New Deck</option>
+      </select>
+      <button class="btn btn-outline-danger btn-sm" [hidden]="creatingDeck" (click)="tossDeck(selection.value)">Remove Deck</button>
+      <form [hidden]="!creatingDeck">
+        <div class="input-group">
+          <input type="text" placeholder="Deck name" #deckName>
+          <div class="input-group-append">
+            <button class="btn btn-info btn-sm" (click)="runCreateDeck(deckName.value); deckName.value= ''">Create</button>
+          </div>
+        </div>
+      </form>
     </div>
-  </div>
-  <div id="tags" class="row">
-    <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">Intro</div>
-      <div class="circle"></div>
-    </div>
-    <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">C#</div>
-      <div class="circle"></div>
-    </div>
-    <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">Ruby</div>
-      <div class="circle"></div>
-    </div>
-    <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">JS</div>
-      <div class="circle"></div>
-    </div>
-    <div class="tag">
-      <div class="triangle"></div>
-      <div class="rectangle">React</div>
-      <div class="circle"></div>
+ 
+    <div id="tags" class="row">
+      <!-- <div class="tag">
+        <div class="triangle"></div>
+        <div class="rectangle">Intro</div>
+        <div class="circle"></div>
+      </div> -->
     </div>
   </div>
 </div>

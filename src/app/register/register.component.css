@@ -1,0 +1,20 @@
+h3, label { color: white; }
+button { margin-top: 10px; }
+
+.container-fluid {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.error-message {
+  color: #ef7b7b;
+  margin-top: 5px;
+  /* position: absolute;
+  transform: translate(470px, -30px); */
+}
+
+@media screen and (min-width: 870px) {
+  .container-fluid {
+    max-width: 500px;
+  }
+}

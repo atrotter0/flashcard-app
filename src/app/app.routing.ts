@@ -7,7 +7,6 @@ import { DecksComponent } from './decks/decks.component';
 import { DeckDetailsComponent } from './deck-details/deck-details.component';
 import { StartComponent } from './start/start.component';
 import { DecksAddComponent } from './decks-add/decks-add.component';
-import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { QuestionAddComponent } from './question-add/question-add.component';
 import { QuestionsComponent } from './questions/questions.component';
@@ -15,7 +14,7 @@ import { QuestionsComponent } from './questions/questions.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
