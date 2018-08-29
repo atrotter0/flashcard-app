@@ -10,11 +10,14 @@ import * as firebase from 'firebase';
 })
 export class TopNavComponent implements OnInit {
   private user;
+  email: string;
 
   constructor(public authService: AuthenticationService) {}
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
+    if (this.user) this.email = this.user.email;
+
   }
 
   ngOnInit() {

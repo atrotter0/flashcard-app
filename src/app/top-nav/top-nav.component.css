@@ -39,6 +39,13 @@ button:hover {
   border-color: white;
 }
 
+#email {
+  position: absolute;
+  right: 83px;
+  top: 15px;
+  font-size: 14px;
+}
+
 #settings {
   margin-left: 20px;
   cursor: pointer;
