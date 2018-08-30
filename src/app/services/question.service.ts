@@ -52,7 +52,7 @@ export class QuestionService {
   }
 
   createQuestion(newQuestion){
-    this.questions.push(newQuestion)
+    this.questions.push(newQuestion);
   }
 
   deleteQuestion(questionToDelete){

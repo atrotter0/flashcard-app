@@ -47,7 +47,7 @@ export class DecksComponent implements OnInit {
   }
 
   goToDeckDetail(deck) {
-    this.router.navigate(['decks', deck.$key]);
+    this.router.navigate(['decks/', deck.$key]); //set prop in db
   }
 
   goToDeckStart(deck) {
