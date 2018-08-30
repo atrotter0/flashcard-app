@@ -17,7 +17,7 @@ export class StartComponent implements OnInit {
   currentDeck: Deck;
   currentQuestions: Question[];
   currentQuestion: Question;
-  deckId: number;
+  deckId: string;
   questionsLeft: Question[];
   questionsDone: number[];
 
@@ -31,7 +31,7 @@ export class StartComponent implements OnInit {
     let deckObserbable: FirebaseObjectObservable<any>;
 
     this.route.params.forEach((urlParameters) => {
-      this.deckId = parseInt(urlParameters['id']);
+      this.deckId = urlParameters['id'];
     });
     deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
     deckObserbable.subscribe((data) => {
@@ -89,6 +89,6 @@ export class StartComponent implements OnInit {
   }
 
   getPic() {
-    return "assets/card.gif" ;
+    return "assets/card.gif";
   }
 }

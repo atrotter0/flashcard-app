@@ -7,6 +7,7 @@
   <div *ngFor="let deck of userDeckList" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDeckDetail(deck)"><em>{{deck?.name}}</em></h3>
+      <button (click)="runQuiz(deck)">Quiz Me</button>
       <button (click)="runDeleteDeck(deck)">Delete</button>
       <hr>
       <br>

@@ -66,8 +66,8 @@ export class DecksComponent implements OnInit {
     this.router.navigate(['decks/', deck.$key]);
   }
 
-  goToDeckStart(deck) {
-    this.router.navigate(['decks/start', deck.$key])
+  runQuizMe(deck) {
+    this.router.navigate(['decks/quiz/', deck.$key])
   }
 
   runDeleteDeck(deck: Deck) {
