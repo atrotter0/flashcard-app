@@ -8,6 +8,7 @@ import { DeckService } from '../services/deck.service';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { PiggybackService } from '../services/piggyback.service';
 
 @Component({
   selector: 'app-category',
@@ -32,9 +33,23 @@ export class CategoryComponent implements OnInit {
     private location: Location,
     private questionService: QuestionService,
     private deckService: DeckService,
-    private database: AngularFireDatabase
+    private database: AngularFireDatabase,
+    private piggyBackService: PiggybackService
   ) {
     this.categories = database.list('categories');
+    this.piggyBackService.message.subscribe(data => {
+      this.userDecks = data.userDecks;
+      if(data.content.substring(0, 3) == "-LL") {
+        let match = this.userDecks.filter(deck => {
+          // console.log(deck.$key);
+          // console.log(data.content);
+          // ignore atom errors on $key
+          return deck.$key === data.content;
+        })
+        this.chosenDeck = match[0];
+        console.log(this.chosenDeck);
+      };
+    })
   }
 
   ngDoCheck() {
@@ -45,11 +60,9 @@ export class CategoryComponent implements OnInit {
     if (this.user !== undefined) {
     this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
     this.route.params.subscribe(param => {
-
       this.categoryName = param.category;
       this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName, this.user);
       this.updateTitle();
-
     })
   }
 
@@ -103,5 +116,9 @@ export class CategoryComponent implements OnInit {
   runDeleteAllQuestionsFromDeck() {
     delete this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()];
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
+  }
+
+  tester(x) {
+    console.log(x);
   }
 }

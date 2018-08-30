@@ -22,7 +22,7 @@ export class BottomDockComponent implements OnInit {
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
     this.piggyBackService.message.subscribe(data => {
       if (data.content == "Here's a deck") {
-        this.decks = data.userDecks;        
+        this.decks = data.userDecks;
       }
     })
   }
@@ -38,7 +38,11 @@ export class BottomDockComponent implements OnInit {
 
   select(value) {
     if (value == '$creating') this.creatingDeck = true;
-    else this.creatingDeck = false;
+    else {
+      this.creatingDeck = false;
+      // console.log(value);
+      this.piggyBackService.change(value);
+    }
   }
 
   runCreateDeck(value) {
