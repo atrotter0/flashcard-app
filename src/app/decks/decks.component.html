@@ -1,13 +1,10 @@
 <div *ngIf="!user">
   <app-restricted-access></app-restricted-access>
 </div>
-
 <div *ngIf="user">
   <h2>Decks</h2>
-
   <button routerLink="/decks/new">Add Deck</button>
-
-  <div *ngFor="let deck of userDecks" class="panel panel-default">
+  <div *ngFor="let deck of userDeckList" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToDeckDetail(deck)"><em>{{deck?.name}}</em></h3>
       <button (click)="runDeleteDeck(deck)">Delete</button>
