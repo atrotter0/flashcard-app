@@ -5,6 +5,7 @@ import { Deck } from '../models/deck.model';
 import { Question } from '../models/question.model';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from 'firebase';
+import { PiggybackService } from '../services/piggyback.service';
 
 @Component({
   selector: 'app-bottom-dock',
@@ -15,10 +16,19 @@ import * as firebase from 'firebase';
 export class BottomDockComponent implements OnInit {
   private user;
   creatingDeck: boolean = false;
+  decks;
 
-  constructor(private deckService: DeckService, public authService: AuthenticationService) { }
+  constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
+    this.piggyBackService.message.subscribe(data => {
+      if (data.content == "Here's a deck") {
+        this.decks = data.userDecks;
+      }
+    })
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
@@ -30,10 +40,7 @@ export class BottomDockComponent implements OnInit {
   }
 
   runCreateDeck(deckName) {
-    let newDeck = new Deck(deckName, this.user.email);
-    this.deckService.createDeck(newDeck);
-    this.user.decks.push(newDeck);
-    this.deckService.addDeckToUser(this.user);
+
   }
 
   tossDeck(deckId) {
