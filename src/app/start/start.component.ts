@@ -40,17 +40,20 @@ export class StartComponent implements OnInit {
   initQuiz(deckObservable: FirebaseObjectObservable<any>) {
     deckObservable.subscribe((data) => {
       this.currentDeck = data;
+      console.log("current Deck: " + JSON.stringify(this.currentDeck));
       this.setQuestionsForCategory();
       this.resetDisplays()
       this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
+      console.log("current question: " + JSON.stringify(this.currentQuestion));
     });
   }
 
   setQuestionsForCategory() {
     for (var category in this.currentDeck.questions) {
-      this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
+      this.currentQuestions = this.currentQuestions.concat(this.currentDeck.questions[category]);
     }
+    console.log("currentQuestions: " + JSON.stringify(this.currentQuestions));
   }
 
   resetDisplays() {
@@ -71,6 +74,7 @@ export class StartComponent implements OnInit {
 
   getRandomQuestion() {
     let question = this.currentQuestions[this.randomNumberForRandomQuestions()];
+    console.log("random question: " + question);
     return question;
   }
 

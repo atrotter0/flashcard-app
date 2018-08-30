@@ -1,14 +1,14 @@
 <div>
   <div>
-    <img *ngFor="let number of questionsLeft" src='{{getPic()}}'>
+    <!-- <img *ngFor="let number of questionsLeft" src='{{getPic()}}'> -->
   </div>
   <div>
-    <p>The question will go here</p>
+    <p>{{currentQuestion.questionText}}</p>
     <button>Show answer</button>
     <button>Next</button>
     <button>Start Over</button>
   </div>
   <div>
-    <img *ngFor="let number of questionsDone" src='{{getPic()}}'>
+    <!-- <img *ngFor="let number of questionsDone" src='{{getPic()}}'> -->
   </div>
 </div>
