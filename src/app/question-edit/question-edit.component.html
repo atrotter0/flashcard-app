@@ -1,28 +1,29 @@
-<h1>Edit Question</h1>
-<form (ngSubmit)="runEditQuestion(selectedQuestion)">
-  <div>
-    <label for="name">Question</label>
-    <input [(ngModel)]="selectedQuestion.questionText" class="form-control" name="question" id="question" >
-  </div>
-  <div>
-    <label for="name">Answer</label>
-    <input [(ngModel)]="selectedQuestion.answerText" class="form-control" name="answer" id="answer" >
-  </div>
-  <div>
-    <label>Category: </label>
-    <br>
-    <select [(ngModel)]="selectedQuestion.category" name="category">
-      <option value="{{name}}" *ngFor="let name of categoryNames">{{name}}</option>
-    </select>
-  </div>
-  <div>
-    <label>Difficulty: </label>
-    <br>
-    <select [(ngModel)]="selectedQuestion.difficulty" name="difficulty">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
-  </div>
-  <button type="submit">Submit</button>
-</form>
+<div id="main">
+  <h1>Edit Question</h1>
+  <form (ngSubmit)="runEditQuestion(selectedQuestion)">
+    <div class="form-group">
+      <label for="name">Question</label>
+      <input class="form-control" [(ngModel)]="selectedQuestion.questionText" class="form-control" name="question" id="question" >
+    </div>
+    <div class="form-group">
+      <label for="name">Answer</label>
+      <input class="form-control" [(ngModel)]="selectedQuestion.answerText" class="form-control" name="answer" id="answer" >
+    </div>
+    <div class="form-group">
+      <label>Category: </label>
+      <select class="form-control" [(ngModel)]="selectedQuestion.category" name="category">
+        <option value="{{name}}" *ngFor="let name of categoryNames">{{name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Difficulty: </label>
+      <select class="form-control" [(ngModel)]="selectedQuestion.difficulty" name="difficulty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <button class="btn btn-info" type="submit">Submit</button>
+  </form>
+
+</div>
