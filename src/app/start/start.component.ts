@@ -18,6 +18,8 @@ export class StartComponent implements OnInit {
   currentQuestions: Question[];
   currentQuestion: Question;
   deckId: number;
+  questionsLeft: Question[];
+  questionsDone: number[];
 
   constructor(
     private route: ActivatedRoute,
@@ -37,15 +39,22 @@ export class StartComponent implements OnInit {
       for (var category in this.currentDeck.questions) {
         this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
       }
+      this.resetDisplays()
       this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
     });
+  }
+
+  resetDisplays() {
+    this.questionsLeft = this.currentQuestions;
+    this.questionsDone = [];
   }
 
   resetQuestions() {
     for (let i = 0; i < this.currentQuestions.length; i++) {
       this.currentQuestions[i].viewed = false;
     }
+    this.resetDisplays()
   }
 
   randomNumberForRandomQuestions() {
@@ -61,6 +70,8 @@ export class StartComponent implements OnInit {
     this.currentQuestion.viewed = true;
     this.currentQuestions = this.currentQuestions.filter(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
+    this.questionsLeft.splice(0, 1);
+    this.questionsDone.push(0);
   }
 
   showAnswer() {
@@ -77,5 +88,7 @@ export class StartComponent implements OnInit {
     this.currentQuestion = this.getRandomQuestion();
   }
 
-
+  getPic() {
+    return "assets/card.gif" ;
+  }
 }

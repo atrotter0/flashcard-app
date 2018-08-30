@@ -5,6 +5,7 @@ import { Deck } from '../models/deck.model';
 import { Question } from '../models/question.model';
 import { QuestionService } from '../services/question.service';
 import { DeckService } from '../services/deck.service';
+import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
 
 @Component({
@@ -13,7 +14,8 @@ import * as firebase from "firebase";
   styleUrls: ['./category.component.css'],
   providers: [
     QuestionService,
-    DeckService
+    DeckService,
+    AuthenticationService
   ]
 })
 export class CategoryComponent implements OnInit {
