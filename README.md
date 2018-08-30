@@ -4,7 +4,7 @@
 
 #### David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown
 
-<img height="300" src="/Users/Guest/Desktop/flashcard-app/src/assets/Screen Shot .png">
+<img height="300" src="src/assets/Screen%20Shot%20.png">
 
 
 ## Description
