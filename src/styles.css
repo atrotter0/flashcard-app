@@ -17,3 +17,13 @@ h1, h2, em, hr {
 .bold {
   font-weight: bold;
 }
+
+.deck-form {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.page-container {
+  margin: 20px;
+}

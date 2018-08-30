@@ -1,6 +1,6 @@
-<div id="main">
+<div id="page-container">
   <h1>Edit Question</h1>
-  <form (ngSubmit)="runEditQuestion(selectedQuestion)">
+  <form (ngSubmit)="runEditQuestion(selectedQuestion)" class="deck-form">
     <div class="form-group">
       <label for="name">Question</label>
       <input class="form-control" [(ngModel)]="selectedQuestion.questionText" class="form-control" name="question" id="question" >
