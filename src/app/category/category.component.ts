@@ -125,18 +125,15 @@ export class CategoryComponent implements OnInit {
     if(!this.chosenDeck.questions) {
       this.chosenDeck.questions = {}; // this block of code should be modulated, or just built in
     }
-
     if(!this.chosenDeck.questions[category]) {
       this.chosenDeck.questions[category] = [];
     }
-
     this.categoryQuestions.forEach(question => {
       question.bookmark = boolean;
       if (boolean) this.chosenDeck.questions[category].push(question);
       else this.chosenDeck.questions[category].pop();
     })
 
-    console.log(this.chosenDeck.questions);
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
@@ -147,18 +144,13 @@ export class CategoryComponent implements OnInit {
 
   toggleQuestionOnDeck(question) {
     question.bookmark = !question.bookmark;
-    console.log(this.categoryQuestions);
     let category = this.categoryQuestions[0].category;
-    console.log(category);
-
     if(!this.chosenDeck.questions) {
       this.chosenDeck.questions = {};
     }
-
     if(!this.chosenDeck.questions[category]) {
       this.chosenDeck.questions[category] = [];
     }
-
     for(let i = 0; i < this.chosenDeck.questions[category].length; i++) {
       if (question.$key == this.chosenDeck.questions[category][i].$key) {
         this.chosenDeck.questions[category].splice(i, 1);
@@ -166,23 +158,7 @@ export class CategoryComponent implements OnInit {
         return;
       }
     }
-
     this.chosenDeck.questions[category].push(question);
-
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
-
-    console.log(this.chosenDeck.questions);
-    // console.log(category);
-    // if(this.chosenDeck.questions) {
-    //   if (this.chosenDeck.questions[category])
-    //   this.chosenDeck.questions[category].push(question);
-    // }
-    // else {
-    //   //
-    //   this.chosenDeck.questions = {};
-    //   this.chosenDeck.questions[category] = [question];
-    // }
-    // console.log(this.chosenDeck.questions);
-
   }
 }

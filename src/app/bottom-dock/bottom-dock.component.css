@@ -26,7 +26,7 @@ select {
 
 .tag {
   display: flex;
-  top: -3px;
+  top: 20px;
   position: relative;
   margin-bottom: 15px;
 }

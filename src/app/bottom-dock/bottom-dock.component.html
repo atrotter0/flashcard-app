@@ -19,11 +19,11 @@
 
 
     <div id="tags" class="row">
-      <!-- <div class="tag">
+      <div *ngFor="let tag of tags" class="tag">
         <div class="triangle"></div>
-        <div class="rectangle">Intro</div>
+        <div class="rectangle">{{tag}}</div>
         <div class="circle"></div>
-      </div> -->
+      </div>
     </div>
   </div>
 </div>

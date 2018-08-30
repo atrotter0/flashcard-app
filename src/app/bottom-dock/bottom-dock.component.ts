@@ -21,6 +21,7 @@ export class BottomDockComponent implements OnInit {
   chosenDeck: Deck;
   usersDecks;
   deck;
+  tags = [];
 
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
 
@@ -32,8 +33,6 @@ export class BottomDockComponent implements OnInit {
           this.decks.push(entry[1]);
         }
       })
-      console.log(this.user.email);
-      console.log(this.decks);
     });
   }
 
@@ -53,10 +52,13 @@ export class BottomDockComponent implements OnInit {
       this.decks.forEach(deck => {
 
         if (deck.$key == value ) {
-          console.log(value);
-          console.log(deck);
           this.chosenDeck = deck;
           this.piggyBackService.chooseDeck(deck);
+          this.tags = [];
+          Object.entries(this.chosenDeck.questions).forEach(category => {
+            this.tags.push(category[0]);
+          });
+
         }
       })
 
@@ -76,7 +78,6 @@ export class BottomDockComponent implements OnInit {
         i = this.decks.length + 1;
       }
     }
-    console.log(this.decks.length);
     if (this.decks.length == 0) {
       this.creatingDeck = true;
     }
