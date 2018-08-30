@@ -39,17 +39,24 @@ export class CategoryComponent implements OnInit {
     this.categories = database.list('categories');
     this.piggyBackService.message.subscribe(data => {
       this.userDecks = data.userDecks;
-      if(data.content.substring(0, 3) == "-LL") {
-        let match = this.userDecks.filter(deck => {
-          // console.log(deck.$key);
-          // console.log(data.content);
-          // ignore atom errors on $key
-          return deck.$key === data.content;
-        })
-        this.chosenDeck = match[0];
-        console.log("Current chosen deck: ");
-        console.log(this.chosenDeck);
-      };
+      console.log("grabbing: ");
+      console.log(data.chosenDeck);
+      this.chosenDeck = data.chosenDeck;
+      // if(data.content.substring(0, 3) == "-LL") {
+      //   let match = this.userDecks.filter(deck => {
+      //     // console.log(deck.$key);
+      //     // console.log(data.content);
+      //     // ignore atom errors on $key
+      //     return deck.$key === data.content;
+      //   })
+      //
+      //   this.chosenDeck = match[0];
+      //
+      //
+      //
+      //   console.log("Current chosen deck: ");
+      //   console.log(this.chosenDeck);
+      // };
     })
   }
 
@@ -105,7 +112,7 @@ export class CategoryComponent implements OnInit {
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
-  runAddAllQuestionsToDeck() {
+  markAllQuestionsTo(boolean) {
     let category = this.categoryQuestions[0].category;
     console.log(category);
     // if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
@@ -124,11 +131,13 @@ export class CategoryComponent implements OnInit {
     }
 
     this.categoryQuestions.forEach(question => {
-      question.bookmark = !question.bookmark;
-      this.chosenDeck.questions[category].push(question);
+      question.bookmark = boolean;
+      if (boolean) this.chosenDeck.questions[category].push(question);
+      else this.chosenDeck.questions[category].pop();
     })
 
     console.log(this.chosenDeck.questions);
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteAllQuestionsFromDeck() {
@@ -159,6 +168,8 @@ export class CategoryComponent implements OnInit {
     }
 
     this.chosenDeck.questions[category].push(question);
+
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
 
     console.log(this.chosenDeck.questions);
     // console.log(category);

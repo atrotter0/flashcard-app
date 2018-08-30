@@ -28,6 +28,27 @@ export class DeckService {
     return decks;
   }
 
+  getDecksByEmail(email) {
+    let decks: Deck[] = [];
+    this.database.object('decks').subscribe(res => {
+      // res.forEach(deck => {
+      //   if (deck.userEmail == email) {
+      //     decks.push(deck);
+      //   }
+      //   console.log(decks);
+      //   return decks;
+      // });
+      Object.entries(res).forEach(entry => {
+        if(entry[1].userEmail == email) {
+          decks.push(entry[1]);
+        }
+      })
+      return decks;
+      // console.log(decks);
+      // console.log(res);
+    })
+  }
+
   getUserById(userId: string) {
     return this.database.object('users/' + userId);
   }
@@ -52,6 +73,8 @@ export class DeckService {
   }
 
   updateQuestionsInDeck(localDeck) {
+    console.log("trying to update deck");
+    console.log(localDeck);
     let deckEntryInFirebase = this.getDeckByDeckId(localDeck.$key);
     deckEntryInFirebase.update({questions: localDeck.questions});
   }
