@@ -1,0 +1,95 @@
+.container-fluid {
+  position: relative;
+}
+
+.row {
+  position: absolute;
+  align-items: center;
+  height: 50px;
+  right: 50px;
+  width: 100%;
+}
+
+.btn-link {
+  color: white;
+}
+
+#login, #logout {
+  height: 19px;
+  width: 18px;
+  border-color: white;
+  position: absolute;
+  right: 30px;
+}
+
+button span {
+  position: relative;
+  left: -28px;
+  color: white;
+  top: -5px;
+}
+
+button#logout {
+  right: 50px;
+}
+
+button#logout span {
+  left: -7px;
+}
+
+button:hover {
+  background-color: #3d8fa285;
+  border-color: white;
+}
+
+#email {
+  position: absolute;
+  right: 83px;
+  top: 15px;
+  font-size: 14px;
+}
+
+#settings {
+  margin-left: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+#decks {
+  margin-left: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 80px;
+}
+
+#questions {
+  margin-left: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+}
+
+#collapse {
+  display: none;
+  cursor: pointer;
+}
+
+#logo {
+  display: inline;
+  position: absolute;
+  left: 100px;
+}
+
+@media screen and (max-height: 630px), screen and (max-width: 800px) {
+  #collapse {
+    display: inline;
+    position: absolute;
+    left: 40px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+}

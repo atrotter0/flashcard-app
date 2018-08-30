@@ -1,27 +1,65 @@
 # FlashcardApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown
 
-## Code scaffolding
+<img height="300" src="src/assets/Screen%20Shot%20.png">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Description
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+A flash card Web application that allows a user to use, create, delete, and edit note cards.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Setup on OSX
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Install Node.js.
+* Install Angular CLI 1.6.5.
+* Clone the project repo.
+* Run `npm install` from project directory.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Run `ng test` to execute the unit tests via Karma.
+* Run `ng e2e` to execute the end-to-end tests via Protractor.
+
+## Contribution Requirements
+
+
+1. Clone the repo
+1. Make a new branch
+1. Commit and push your changes
+1. Create a PR
+
+
+## Technologies Used
+
+* Angular v5.2.0
+* HTML5/CSS3
+* Bootstrap
+* ES6
+* Typescipt
+* Node.js
+* Jasmine
+* Karma
+* TSLint
+
+## Links
+
+## Support and Contact Details
+
+
+
+If you have find issues, ideas to improve the app, or concerns.  Please feel free to ![submit and issue to the github in the issues page.](/issues)
+
+## License
+
+
+
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2018 **David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown**

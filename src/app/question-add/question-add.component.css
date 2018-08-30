@@ -1,0 +1,16 @@
+#main{
+  text-align: center;
+}
+
+button{
+  margin-top: 10px;
+}
+
+label{
+  color: white;
+}
+
+.form-control {
+  max-width: 50%;
+  margin: 0 auto;
+}

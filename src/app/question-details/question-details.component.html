@@ -1,0 +1,15 @@
+<div>
+  <h1>Details:</h1>
+  <h3>Question:</h3>
+  <h5>{{questionToDisplay?.questionText}}</h5>
+  <h3>Answer:</h3>
+  <h5>{{questionToDisplay?.answerText}}</h5>
+  <h3>Difficulty:</h3>
+  <h5>{{questionToDisplay?.difficulty}}</h5>
+  <h3>Category:</h3>
+  <h5>{{questionToDisplay?.category}}</h5>
+  <hr>
+  <br>
+<div *ngIf="questionToDisplay">
+  <app-question-edit [selectedQuestion]="questionToDisplay"></app-question-edit>
+</div>

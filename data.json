@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "name": "Intro"
+    },
+    {
+      "name": "CSharp"
+    },
+    {
+      "name": "Ruby"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "Rails"
+    }
+  ]
+}

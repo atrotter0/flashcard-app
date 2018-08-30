@@ -1,0 +1,58 @@
+form {
+  display: inline-block;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  color: #69b7e6;
+  margin-right: 40px;
+}
+
+#tags {
+  position: relative;
+  top: 10px;
+  width: 200px;
+}
+
+.container-fluid {
+  height: 230px;
+  margin: 10px;
+}
+
+.btn-link {
+  color: #69b7e6;
+}
+
+.tag {
+  display: flex;
+  top: -3px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.triangle {
+  border: 15px solid;
+  height: 0;
+  border-color: transparent;
+  border-right-color: #69b7e6;
+}
+
+.rectangle {
+  background-color: #69b7e6;
+  height: 30px;
+  width: 45px;
+  color: #303335;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.circle {
+    background-color: #303335;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    position: relative;
+    left: -52px;
+    top: 12px;
+}

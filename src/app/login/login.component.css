@@ -1,0 +1,64 @@
+h3, label, p { color: white; }
+form p {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  top: 5px;
+}
+form button { margin-top: 10px; }
+
+#top-row {
+  justify-content: center;
+  margin: 50px 0;
+}
+
+#or {
+    margin-left: 30%;
+    background-color: #303335;
+    z-index: 1;
+    text-align: center;
+    width: 30px;
+}
+
+#strikethrough {
+    width: 100%;
+    background-color: white;
+    height: 1px;
+    position: relative;
+    top: -28px;
+    margin: 0 5%;
+}
+
+#greeting {
+  margin-left: 16%;
+  margin-right: 10%;
+}
+
+.fa-google { padding-right: 20px; }
+
+#login { max-width: 60%; }
+
+@media screen and (min-width: 870px) {
+  .container-fluid {
+    max-width: 800px;
+  }
+  #login {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #greeting {
+    display: none;
+  }
+
+  #login {
+    position: relative;
+    margin-left: -20%;
+
+  }
+
+  input {
+    width: 120%;
+  }
+}

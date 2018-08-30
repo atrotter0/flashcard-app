@@ -1,0 +1,16 @@
+
+<div class="container-fluid">
+  <div class="row root">Categories</div>
+  <div class="row course" *ngFor="let category of categories | async; index as i">
+    <div [ngClass]="{'selected': selected == i}" class="tab" (click)="select(i)" [routerLink]="[category.name.toLowerCase()]">{{category.name}}</div>
+  </div>
+  <div id="misc">
+    <div class="row">
+      <div [ngClass]="{'selected': selected == 'decks'}" class="tab" (click)="select('decks')" [routerLink]="['decks']">Decks</div>
+      </div>
+    <div class="row">
+      <div [ngClass]="{'selected': selected == 'questions'}" class="tab" (click)="select('questions')" [routerLink]="['questions']">Questions</div>
+    </div>
+    <div class="row root">Study</div>
+  </div>
+</div>

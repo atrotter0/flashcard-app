@@ -1,0 +1,44 @@
+.layout {
+  max-height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 50px calc(100vh - 300px) 250px;
+  grid-template-areas: "top top"
+                       "side body"
+                       "side bottom-dock";
+}
+.top-nav {
+  grid-area: top;
+  background-color: #69b7e6;
+  color: white;
+}
+.side-nav {
+  grid-area: side;
+}
+.body {
+  grid-area: body;
+  background-color: #303335;
+  overflow-y: auto;
+}
+::-webkit-scrollbar { width: .5em; }
+::-webkit-scrollbar-thumb { background-color: #69b7e6; }
+.bottom-dock {
+  grid-area: bottom-dock;
+  background-color: #303335;
+  color: white;
+}
+
+@media screen and (max-height: 630px), screen and (max-width: 800px) {
+  .layout {
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto 250px;
+    grid-template-areas: "top"
+                         "body"
+                         "bottom-dock";
+  }
+  .side-nav {
+    display: none;
+  }
+}
