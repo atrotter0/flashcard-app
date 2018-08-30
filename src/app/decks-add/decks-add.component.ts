@@ -21,7 +21,7 @@ export class DecksAddComponent implements OnInit {
     public deckService: DeckService,
     public authService: AuthenticationService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.user = firebase.auth().currentUser;

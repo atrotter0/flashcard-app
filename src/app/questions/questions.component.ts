@@ -39,7 +39,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   goToQuestionDetail(question){
-    this.router.navigate(['questions/', question.$key]);
+    this.router.navigate(['questions', question.$key]);
   }
 
   runDeleteQuestion(deck: Deck){
