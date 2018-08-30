@@ -61,7 +61,7 @@ export class DecksComponent implements OnInit {
   buildUserDeckList() {
     this.allDecks.forEach((deck) => {
       if (deck.userEmail === this.user.email) {
-        console.log('found Deck for ' + this.user.email);
+        // console.log('found Deck for ' + this.user.email);
         this.userDeckList.push(deck);
         this.piggyBackService.shareDeck(this.userDeckList);
       }

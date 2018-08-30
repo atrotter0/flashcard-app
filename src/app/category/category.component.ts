@@ -47,6 +47,7 @@ export class CategoryComponent implements OnInit {
           return deck.$key === data.content;
         })
         this.chosenDeck = match[0];
+        console.log("Current chosen deck: ");
         console.log(this.chosenDeck);
       };
     })
@@ -118,7 +119,8 @@ export class CategoryComponent implements OnInit {
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
-  tester(x) {
-    console.log(x);
+  addQuestionToDeck(question) {
+    // console.log(this.categoryQuestions);
+    
   }
 }
