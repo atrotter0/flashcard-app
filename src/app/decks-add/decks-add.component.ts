@@ -34,7 +34,7 @@ export class DecksAddComponent implements OnInit {
   }
 
   runCreateDeck(newName: string) {
-    let newDeck = new Deck(newName);
+    let newDeck = new Deck(newName, this.localUser.email);
     this.deckService.createDeck(newDeck);
     if (this.localUser.decks === undefined) {
       this.localUser.decks = [];

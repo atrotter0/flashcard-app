@@ -19,10 +19,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
   ]
 })
 export class DecksComponent implements OnInit {
-  userDecks: Deck[];
-  userId: string;
   private user;
   localUser: User;
+  decks: FirebaseListObservable<any[]>;
+  allDecks: Deck[];
+  userDeckList: Deck[] = [];
 
   constructor(
     private router: Router,
@@ -34,19 +35,35 @@ export class DecksComponent implements OnInit {
 
   ngOnInit() {
     this.user = firebase.auth().currentUser;
-    if (this.user) {
-      this.authService.getUserByEmail(this.user.email);
-      this.localUser = this.authService.localUser;
-      this.userDecks = this.localUser.decks;
-    }
+    this.decks = this.deckService.getAllDecks();
+    this.buildDeckList();
   }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
   }
 
+  buildDeckList() {
+    if (this.user) {
+      this.authService.getUserByEmail(this.user.email);
+      this.decks.subscribe((data) => {
+        this.allDecks = data;
+        this.buildUserDeckList();
+      });
+    }
+  }
+
+  buildUserDeckList() {
+    this.allDecks.forEach((deck) => {
+      if (deck.userEmail === this.user.email) {
+        console.log('found Deck for ' + this.user.email);
+        this.userDeckList.push(deck);
+      }
+    });
+  }
+
   goToDeckDetail(deck) {
-    this.router.navigate(['decks/', deck.$key]); //set prop in db
+    this.router.navigate(['decks/', deck.$key]);
   }
 
   goToDeckStart(deck) {
@@ -55,5 +72,11 @@ export class DecksComponent implements OnInit {
 
   runDeleteDeck(deck: Deck) {
     this.deckService.deleteDeck(deck);
+    this.deleteFromDeckList(deck);
+  }
+
+  deleteFromDeckList(deck: Deck) {
+    let deckPosition = this.userDeckList.indexOf(deck);
+    this.userDeckList.splice(deckPosition, 1);
   }
 }
