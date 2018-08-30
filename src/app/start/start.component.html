@@ -1,21 +1,24 @@
-<div>
-  <div>
-    <!-- <img *ngFor="let number of questionsLeft" src='{{getPic()}}'> -->
-  </div>
-  <div>
-    <div *ngIf="displayAnswer == false">
-      <p>Question: {{currentQuestion.questionText}}</p>
-      <button (click)="toggleDisplayAnswer()">Show answer</button>
+<div class="container-fluid">
+  <div class="flashcard row">
+    <div class="col-12">
+      <div class="question-answer-section">
+        <div *ngIf="displayAnswer == false">
+          <p><span class="bold">Question:</span> {{currentQuestion.questionText}}</p>
+          <button class="btn btn-info top-bottom-margin" (click)="toggleDisplayAnswer()">Show answer</button>
+        </div>
+        <div *ngIf="displayAnswer">
+          <p><span class="bold">Answer:</span> {{currentQuestion.answerText}}</p>
+          <button class="btn btn-info top-bottom-margin" (click)="toggleDisplayAnswer()">
+            Back To Question
+          </button>
+        </div>
+      </div>
+      <button class="btn btn-lg btn-outline-info progress-btn" (click)="nextQuestion()" *ngIf="stillQuestionsLeft()">
+        Next
+      </button>
+      <button class="btn btn-lg btn-outline-info progress-btn" (click)="retakeQuiz()" *ngIf="!stillQuestionsLeft()">
+        Retake Quiz
+      </button>
     </div>
-    <div *ngIf="displayAnswer">
-      <p>Answer: {{currentQuestion.answerText}}</p>
-      <button (click)="toggleDisplayAnswer()">Back To Question</button>
-    </div>
-    <button (click)="nextQuestion()" *ngIf="stillQuestionsLeft()">
-      Next
-    </button>
-    <button (click)="retakeQuiz()" *ngIf="!stillQuestionsLeft()">Retake Quiz</button>
-  <div>
-    <!-- <img *ngFor="let number of questionsDone" src='{{getPic()}}'> -->
   </div>
 </div>
