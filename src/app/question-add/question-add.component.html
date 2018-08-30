@@ -1,32 +1,30 @@
-<h2>New Question</h2>
-<div>
-  <form (ngSubmit)="runCreateQuestion(newQText.value, newQAnswer.value, newQCategory.value, newQDifficulty.value); newQText.value=''; newQAnswer.value=''; newQAnswer.value='';">
-    <div>
-      <label>Question: </label>
-      <br>
-      <input type="text" #newQText>
-    </div>
-    <div>
-      <label>Answer: </label>
-      <br>
-      <input type="text" #newQAnswer>
-    </div>
-    <div>
-      <label>Category: </label>
-      <br>
-      <select #newQCategory>
-        <option value="{{name}}" *ngFor="let name of categoryNames">{{name}}</option>
-      </select>
-    </div>
-    <div>
-      <label>Difficulty: </label>
-      <br>
-      <select #newQDifficulty>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-<div>
+<div id="main">
+  <h2>New Question</h2>
+  <div>
+    <form (ngSubmit)="runCreateQuestion(newQText.value, newQAnswer.value, newQCategory.value, newQDifficulty.value); newQText.value=''; newQAnswer.value=''; newQAnswer.value='';">
+      <div class="form-group">
+        <label>Question: </label>
+        <input type="text" class="form-control" #newQText>
+      </div>
+      <div class="form-group">
+        <label>Answer: </label>
+        <input type="text" class="form-control" #newQAnswer>
+      </div>
+      <div class="form-group">
+        <label>Category: </label>
+        <select #newQCategory class="form-control">
+          <option value="{{name}}" *ngFor="let name of categoryNames">{{name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Difficulty: </label>
+        <select #newQDifficulty class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+  <div>
+</div>
