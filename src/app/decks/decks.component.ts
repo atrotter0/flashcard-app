@@ -66,8 +66,13 @@ export class DecksComponent implements OnInit {
     this.router.navigate(['decks/', deck.$key]);
   }
 
-  runQuizMe(deck) {
-    this.router.navigate(['decks/quiz/', deck.$key])
+  runQuiz(deck) {
+    this.checkDeckForQuestions(deck);
+    this.router.navigate(['decks/quiz/', deck.$key]);
+  }
+
+  checkDeckForQuestions(deck: Deck) {
+    //if (deck.questions > 0)
   }
 
   runDeleteDeck(deck: Deck) {

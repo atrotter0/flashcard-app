@@ -28,21 +28,29 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let deckObserbable: FirebaseObjectObservable<any>;
+    let deckObservable: FirebaseObjectObservable<any>;
 
     this.route.params.forEach((urlParameters) => {
       this.deckId = urlParameters['id'];
     });
-    deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
-    deckObserbable.subscribe((data) => {
+    deckObservable = this.deckService.getDeckByDeckId(this.deckId);
+    this.initQuiz(deckObservable);
+  }
+
+  initQuiz(deckObservable: FirebaseObjectObservable<any>) {
+    deckObservable.subscribe((data) => {
       this.currentDeck = data;
-      for (var category in this.currentDeck.questions) {
-        this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
-      }
+      this.setQuestionsForCategory();
       this.resetDisplays()
       this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
     });
+  }
+  
+  setQuestionsForCategory() {
+    for (var category in this.currentDeck.questions) {
+      this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
+    }
   }
 
   resetDisplays() {
