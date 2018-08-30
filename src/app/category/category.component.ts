@@ -120,7 +120,9 @@ export class CategoryComponent implements OnInit {
   }
 
   addQuestionToDeck(question) {
-    // console.log(this.categoryQuestions);
-    
+    console.log(this.categoryQuestions);
+    let category = this.categoryQuestions[0].category;
+    console.log(category);
+
   }
 }
