@@ -35,7 +35,7 @@ export class QuestionAddComponent implements OnInit {
 
   }
 
-  goToQuestionDetail(){
+  goToQuestionDetail() {
     this.router.navigate(['questions']);
   }
 }
