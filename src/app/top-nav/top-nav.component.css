@@ -25,9 +25,8 @@
 button span {
   position: relative;
   left: -28px;
-  top: -7px;
   color: white;
-  top: -6px;
+  top: -5px;
 }
 
 button#logout {

@@ -35,6 +35,8 @@ import { QuestionsComponent } from './questions/questions.component';
 import { QuestionDetailsComponent } from './question-details/question-details.component';
 import { QuestionEditComponent } from './question-edit/question-edit.component';
 
+import { PiggybackService } from './services/piggyback.service';
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -79,7 +81,7 @@ export const firebaseConfig = {
     MatSelectModule,
     NgbDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [PiggybackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

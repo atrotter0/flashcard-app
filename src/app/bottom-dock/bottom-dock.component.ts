@@ -5,6 +5,7 @@ import { Deck } from '../models/deck.model';
 import { Question } from '../models/question.model';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from 'firebase';
+import { PiggybackService } from '../services/piggyback.service';
 
 @Component({
   selector: 'app-bottom-dock',
@@ -14,11 +15,22 @@ import * as firebase from 'firebase';
 })
 export class BottomDockComponent implements OnInit {
   private user;
-  creatingDeck: boolean = false;
+  creatingDeck: boolean;
+  decks;
+  index;
 
-  constructor(private deckService: DeckService, public authService: AuthenticationService) { }
+  constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
+    this.piggyBackService.message.subscribe(data => {
+      if (data.content == "Here's a deck") {
+        this.decks = data.userDecks;
+      }
+    })
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if (!this.decks) this.creatingDeck = true;
+    else this.creatingDeck = false;
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
@@ -26,17 +38,28 @@ export class BottomDockComponent implements OnInit {
 
   select(value) {
     if (value == '$creating') this.creatingDeck = true;
-    else this.creatingDeck = false;
+    else {
+      this.creatingDeck = false;
+      // console.log(value);
+      this.piggyBackService.change(value);
+    }
   }
 
-  runCreateDeck(deckName) {
-    let newDeck = new Deck(deckName, this.user.email);
-    this.deckService.createDeck(newDeck);
-    this.user.decks.push(newDeck);
-    this.deckService.addDeckToUser(this.user);
+  runCreateDeck(value) {
+
   }
 
-  tossDeck(deckId) {
-    console.log(deckId);
+  tossDeck(key) {
+    this.deckService.deleteDeckWithKey(key);
+    for(let i = 0; i < this.decks.length; i++) {
+      if (this.decks[i].$key == key) {
+        this.decks.splice(i, 1);
+        i = this.decks.length + 1;
+      }
+    }
+    console.log(this.decks.length);
+    if (this.decks.length == 0) {
+      this.creatingDeck = true;
+    }
   }
 }

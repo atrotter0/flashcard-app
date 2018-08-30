@@ -6,6 +6,22 @@
 p { display: inline-block; }
 ul { padding-top: 30px; }
 
+.marked, .fa-check {
+  color: #95e695;
+  animation: flicker 1s infinite alternate;
+}
+
+.fa-check {
+  position: absolute;
+  left: -33px;
+  top: -10px;
+  font-size: 21px;
+}
+
+@keyframes flicker {
+  to { filter: brightness(.7); }
+}
+
 #header {
   background-color: #303335;
   position: fixed;
