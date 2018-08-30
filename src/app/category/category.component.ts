@@ -106,12 +106,28 @@ export class CategoryComponent implements OnInit {
   }
 
   runAddAllQuestionsToDeck() {
-    if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
-      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()].push(this.categoryQuestions);
-    } else {
-      this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()] = [this.categoryQuestions];
+    let category = this.categoryQuestions[0].category;
+    console.log(category);
+    // if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
+    //   this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()].push(this.categoryQuestions);
+    // } else {
+    //   this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()] = [this.categoryQuestions];
+    // }
+    // this.deckService.updateQuestionsInDeck(this.chosenDeck);
+
+    if(!this.chosenDeck.questions) {
+      this.chosenDeck.questions = {}; // this block of code should be modulated, or just built in
     }
-    this.deckService.updateQuestionsInDeck(this.chosenDeck);
+
+    if(!this.chosenDeck.questions[category]) {
+      this.chosenDeck.questions[category] = [];
+    }
+
+    this.categoryQuestions.forEach(question => {
+      this.chosenDeck.questions[category].push(question);
+    })
+
+    console.log(this.chosenDeck.questions);
   }
 
   runDeleteAllQuestionsFromDeck() {
@@ -120,7 +136,7 @@ export class CategoryComponent implements OnInit {
   }
 
   addQuestionToDeck(question) {
-    // console.log(this.categoryQuestions);
+    console.log(this.categoryQuestions);
     let category = this.categoryQuestions[0].category;
     console.log(category);
 

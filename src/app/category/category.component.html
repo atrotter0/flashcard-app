@@ -1,5 +1,5 @@
 <div id="header" class="container-fluid">
-  <p>{{categoryName}} Deck</p><button class="btn btn-outline-info btn-sm">Add to deck</button>
+  <p>{{categoryName}} Deck</p><button class="btn btn-outline-info btn-sm" (click)="runAddAllQuestionsToDeck()">Add to deck</button>
 </div>
 <ul>
   <li *ngFor="let question of categoryQuestions" (click)="addQuestionToDeck(question)">{{question.questionText}}</li>
