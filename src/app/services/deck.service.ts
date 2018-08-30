@@ -15,7 +15,7 @@ export class DeckService {
     return this.database.list('decks');
   }
 
-  getDeckByDeckId(deckId: number) {
+  getDeckByDeckId(deckId: string) {
     return this.database.object('decks/' + deckId);
   }
 

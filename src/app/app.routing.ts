@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     component: DeckDetailsComponent
   },
   {
-    path: 'decks/start/:id',
+    path: 'decks/quiz/:id',
     component: StartComponent
   },
   {
@@ -53,7 +53,7 @@ const appRoutes: Routes = [
   {
       path: 'questions/:id',
       component: QuestionDetailsComponent
-    },
+  },
   {
     path: ':category',
     component: CategoryComponent

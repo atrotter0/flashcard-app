@@ -1,14 +1,21 @@
 <div>
   <div>
-    <img *ngFor="let number of questionsLeft" src='{{getPic()}}'>
+    <!-- <img *ngFor="let number of questionsLeft" src='{{getPic()}}'> -->
   </div>
   <div>
-    <p>The question will go here</p>
-    <button>Show answer</button>
-    <button>Next</button>
-    <button>Start Over</button>
-  </div>
+    <div *ngIf="displayAnswer == false">
+      <p>Question: {{currentQuestion.questionText}}</p>
+      <button (click)="toggleDisplayAnswer()">Show answer</button>
+    </div>
+    <div *ngIf="displayAnswer">
+      <p>Answer: {{currentQuestion.answerText}}</p>
+      <button (click)="toggleDisplayAnswer()">Back To Question</button>
+    </div>
+    <button (click)="nextQuestion()" *ngIf="stillQuestionsLeft()">
+      Next
+    </button>
+    <button (click)="retakeQuiz()" *ngIf="!stillQuestionsLeft()">Retake Quiz</button>
   <div>
-    <img *ngFor="let number of questionsDone" src='{{getPic()}}'>
+    <!-- <img *ngFor="let number of questionsDone" src='{{getPic()}}'> -->
   </div>
 </div>
