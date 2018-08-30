@@ -32,8 +32,6 @@ export class QuestionsComponent implements OnInit {
     this.user = firebase.auth().currentUser;
     if (this.user !== undefined) {
       this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email);
-      this.localUser = this.authService.localUser;
-      this.userQuestions = this.localUser.questions;
     }
   }
   ngDoCheck(){
@@ -41,7 +39,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   goToQuestionDetail(question){
-    this.router.navigate(['questions', question.$key]);
+    this.router.navigate(['questions/', question.$key]);
   }
 
   runDeleteQuestion(deck: Deck){
