@@ -1,5 +1,7 @@
 <div id="header" class="container-fluid">
-  <p>{{categoryName}} Deck</p><button class="btn btn-outline-info btn-sm" (click)="runAddAllQuestionsToDeck()">Add to deck</button>
+  <p>{{categoryName}} Stack</p>
+  <button class="btn btn-outline-info btn-sm" (click)="markAllQuestionsTo(true)">Add all to deck</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="markAllQuestionsTo(false)">Remove all from deck</button>
 </div>
 <ul>
   <li *ngFor="let question of categoryQuestions" (click)="toggleQuestionOnDeck(question)" [ngClass]="{'marked': question.bookmark}"><i class="fa fa-check" [hidden]="!question.bookmark"></i>{{question.questionText}}</li>

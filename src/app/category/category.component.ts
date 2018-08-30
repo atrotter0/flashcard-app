@@ -105,7 +105,7 @@ export class CategoryComponent implements OnInit {
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
-  runAddAllQuestionsToDeck() {
+  markAllQuestionsTo(boolean) {
     let category = this.categoryQuestions[0].category;
     console.log(category);
     // if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
@@ -124,8 +124,9 @@ export class CategoryComponent implements OnInit {
     }
 
     this.categoryQuestions.forEach(question => {
-      question.bookmark = !question.bookmark;
-      this.chosenDeck.questions[category].push(question);
+      question.bookmark = boolean;
+      if (boolean) this.chosenDeck.questions[category].push(question);
+      else this.chosenDeck.questions[category].pop();
     })
 
     console.log(this.chosenDeck.questions);
