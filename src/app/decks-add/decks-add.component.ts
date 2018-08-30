@@ -44,7 +44,7 @@ export class DecksAddComponent implements OnInit {
     this.goToDeckDetail();
 
   }
-  goToDeckDetail(){
+  goToDeckDetail() {
     this.router.navigate(['decks']);
   }
 }

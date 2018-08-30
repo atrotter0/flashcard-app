@@ -7,10 +7,9 @@
 
   <button routerLink="/decks/new">Add Deck</button>
 
-  <div *ngFor="let deck of userDecks | async" class="panel panel-default">
+  <div *ngFor="let deck of userDecks" class="panel panel-default">
     <div class="panel-body">
-      <h3>Test</h3>
-      <h3 (click)="goToDeckDetail(deck)"><em>{{deck.name}}</em></h3>
+      <h3 (click)="goToDeckDetail(deck)"><em>{{deck?.name}}</em></h3>
       <button (click)="runDeleteDeck(deck)">Delete</button>
       <hr>
       <br>

@@ -103,7 +103,7 @@ export class AuthenticationService {
   findUser(usersFromDb: User[], localUser: User) {
     let userFound = false;
     for (let i = 0; i < usersFromDb.length; i++) {
-      if( localUser) {
+      if (localUser) {
         if (usersFromDb[i].email === localUser.email) {
           userFound = true;
           this.localUser = usersFromDb[i];

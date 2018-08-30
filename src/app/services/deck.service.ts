@@ -18,9 +18,9 @@ export class DeckService {
   getDecksByUserId(userId: string) {
     const user = this.database.object('users/' + userId);
     let decks: Deck[];
-    user.subscribe(data => {
+    user.subscribe((data) => {
       decks = data.decks;
-    });
+    })
     return decks;
   }
 

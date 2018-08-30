@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
+import { User } from '../models/user.model';
 import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
 import { QuestionService } from '../services/question.service';
@@ -18,6 +19,7 @@ import * as firebase from "firebase";
 export class QuestionsComponent implements OnInit {
   userQuestions: Question[];
   private user;
+  localUser: User;
 
   constructor(
     private router: Router,
@@ -26,16 +28,18 @@ export class QuestionsComponent implements OnInit {
     private qService: QuestionService,
     public authService: AuthenticationService) { }
 
+  ngOnInit() {
+    this.user = firebase.auth().currentUser;
+    if (this.user !== undefined) {
+      this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email);
+    }
+  }
   ngDoCheck(){
     this.user = firebase.auth().currentUser;
   }
 
-  ngOnInit() {
-      if (this.user !== undefined) { this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email); }
-  }
-
   goToQuestionDetail(question){
-    this.router.navigate(['questions', question.$key]);
+    this.router.navigate(['questions/', question.$key]);
   }
 
   runDeleteQuestion(deck: Deck){
