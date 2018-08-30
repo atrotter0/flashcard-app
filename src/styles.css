@@ -13,3 +13,7 @@ h1, h2, em, hr {
 .center {
   text-align: center;
 }
+
+.bold {
+  font-weight: bold;
+}

@@ -81,6 +81,7 @@ export class StartComponent implements OnInit {
   }
 
   nextQuestion() {
+    this.displayAnswer = false;
     this.currentQuestion.viewed = true;
     this.currentQuestions = this.currentQuestions.filter(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
@@ -101,6 +102,7 @@ export class StartComponent implements OnInit {
   }
 
   retakeQuiz() {
+    this.displayAnswer = false;
     this.currentQuestions = [];
     this.currentQuestion = undefined;
     this.setupAndInitialize();
