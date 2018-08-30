@@ -124,6 +124,7 @@ export class CategoryComponent implements OnInit {
     }
 
     this.categoryQuestions.forEach(question => {
+      question.bookmark = !question.bookmark;
       this.chosenDeck.questions[category].push(question);
     })
 
@@ -135,7 +136,8 @@ export class CategoryComponent implements OnInit {
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
-  addQuestionToDeck(question) {
+  toggleQuestionOnDeck(question) {
+    question.bookmark = !question.bookmark;
     console.log(this.categoryQuestions);
     let category = this.categoryQuestions[0].category;
     console.log(category);
@@ -148,8 +150,15 @@ export class CategoryComponent implements OnInit {
       this.chosenDeck.questions[category] = [];
     }
 
-    this.chosenDeck.questions[category].push(question);
+    for(let i = 0; i < this.chosenDeck.questions[category].length; i++) {
+      if (question.$key == this.chosenDeck.questions[category][i].$key) {
+        this.chosenDeck.questions[category].splice(i, 1);
+        console.log(this.chosenDeck.questions);
+        return;
+      }
+    }
 
+    this.chosenDeck.questions[category].push(question);
 
     console.log(this.chosenDeck.questions);
     // console.log(category);
