@@ -20,6 +20,7 @@ export class StartComponent implements OnInit {
   deckId: string;
   questionsLeft: Question[];
   questionsDone: number[];
+  displayAnswer: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -88,6 +89,10 @@ export class StartComponent implements OnInit {
 
   showAnswer() {
     return this.currentQuestion.answerText;
+  }
+
+  toggleDisplayAnswer() {
+    this.displayAnswer = !this.displayAnswer;
   }
 
   checkRemainingQuestions() {

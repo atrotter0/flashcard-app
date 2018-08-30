@@ -3,11 +3,15 @@
     <!-- <img *ngFor="let number of questionsLeft" src='{{getPic()}}'> -->
   </div>
   <div>
-    <p>{{currentQuestion.questionText}}</p>
-    <button>Show answer</button>
+    <div *ngIf="displayAnswer == false">
+      <p>Question: {{currentQuestion.questionText}}</p>
+      <button (click)="toggleDisplayAnswer()">Show answer</button>
+    </div>
+    <div *ngIf="displayAnswer">
+      <p>Answer: {{currentQuestion.answerText}}</p>
+      <button (click)="toggleDisplayAnswer()">Back To Question</button>
+    </div>
     <button>Next</button>
-    <button>Start Over</button>
-  </div>
   <div>
     <!-- <img *ngFor="let number of questionsDone" src='{{getPic()}}'> -->
   </div>
