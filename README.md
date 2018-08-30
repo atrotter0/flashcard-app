@@ -1,21 +1,21 @@
 # FlashcardApp
-<hr />
+
 
 
 #### David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown
 
 <img height="300" src="/Users/Guest/Desktop/flashcard-app/src/assets/Screen Shot .png">
-<hr />
+
 
 ## Description
-<hr />
+
 
 A flash card Web application that allows a user to use, create, delete, and edit note cards.
 
 
 
 ## Setup on OSX
-<hr />
+
 
 * Install Node.js.
 * Install Angular CLI 1.6.5.
@@ -27,7 +27,7 @@ A flash card Web application that allows a user to use, create, delete, and edit
 * Run `ng e2e` to execute the end-to-end tests via Protractor.
 
 ## Contribution Requirements
-<hr />
+
 
 1. Clone the repo
 1. Make a new branch
@@ -36,7 +36,7 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 
 ## Technologies Used
-<hr />
+
 * Angular v5.2.0
 * HTML5/CSS3
 * Bootstrap
@@ -48,18 +48,16 @@ A flash card Web application that allows a user to use, create, delete, and edit
 * TSLint
 
 ## Links
-<hr />
 
 ## Support and Contact Details
 
-<hr />
 
 
 If you have find issues, ideas to improve the app, or concerns.  Please feel free to ![submit and issue to the github in the issues page.](/issues)
 
 ## License
 
-<hr />
+
 
 
 This software is licensed under the MIT license.
