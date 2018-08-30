@@ -29,8 +29,11 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let deckObservable: FirebaseObjectObservable<any>;
+    this.setupAndInitialize();
+  }
 
+  setupAndInitialize() {
+    let deckObservable: FirebaseObjectObservable<any>;
     this.route.params.forEach((urlParameters) => {
       this.deckId = urlParameters['id'];
     });
@@ -65,7 +68,6 @@ export class StartComponent implements OnInit {
     this.currentQuestions.forEach((question) => {
       question.viewed = false;
     });
-    console.log("current questions reset: " + JSON.stringify(this.currentQuestions));
     this.setfinishedAndRemaining();
   }
 
@@ -99,9 +101,9 @@ export class StartComponent implements OnInit {
   }
 
   retakeQuiz() {
-    this.resetQuestions();
-    this.currentQuestion = this.getRandomQuestion();
-    this.displayAnswer = false;
+    this.currentQuestions = [];
+    this.currentQuestion = undefined;
+    this.setupAndInitialize();
   }
 
   getPic() {
