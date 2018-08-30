@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { User } from '../models/user.model';
 import { Question } from '../models/question.model';
-import { Questions } from '../models/questions.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -39,34 +36,20 @@ export class QuestionService {
     return categoryQuestions;
   }
 
-  getQuestionsByUserEmail(userEmail) {
-    let localQuestions: Question[];
-    let userQuestions: Question[] = [];
-    this.questions.subscribe((data) =>{
-      localQuestions = data;
-      for (let i = 0; i < localQuestions.length; i++){
-        if(localQuestions[i].userEmail === userEmail){
-          userQuestions.push(localQuestions[i]);
-        }
-      }
-    });
-    return userQuestions;
-  }
-
-  createQuestion(newQuestion){
+  createQuestion(newQuestion) {
     this.questions.push(newQuestion);
   }
 
-  deleteQuestion(questionToDelete){
+  deleteQuestion(questionToDelete) {
     let questionEntryInFirebase = this.getQuestionByQuestionKey(questionToDelete.$key);
     questionEntryInFirebase.remove();
   }
 
-  editQuestion(localQuestionToEdit){
+  editQuestion(localQuestionToEdit) {
     let questionEntryInFirebase = this.getQuestionByQuestionKey(localQuestionToEdit.$key);
     questionEntryInFirebase.update({questionText: localQuestionToEdit.questionText,
                                     answerText: localQuestionToEdit.answerText,
                                     category: localQuestionToEdit.category,
-                                    difficulty: localQuestionToEdit.difficulty})
+                                    difficulty: localQuestionToEdit.difficulty});
   }
 }

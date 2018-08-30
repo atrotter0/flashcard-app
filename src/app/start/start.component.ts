@@ -15,11 +15,12 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class StartComponent implements OnInit {
   currentDeck: Deck;
-  currentQuestions: Question[];
+  currentQuestions: Question[] = [];
   currentQuestion: Question;
-  deckId: number;
-  questionsLeft: Question[];
-  questionsDone: number[];
+  deckId: string;
+  questionsLeft: number;
+  questionsDone: number;
+  displayAnswer: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,33 +29,46 @@ export class StartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let deckObserbable: FirebaseObjectObservable<any>;
+    this.setupAndInitialize();
+  }
 
+  setupAndInitialize() {
+    let deckObservable: FirebaseObjectObservable<any>;
     this.route.params.forEach((urlParameters) => {
-      this.deckId = parseInt(urlParameters['id']);
+      this.deckId = urlParameters['id'];
     });
-    deckObserbable = this.deckService.getDeckByDeckId(this.deckId);
-    deckObserbable.subscribe((data) => {
+    deckObservable = this.deckService.getDeckByDeckId(this.deckId);
+    this.initQuiz(deckObservable);
+  }
+
+  initQuiz(deckObservable: FirebaseObjectObservable<any>) {
+    deckObservable.subscribe((data) => {
       this.currentDeck = data;
-      for (var category in this.currentDeck.questions) {
-        this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])
-      }
-      this.resetDisplays()
+      console.log("current Deck: " + JSON.stringify(this.currentDeck));
+      this.setQuestionsForCategory();
+      this.setfinishedAndRemaining()
       this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
+      console.log("current question: " + JSON.stringify(this.currentQuestion));
     });
   }
 
-  resetDisplays() {
-    this.questionsLeft = this.currentQuestions;
-    this.questionsDone = [];
+  setQuestionsForCategory() {
+    for (var category in this.currentDeck.questions) {
+      this.currentQuestions = this.currentQuestions.concat(this.currentDeck.questions[category]);
+    }
+  }
+
+  setfinishedAndRemaining() {
+    this.questionsLeft = this.currentQuestions.length;
+    this.questionsDone = 0;
   }
 
   resetQuestions() {
-    for (let i = 0; i < this.currentQuestions.length; i++) {
-      this.currentQuestions[i].viewed = false;
-    }
-    this.resetDisplays()
+    this.currentQuestions.forEach((question) => {
+      question.viewed = false;
+    });
+    this.setfinishedAndRemaining();
   }
 
   randomNumberForRandomQuestions() {
@@ -70,25 +84,29 @@ export class StartComponent implements OnInit {
     this.currentQuestion.viewed = true;
     this.currentQuestions = this.currentQuestions.filter(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
-    this.questionsLeft.splice(0, 1);
-    this.questionsDone.push(0);
+    this.questionsLeft--;
+    this.questionsDone++;
   }
 
   showAnswer() {
     return this.currentQuestion.answerText;
   }
 
-  checkRemainingQuestions() {
-    let remaining = this.currentQuestions.filter(question => question.viewed === false)
-    return (remaining.length > 0 ? true : false);
+  toggleDisplayAnswer() {
+    this.displayAnswer = !this.displayAnswer;
   }
 
-  startAgain() {
-    this.resetQuestions();
-    this.currentQuestion = this.getRandomQuestion();
+  stillQuestionsLeft() {
+    return (this.questionsLeft > 1);
+  }
+
+  retakeQuiz() {
+    this.currentQuestions = [];
+    this.currentQuestion = undefined;
+    this.setupAndInitialize();
   }
 
   getPic() {
-    return "assets/card.gif" ;
+    return "assets/card.gif";
   }
 }

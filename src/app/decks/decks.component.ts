@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { User } from '../models/user.model';
 import { DeckService } from '../services/deck.service';
 import { AuthenticationService } from '../services/authentication.service';
@@ -72,8 +71,15 @@ export class DecksComponent implements OnInit {
     this.router.navigate(['decks/', deck.$key]);
   }
 
-  goToDeckStart(deck) {
-    this.router.navigate(['decks/start', deck.$key])
+  runQuiz(deck) {
+    if (this.deckHasNoQuestions(deck)) {
+      return alert('You need to add questions to this deck before you can start a quiz.');
+    }
+    this.router.navigate(['decks/quiz/', deck.$key]);
+  }
+
+  deckHasNoQuestions(deck: Deck) {
+    return (deck.questions === undefined);
   }
 
   runDeleteDeck(deck: Deck) {

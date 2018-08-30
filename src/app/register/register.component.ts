@@ -3,6 +3,7 @@ import { AuthenticationService } from '../services/authentication.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { PasswordValidator } from '../validators/password.validator';
 import { Router } from '@angular/router';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-register',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
   providers: [AuthenticationService]
 })
 export class RegisterComponent implements OnInit {
+  private user;
   registrationForm: FormGroup;
   matching_passwords_group: FormGroup;
 
@@ -36,8 +38,11 @@ export class RegisterComponent implements OnInit {
     this.createForms();
   }
 
-  createForms(){
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
+  }
 
+  createForms() {
     this.matching_passwords_group = new FormGroup({
       password: new FormControl('', Validators.compose([
         Validators.minLength(5),
@@ -58,15 +63,13 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmitRegistration(value){
-
-  }
+  onSubmitRegistration(value) { }
 
   runRegisterUser(email: string, password: string) {
     this.authService.registerUser(email, password);
 
     if (this.authService.registrationSuccess) {
-      this.router.navigate(['']);
+      this.router.navigate(['decks']);
     }
   }
 }
