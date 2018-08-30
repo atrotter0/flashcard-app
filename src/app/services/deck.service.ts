@@ -52,6 +52,8 @@ export class DeckService {
   }
 
   updateQuestionsInDeck(localDeck) {
+    console.log("trying to update deck");
+    console.log(localDeck);
     let deckEntryInFirebase = this.getDeckByDeckId(localDeck.$key);
     deckEntryInFirebase.update({questions: localDeck.questions});
   }

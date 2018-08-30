@@ -5,6 +5,11 @@ body {
   user-select: none;
 }
 
+h1, h2, em, hr {
+  color: white;
+  border-color: white;
+}
+
 .center {
   text-align: center;
 }

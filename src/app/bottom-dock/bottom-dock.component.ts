@@ -18,11 +18,15 @@ export class BottomDockComponent implements OnInit {
   creatingDeck: boolean;
   decks;
   index;
+  chosenDeck: Deck;
 
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
     this.piggyBackService.message.subscribe(data => {
       if (data.content == "Here's a deck") {
         this.decks = data.userDecks;
+        this.chosenDeck = data.chosenDeck;
+        console.log("my own deck:");
+        console.log(this.chosenDeck);
       }
     })
   }

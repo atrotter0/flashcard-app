@@ -39,6 +39,7 @@ export class CategoryComponent implements OnInit {
     this.categories = database.list('categories');
     this.piggyBackService.message.subscribe(data => {
       this.userDecks = data.userDecks;
+      this.chosenDeck = data.chosenDeck;
       if(data.content.substring(0, 3) == "-LL") {
         let match = this.userDecks.filter(deck => {
           // console.log(deck.$key);
@@ -46,7 +47,11 @@ export class CategoryComponent implements OnInit {
           // ignore atom errors on $key
           return deck.$key === data.content;
         })
+
         this.chosenDeck = match[0];
+        this.piggyBackService.chooseDeck(this.chosenDeck);
+
+
         console.log("Current chosen deck: ");
         console.log(this.chosenDeck);
       };
@@ -130,6 +135,7 @@ export class CategoryComponent implements OnInit {
     })
 
     console.log(this.chosenDeck.questions);
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
   }
 
   runDeleteAllQuestionsFromDeck() {
@@ -160,6 +166,8 @@ export class CategoryComponent implements OnInit {
     }
 
     this.chosenDeck.questions[category].push(question);
+
+    this.deckService.updateQuestionsInDeck(this.chosenDeck);
 
     console.log(this.chosenDeck.questions);
     // console.log(category);
