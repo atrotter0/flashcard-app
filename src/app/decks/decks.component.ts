@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { Decks } from '../models/decks.model';
+import { User } from '../models/user.model';
 import { DeckService } from '../services/deck.service';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
@@ -21,29 +22,31 @@ export class DecksComponent implements OnInit {
   userDecks: Deck[];
   userId: string;
   private user;
-  decks: FirebaseListObservable<any[]>;
-
+  localUser: User;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private location: Location,
     private deckService: DeckService,
-    public authService: AuthenticationService,
-    private database: AngularFireDatabase
-  ) {
-  this.decks = database.list('decks');
+    public authService: AuthenticationService
+  ) { }
+
+  ngOnInit() {
+    this.user = firebase.auth().currentUser;
+    if (this.user) {
+      this.authService.getUserByEmail(this.user.email);
+      this.localUser = this.authService.localUser;
+      console.log("local user in decks: " + JSON.stringify(this.localUser));
+      this.userDecks = this.localUser.decks;
+    }
   }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
   }
 
-  ngOnInit() {
-    if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
-  }
-
-  goToDeckDetail(deck){
+  goToDeckDetail(deck) {
     this.router.navigate(['decks', deck.$key]);
   }
 
