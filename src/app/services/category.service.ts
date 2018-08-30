@@ -9,7 +9,7 @@ export class CategoryService {
     this.categories = database.list('categories');
   }
 
-  getCategoryNames() {
-    return Object.keys(this.categories);
+  getCategories() {
+    return this.categories;
   }
 }
