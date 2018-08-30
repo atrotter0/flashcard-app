@@ -2,12 +2,10 @@
   <app-restricted-access></app-restricted-access>
 </div>
 
-<div id='main' *ngIf="user">
+<div class="page-container" *ngIf="user">
   <h1>Add Question</h1>
   <button class="btn btn-info" type="button" routerLink="/questions/new" name="button">Add Question</button>
-  <hr>
-  <h2>User Questions</h2>
-
+  <h3>User Questions</h3>
   <div *ngFor="let question of userQuestionsList" class="panel panel-default">
     <div class="panel-body">
       <h3 (click)="goToQuestionDetail(question)"><em>{{question?.questionText}}</em></h3>

@@ -1,7 +1,3 @@
-#main{
-  text-align: center;
-}
-
 button{
   margin-top: 10px;
 }
@@ -10,7 +6,12 @@ label{
   color: white;
 }
 
-.form-control {
-  max-width: 50%;
-  margin: 0 auto;
+.deck-form {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.page-container {
+  margin: 20px;
 }
