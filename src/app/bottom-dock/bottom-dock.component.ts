@@ -32,6 +32,7 @@ export class BottomDockComponent implements OnInit {
       }
     })
     this.deckService.decks.subscribe(res => {
+      this.decks = [];
       // this.deckService.getDecksByEmail(this.user.email);
       Object.entries(res).forEach(entry => {
         if(entry[1].userEmail == this.user.email) {
@@ -62,7 +63,7 @@ export class BottomDockComponent implements OnInit {
         if (deck.$key == value ) {
           console.log(value);
           console.log(deck);
-
+          this.chosenDeck = deck;
           this.piggyBackService.chooseDeck(deck);
         }
       })
@@ -70,8 +71,9 @@ export class BottomDockComponent implements OnInit {
     }
   }
 
-  runCreateDeck(value) {
-
+  runCreateDeck(deckName) {
+    let newDeck = new Deck(deckName, this.user.email);
+    this.deckService.createDeck(newDeck);
   }
 
   tossDeck(key) {
