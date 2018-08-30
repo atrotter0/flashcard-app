@@ -56,7 +56,7 @@ export class BottomDockComponent implements OnInit {
     if (value == '$creating') this.creatingDeck = true;
     else {
       this.creatingDeck = false;
-      // console.log(value);
+
       this.decks.forEach(deck => {
 
         if (deck.$key == value ) {
