@@ -11,7 +11,10 @@
       <p>Answer: {{currentQuestion.answerText}}</p>
       <button (click)="toggleDisplayAnswer()">Back To Question</button>
     </div>
-    <button>Next</button>
+    <button (click)="nextQuestion()" *ngIf="stillQuestionsLeft()">
+      Next
+    </button>
+    <button (click)="retakeQuiz()" *ngIf="!stillQuestionsLeft()">Retake Quiz</button>
   <div>
     <!-- <img *ngFor="let number of questionsDone" src='{{getPic()}}'> -->
   </div>

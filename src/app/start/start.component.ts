@@ -18,8 +18,8 @@ export class StartComponent implements OnInit {
   currentQuestions: Question[] = [];
   currentQuestion: Question;
   deckId: string;
-  questionsLeft: Question[];
-  questionsDone: number[];
+  questionsLeft: number;
+  questionsDone: number;
   displayAnswer: boolean = false;
 
   constructor(
@@ -43,7 +43,7 @@ export class StartComponent implements OnInit {
       this.currentDeck = data;
       console.log("current Deck: " + JSON.stringify(this.currentDeck));
       this.setQuestionsForCategory();
-      this.resetDisplays()
+      this.setfinishedAndRemaining()
       this.resetQuestions();
       this.currentQuestion = this.getRandomQuestion();
       console.log("current question: " + JSON.stringify(this.currentQuestion));
@@ -54,19 +54,19 @@ export class StartComponent implements OnInit {
     for (var category in this.currentDeck.questions) {
       this.currentQuestions = this.currentQuestions.concat(this.currentDeck.questions[category]);
     }
-    console.log("currentQuestions: " + JSON.stringify(this.currentQuestions));
   }
 
-  resetDisplays() {
-    this.questionsLeft = this.currentQuestions;
-    this.questionsDone = [];
+  setfinishedAndRemaining() {
+    this.questionsLeft = this.currentQuestions.length;
+    this.questionsDone = 0;
   }
 
   resetQuestions() {
-    for (let i = 0; i < this.currentQuestions.length; i++) {
-      this.currentQuestions[i].viewed = false;
-    }
-    this.resetDisplays()
+    this.currentQuestions.forEach((question) => {
+      question.viewed = false;
+    });
+    console.log("current questions reset: " + JSON.stringify(this.currentQuestions));
+    this.setfinishedAndRemaining();
   }
 
   randomNumberForRandomQuestions() {
@@ -75,7 +75,6 @@ export class StartComponent implements OnInit {
 
   getRandomQuestion() {
     let question = this.currentQuestions[this.randomNumberForRandomQuestions()];
-    console.log("random question: " + question);
     return question;
   }
 
@@ -83,8 +82,8 @@ export class StartComponent implements OnInit {
     this.currentQuestion.viewed = true;
     this.currentQuestions = this.currentQuestions.filter(question => question.viewed === false);
     this.currentQuestion = this.getRandomQuestion();
-    this.questionsLeft.splice(0, 1);
-    this.questionsDone.push(0);
+    this.questionsLeft--;
+    this.questionsDone++;
   }
 
   showAnswer() {
@@ -95,14 +94,14 @@ export class StartComponent implements OnInit {
     this.displayAnswer = !this.displayAnswer;
   }
 
-  checkRemainingQuestions() {
-    let remaining = this.currentQuestions.filter(question => question.viewed === false)
-    return (remaining.length > 0 ? true : false);
+  stillQuestionsLeft() {
+    return (this.questionsLeft > 1);
   }
 
-  startAgain() {
+  retakeQuiz() {
     this.resetQuestions();
     this.currentQuestion = this.getRandomQuestion();
+    this.displayAnswer = false;
   }
 
   getPic() {
