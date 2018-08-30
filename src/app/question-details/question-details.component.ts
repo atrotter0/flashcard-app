@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { QuestionService } from '../services/question.service';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-question-details',
@@ -16,6 +16,7 @@ export class QuestionDetailsComponent implements OnInit {
   constructor(
       private route: ActivatedRoute,
       private qService: QuestionService,
+      private location: Location,
       private router: Router) { }
 
     ngOnInit() {
