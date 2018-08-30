@@ -1,6 +1,6 @@
 <div id="header" class="container-fluid">
   <p>{{categoryName}} Stack</p>
-  <button class="btn btn-outline-info btn-sm" (click)="markAllQuestionsTo(true)">Add all to deck</button>
+  <button *ngIf="showAddAll" class="btn btn-outline-info btn-sm" (click)="markAllQuestionsTo(true)">Add all to deck</button>
   <button class="btn btn-outline-danger btn-sm" (click)="markAllQuestionsTo(false)">Remove all from deck</button>
 </div>
 <ul>

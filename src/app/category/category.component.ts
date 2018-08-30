@@ -27,6 +27,7 @@ export class CategoryComponent implements OnInit {
   userDecks: Deck[];
   private user;
   categories: FirebaseListObservable<any[]>;
+  showAddAll: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -39,24 +40,7 @@ export class CategoryComponent implements OnInit {
     this.categories = database.list('categories');
     this.piggyBackService.message.subscribe(data => {
       this.userDecks = data.userDecks;
-      console.log("grabbing: ");
-      console.log(data.chosenDeck);
       this.chosenDeck = data.chosenDeck;
-      // if(data.content.substring(0, 3) == "-LL") {
-      //   let match = this.userDecks.filter(deck => {
-      //     // console.log(deck.$key);
-      //     // console.log(data.content);
-      //     // ignore atom errors on $key
-      //     return deck.$key === data.content;
-      //   })
-      //
-      //   this.chosenDeck = match[0];
-      //
-      //
-      //
-      //   console.log("Current chosen deck: ");
-      //   console.log(this.chosenDeck);
-      // };
     })
   }
 
@@ -88,68 +72,36 @@ export class CategoryComponent implements OnInit {
     this.chosenDeck = deck;
   }
 
-  getCategoryAndLowerCase(question: Question) {
-    return question.category.toLowerCase();
-  }
-
-  getCategoryFromCategoryQuestionsAndLowerCase() {
-    return this.categoryQuestions[0].category.toLowerCase();
-  }
-
-  runAddQuestionToDeck(question: Question) {
-    if (this.getCategoryAndLowerCase(question) in this.chosenDeck.questions) {
-      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].push(question);
-    } else {
-      this.chosenDeck.questions[this.getCategoryAndLowerCase(question)] = [question];
-    }
-    this.deckService.updateQuestionsInDeck(this.chosenDeck);
-  }
-
-  runDeleteQuestionFromDeck(question: Question) {
-    let categoryArray = this.chosenDeck.questions[this.getCategoryAndLowerCase(question)];
-    let indexOfQuestionToRemove = categoryArray.indexOf(question);
-    this.chosenDeck.questions[this.getCategoryAndLowerCase(question)].splice(indexOfQuestionToRemove, 1);
-    this.deckService.updateQuestionsInDeck(this.chosenDeck);
-  }
-
   markAllQuestionsTo(boolean) {
     let category = this.categoryQuestions[0].category;
-    console.log(category);
-    // if (this.categoryQuestions[0].category.toLowerCase() in this.chosenDeck.questions) {
-    //   this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()].push(this.categoryQuestions);
-    // } else {
-    //   this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()] = [this.categoryQuestions];
-    // }
-    // this.deckService.updateQuestionsInDeck(this.chosenDeck);
-
     if(!this.chosenDeck.questions) {
-      this.chosenDeck.questions = {}; // this block of code should be modulated, or just built in
+      this.chosenDeck.questions = {};
     }
 
     if(!this.chosenDeck.questions[category]) {
       this.chosenDeck.questions[category] = [];
     }
 
+    this.chosenDeck.questions[category] = [];
+
     this.categoryQuestions.forEach(question => {
       question.bookmark = boolean;
-      if (boolean) this.chosenDeck.questions[category].push(question);
-      else this.chosenDeck.questions[category].pop();
+      if (boolean) {
+        this.chosenDeck.questions[category].push(question);
+      }
     })
 
-    console.log(this.chosenDeck.questions);
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
-  }
-
-  runDeleteAllQuestionsFromDeck() {
-    delete this.chosenDeck.questions[this.getCategoryFromCategoryQuestionsAndLowerCase()];
-    this.deckService.updateQuestionsInDeck(this.chosenDeck);
+    if (boolean) {
+      this.showAddAll = false;
+    } else {
+      this.showAddAll = true;
+    }
   }
 
   toggleQuestionOnDeck(question) {
     question.bookmark = !question.bookmark;
-    console.log(this.categoryQuestions);
     let category = this.categoryQuestions[0].category;
-    console.log(category);
 
     if(!this.chosenDeck.questions) {
       this.chosenDeck.questions = {};
@@ -159,30 +111,20 @@ export class CategoryComponent implements OnInit {
       this.chosenDeck.questions[category] = [];
     }
 
-    for(let i = 0; i < this.chosenDeck.questions[category].length; i++) {
+    for (let i = 0; i < this.chosenDeck.questions[category].length; i++) {
       if (question.$key == this.chosenDeck.questions[category][i].$key) {
         this.chosenDeck.questions[category].splice(i, 1);
-        console.log(this.chosenDeck.questions);
+
+        this.showAddAll = true;
         return;
       }
     }
 
     this.chosenDeck.questions[category].push(question);
-
     this.deckService.updateQuestionsInDeck(this.chosenDeck);
 
-    console.log(this.chosenDeck.questions);
-    // console.log(category);
-    // if(this.chosenDeck.questions) {
-    //   if (this.chosenDeck.questions[category])
-    //   this.chosenDeck.questions[category].push(question);
-    // }
-    // else {
-    //   //
-    //   this.chosenDeck.questions = {};
-    //   this.chosenDeck.questions[category] = [question];
-    // }
-    // console.log(this.chosenDeck.questions);
-
+    if (this.chosenDeck.questions[category].length == this.categoryQuestions.length) {
+      this.showAddAll = false;
+    }
   }
 }
