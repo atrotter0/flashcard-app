@@ -11,6 +11,10 @@ export class DeckService {
     this.decks = database.list('decks');
   }
 
+  getAllDecks() {
+    return this.database.list('decks');
+  }
+
   getDeckByDeckId(deckId: number) {
     return this.database.object('decks/' + deckId);
   }
@@ -28,7 +32,7 @@ export class DeckService {
     return this.database.object('users/' + userId);
   }
 
-  createDeck(newDeck){
+  createDeck(newDeck) {
     this.decks.push(newDeck);
   }
 
