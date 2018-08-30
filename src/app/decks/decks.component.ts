@@ -37,7 +37,6 @@ export class DecksComponent implements OnInit {
     if (this.user) {
       this.authService.getUserByEmail(this.user.email);
       this.localUser = this.authService.localUser;
-      console.log("local user in decks: " + JSON.stringify(this.localUser));
       this.userDecks = this.localUser.decks;
     }
   }

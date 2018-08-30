@@ -10,6 +10,7 @@ import { DecksAddComponent } from './decks-add/decks-add.component';
 import { CategoryComponent } from './category/category.component';
 import { QuestionAddComponent } from './question-add/question-add.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { QuestionDetailsComponent } from './question-details/question-details.component';
 
 const appRoutes: Routes = [
   {
@@ -49,6 +50,10 @@ const appRoutes: Routes = [
     path: 'questions/new',
     component: QuestionAddComponent
   },
+  {
+      path: 'questions/:id',
+      component: QuestionDetailsComponent
+    },
   {
     path: ':category',
     component: CategoryComponent
