@@ -2,5 +2,5 @@
   <p>{{categoryName}} Deck</p><button class="btn btn-outline-info btn-sm">Add to deck</button>
 </div>
 <ul>
-  <li *ngFor="let question of categoryQuestions" value={{question.questionText}} (click)="addQuestionToDeck(question.questionText)">{{question.questionText}}</li>
+  <li *ngFor="let question of categoryQuestions" (click)="addQuestionToDeck(question)">{{question.questionText}}</li>
 </ul>

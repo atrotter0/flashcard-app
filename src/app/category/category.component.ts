@@ -120,9 +120,33 @@ export class CategoryComponent implements OnInit {
   }
 
   addQuestionToDeck(question) {
-    console.log(this.categoryQuestions);
+    // console.log(this.categoryQuestions);
     let category = this.categoryQuestions[0].category;
     console.log(category);
+
+    if(!this.chosenDeck.questions) {
+      this.chosenDeck.questions = {};
+    }
+
+    if(!this.chosenDeck.questions[category]) {
+      this.chosenDeck.questions[category] = [];
+    }
+
+    this.chosenDeck.questions[category].push(question);
+
+
+    console.log(this.chosenDeck.questions);
+    // console.log(category);
+    // if(this.chosenDeck.questions) {
+    //   if (this.chosenDeck.questions[category])
+    //   this.chosenDeck.questions[category].push(question);
+    // }
+    // else {
+    //   //
+    //   this.chosenDeck.questions = {};
+    //   this.chosenDeck.questions[category] = [question];
+    // }
+    // console.log(this.chosenDeck.questions);
 
   }
 }
