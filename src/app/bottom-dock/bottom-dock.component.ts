@@ -20,6 +20,7 @@ export class BottomDockComponent implements OnInit {
   index;
   chosenDeck: Deck;
   usersDecks;
+  deck;
 
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
     this.piggyBackService.message.subscribe(data => {
@@ -56,7 +57,16 @@ export class BottomDockComponent implements OnInit {
     else {
       this.creatingDeck = false;
       // console.log(value);
-      this.piggyBackService.change(value);
+      this.decks.forEach(deck => {
+
+        if (deck.$key == value ) {
+          console.log(value);
+          console.log(deck);
+
+          this.piggyBackService.chooseDeck(deck);
+        }
+      })
+
     }
   }
 
