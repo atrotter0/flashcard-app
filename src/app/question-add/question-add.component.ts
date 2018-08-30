@@ -26,12 +26,7 @@ export class QuestionAddComponent implements OnInit {
     this.user = firebase.auth().currentUser;
   }
 
-  ngOnInit() {
-    if (this.user !== undefined) { this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email);
-    console.log("user email: " + this.user.email); }
-  }
-
-
+  ngOnInit() { }
 
   runCreateQuestion(newQText: string, newQAnswer: string, newQCategory: string, newQDifficulty: number){
     let newQuestion = new Question(newQText, newQAnswer, newQDifficulty, newQCategory, this.user.email);
@@ -43,6 +38,4 @@ export class QuestionAddComponent implements OnInit {
   goToQuestionDetail(){
     this.router.navigate(['questions']);
   }
-
-
 }

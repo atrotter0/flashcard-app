@@ -8,6 +8,7 @@ import { Question } from '../models/question.model';
 import { QuestionService } from '../services/question.service';
 import { AuthenticationService } from '../services/authentication.service';
 import * as firebase from "firebase";
+import { FirebaseListObservable } from '../../../node_modules/angularfire2/database';
 
 
 @Component({
@@ -17,7 +18,9 @@ import * as firebase from "firebase";
   providers: [QuestionService, AuthenticationService]
 })
 export class QuestionsComponent implements OnInit {
-  userQuestions: Question[];
+  allQuestionsFromDb: FirebaseListObservable<any[]>;
+  allQuestions: Question[];
+  userQuestionsList: Question[] = [];
   private user;
   localUser: User;
 
@@ -31,18 +34,43 @@ export class QuestionsComponent implements OnInit {
   ngOnInit() {
     this.user = firebase.auth().currentUser;
     if (this.user !== undefined) {
-      this.userQuestions = this.qService.getQuestionsByUserEmail(this.user.email);
+      this.allQuestionsFromDb = this.qService.getAllQuestions();
+      this.buildQuestionsList();
+      console.log(this.allQuestionsFromDb);
     }
   }
+
   ngDoCheck(){
     this.user = firebase.auth().currentUser;
   }
 
-  goToQuestionDetail(question){
-    this.router.navigate(['questions', question.$key]);
+  buildQuestionsList() {
+    this.allQuestionsFromDb.subscribe((data) => {
+      this.allQuestions = data;
+      this.buildUserQuestionsList();
+    });
   }
 
-  runDeleteQuestion(deck: Deck){
-    this.qService.deleteQuestion(deck)
+  buildUserQuestionsList() {
+    this.allQuestions.forEach((question) => {
+      if (question.userEmail === this.user.email) {
+        console.log('found question for ' + this.user.email);
+        this.userQuestionsList.push(question);
+      }
+    });
+  }
+
+  goToQuestionDetail(question) {
+    this.router.navigate(['questions/', question.$key]);
+  }
+
+  runDeleteQuestion(question: Question){
+    this.qService.deleteQuestion(question);
+    this.deleteFromUserQuestions(question);
+  }
+
+  deleteFromUserQuestions(question: Question) {
+    const questionPosition = this.userQuestionsList.indexOf(question);
+    this.userQuestionsList.splice(questionPosition, 1);
   }
 }

@@ -8,9 +8,9 @@
 <div *ngIf="user">
   <h2>User Questions</h2>
 
-  <div *ngFor="let question of userQuestions" class="panel panel-default">
+  <div *ngFor="let question of userQuestionsList" class="panel panel-default">
     <div class="panel-body">
-      <h3 (click)="goToQuestionDetail(question)"><em>{{question.questionText}}</em></h3>
+      <h3 (click)="goToQuestionDetail(question)"><em>{{question?.questionText}}</em></h3>
       <button (click)="runDeleteQuestion(question)">Delete</button>
       <hr>
       <br>

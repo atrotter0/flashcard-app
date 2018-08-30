@@ -7,7 +7,8 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-question-details',
   templateUrl: './question-details.component.html',
-  styleUrls: ['./question-details.component.css']
+  styleUrls: ['./question-details.component.css'],
+  providers: [QuestionService]
 })
 export class QuestionDetailsComponent implements OnInit {
   questionKey;
