@@ -17,11 +17,13 @@ export class BottomDockComponent implements OnInit {
   private user;
   creatingDeck: boolean = false;
   decks;
+  index;
 
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
     this.piggyBackService.message.subscribe(data => {
       if (data.content == "Here's a deck") {
         this.decks = data.userDecks;
+        console.log(this.decks);
       }
     })
   }
@@ -39,11 +41,21 @@ export class BottomDockComponent implements OnInit {
     else this.creatingDeck = false;
   }
 
-  runCreateDeck(deckName) {
+  runCreateDeck(value) {
 
   }
 
-  tossDeck(deckId) {
-    console.log(deckId);
+  tossDeck(key) {
+    this.deckService.deleteDeckWithKey(key);
+    for(let i = 0; i < this.decks.length; i++) {
+      if (this.decks[i].$key == key) {
+        this.decks.splice(i, 1);
+        i = this.decks.length + 1;
+      }
+    }
+    console.log(this.decks.length);
+    if (this.decks.length == 0) {
+      this.creatingDeck = true;
+    }
   }
 }

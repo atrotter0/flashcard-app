@@ -36,11 +36,7 @@ export class DecksComponent implements OnInit {
     private deckService: DeckService,
     public authService: AuthenticationService,
     private piggyBackService: PiggybackService
-  ) {
-    this.piggyBackService.message.subscribe(data => {
-
-    })
-  }
+  ) {  }
 
   ngOnInit() {
     this.user = firebase.auth().currentUser;
