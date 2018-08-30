@@ -28,8 +28,10 @@ export class QuestionService {
       localQuestions = data;
       for (let i = 0; i < localQuestions.length; i++) {
         if (localQuestions[i].category.toLowerCase() === category.toLowerCase()) {
-          if (localQuestions[i].adminCreated || localQuestions[i].userEmail === user.email) {
-            categoryQuestions.push(localQuestions[i]);
+          if (user) {
+            if (localQuestions[i].adminCreated || localQuestions[i].userEmail === user.email) {
+              categoryQuestions.push(localQuestions[i]);
+            }
           }
         }
       }
