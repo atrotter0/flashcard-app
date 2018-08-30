@@ -6,6 +6,7 @@ import { Question } from '../models/question.model';
 import { QuestionService } from '../services/question.service';
 import { DeckService } from '../services/deck.service';
 import * as firebase from "firebase";
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-category',
@@ -22,23 +23,41 @@ export class CategoryComponent implements OnInit {
   chosenDeck: Deck;
   userDecks: Deck[];
   private user;
+  categories: FirebaseListObservable<any[]>;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private questionService: QuestionService,
-    private deckService: DeckService
-  ) { }
+    private deckService: DeckService,
+    private database: AngularFireDatabase
+  ) {
+    this.categories = database.list('categories');
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
   }
 
   ngOnInit() {
-    if (this.user !== undefined) { this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
+    if (this.user !== undefined) {
+    this.userDecks = this.deckService.getDecksByUserId(this.user.userId); }
     this.route.params.subscribe(param => {
+
       this.categoryName = param.category;
       this.categoryQuestions = this.questionService.getQuestionsByCategory(this.categoryName, this.user);
+      this.updateTitle();
+
+    })
+  }
+
+  updateTitle() {
+    this.categories.subscribe(result => {
+      result.forEach(category => {
+        if (this.categoryName == category.name.toLowerCase()) {
+          this.categoryName = category.name;
+        }
+      })
     })
   }
 

@@ -20,7 +20,6 @@ export class LoginComponent {
       } else {
         this.isLoggedIn = true;
         this.user = user;
-        console.log(user);
       }
     });
   }
