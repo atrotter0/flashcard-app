@@ -2,6 +2,10 @@ h3:hover {
   cursor: pointer;
 }
 
-#main{
-  text-align: center;
+h3 {
+  margin-top: 30px;
+}
+
+div {
+  color: white;
 }

@@ -1,7 +1,7 @@
-<div id="main">
+<div class="page-container">
   <h2>New Question</h2>
   <div>
-    <form (ngSubmit)="runCreateQuestion(newQText.value, newQAnswer.value, newQCategory.value, newQDifficulty.value); newQText.value=''; newQAnswer.value=''; newQAnswer.value='';">
+    <form class="deck-form" (ngSubmit)="runCreateQuestion(newQText.value, newQAnswer.value, newQCategory.value, newQDifficulty.value); newQText.value=''; newQAnswer.value=''; newQAnswer.value='';">
       <div class="form-group">
         <label>Question: </label>
         <input type="text" class="form-control" #newQText>

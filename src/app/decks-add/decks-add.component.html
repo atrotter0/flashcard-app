@@ -1,11 +1,13 @@
-<h2>New Deck</h2>
-<div>
-  <form (ngSubmit)="runCreateDeck(newName.value); newName.value='';">
-    <div>
-      <label>Name: </label>
-      <br>
-      <input type="text" #newName>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-<div>
+<div class="page-container">
+  <h2>New Deck</h2>
+  <div>
+    <form (ngSubmit)="runCreateDeck(newName.value); newName.value='';" class="deck-form">
+      <div class="form-group">
+        <label>Name: </label>
+        <br>
+        <input type="text" #newName class="form-control">
+      </div>
+      <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+  <div>
+</div>
