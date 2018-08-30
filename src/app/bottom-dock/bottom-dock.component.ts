@@ -30,10 +30,8 @@ export class BottomDockComponent implements OnInit {
   }
 
   runCreateDeck(deckName) {
-    let newDeck = new Deck(deckName);
+    let newDeck = new Deck(deckName, this.user.email);
     this.deckService.createDeck(newDeck);
-    console.log(this.user);
-    console.log(this.user.decks);
     this.user.decks.push(newDeck);
     this.deckService.addDeckToUser(this.user);
   }

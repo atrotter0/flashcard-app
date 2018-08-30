@@ -42,8 +42,8 @@ export class DecksAddComponent implements OnInit {
     this.localUser.decks.push(newDeck);
     this.deckService.addDeckToUser(this.localUser);
     this.goToDeckDetail();
-
   }
+
   goToDeckDetail() {
     this.router.navigate(['decks']);
   }
