@@ -1,11 +1,3 @@
-<div>
-  <h3>{{deckToDisplay?.name}}</h3>
-  <h4>Questions:</h4>
-  <div *ngFor="let question of deckToDisplay?.questions">
-    <h4>{{question}}</h4>
-  </div>
-  <hr>
-</div>
 <div *ngIf="deckToDisplay">
   <app-decks-edit [selectedDeck]="deckToDisplay"></app-decks-edit>
 </div>
