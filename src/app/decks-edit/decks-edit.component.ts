@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DeckService } from '../services/deck.service';
-import { Deck } from '../models/deck.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-decks-edit',
@@ -11,12 +11,16 @@ import { Deck } from '../models/deck.model';
 
 export class DecksEditComponent implements OnInit {
   @Input() selectedDeck;
-  constructor(public deckService: DeckService) { }
+  constructor(public deckService: DeckService, private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   runEditDeck(deckToEdit){
     this.deckService.editDeck(deckToEdit);
+    this.goToDeckDetail();
+  }
+
+  goToDeckDetail() {
+    this.router.navigate(['decks']);
   }
 }

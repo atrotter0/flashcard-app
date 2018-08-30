@@ -15,11 +15,7 @@
       <label>Category: </label>
       <br>
       <select #newQCategory>
-        <option value="CSharp">CSharp</option>
-        <option value="Javascript">Javascript</option>
-        <option value="Ruby">Ruby</option>
-        <option value="React">React</option>
-        <option value="Rails">Rails</option>
+        <option value="{{name}}" *ngFor="let name of categoryNames">{{name}}</option>
       </select>
     </div>
     <div>

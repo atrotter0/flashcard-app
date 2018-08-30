@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { User } from '../models/user.model';
 import { Question } from '../models/question.model';
-import { Questions } from '../models/questions.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()

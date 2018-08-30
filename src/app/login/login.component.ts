@@ -20,6 +20,7 @@ export class LoginComponent {
       } else {
         this.isLoggedIn = true;
         this.user = user;
+        this.redirectToDecks();
       }
     });
   }
@@ -34,5 +35,9 @@ export class LoginComponent {
 
   runLogOut(){
     this.authService.logout();
+  }
+
+  redirectToDecks() {
+    this.router.navigate(['decks']);
   }
 }

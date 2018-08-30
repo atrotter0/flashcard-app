@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DeckService } from '../services/deck.service';
 
