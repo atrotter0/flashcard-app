@@ -5,7 +5,6 @@ import { Question } from '../models/question.model';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import * as firebase from "firebase";
 
-
 @Component({
   selector: 'app-question-add',
   templateUrl: './question-add.component.html',
@@ -32,7 +31,6 @@ export class QuestionAddComponent implements OnInit {
     let newQuestion = new Question(newQText, newQAnswer, newQDifficulty, newQCategory, this.user.email);
     this.qService.createQuestion(newQuestion);
     this.goToQuestionDetail();
-
   }
 
   goToQuestionDetail() {

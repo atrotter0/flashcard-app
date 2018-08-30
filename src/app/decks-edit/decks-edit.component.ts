@@ -13,8 +13,7 @@ export class DecksEditComponent implements OnInit {
   @Input() selectedDeck;
   constructor(public deckService: DeckService, private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   runEditDeck(deckToEdit){
     this.deckService.editDeck(deckToEdit);
