@@ -15,7 +15,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class StartComponent implements OnInit {
   currentDeck: Deck;
-  currentQuestions: Question[];
+  currentQuestions: Question[] = [];
   currentQuestion: Question;
   deckId: string;
   questionsLeft: Question[];
@@ -46,7 +46,7 @@ export class StartComponent implements OnInit {
       this.currentQuestion = this.getRandomQuestion();
     });
   }
-  
+
   setQuestionsForCategory() {
     for (var category in this.currentDeck.questions) {
       this.currentQuestions = this.currentQuestions.concat(...this.currentDeck.questions[category])

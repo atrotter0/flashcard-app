@@ -56,7 +56,6 @@ export class DecksComponent implements OnInit {
   buildUserDeckList() {
     this.allDecks.forEach((deck) => {
       if (deck.userEmail === this.user.email) {
-        console.log('found Deck for ' + this.user.email);
         this.userDeckList.push(deck);
       }
     });
@@ -67,12 +66,14 @@ export class DecksComponent implements OnInit {
   }
 
   runQuiz(deck) {
-    this.checkDeckForQuestions(deck);
+    if (this.deckHasNoQuestions(deck)) {
+      return alert('You need to add questions to this deck before you can start a quiz.');
+    }
     this.router.navigate(['decks/quiz/', deck.$key]);
   }
 
-  checkDeckForQuestions(deck: Deck) {
-    //if (deck.questions > 0)
+  deckHasNoQuestions(deck: Deck) {
+    return (deck.questions === undefined);
   }
 
   runDeleteDeck(deck: Deck) {
