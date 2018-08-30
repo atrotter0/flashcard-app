@@ -15,7 +15,7 @@ import { PiggybackService } from '../services/piggyback.service';
 })
 export class BottomDockComponent implements OnInit {
   private user;
-  creatingDeck: boolean;
+  creatingDeck: boolean = true;
   decks: Deck[] = [];
   index;
   chosenDeck: Deck;
@@ -23,14 +23,7 @@ export class BottomDockComponent implements OnInit {
   deck;
 
   constructor(private deckService: DeckService, public authService: AuthenticationService, private piggyBackService: PiggybackService) {
-    this.piggyBackService.message.subscribe(data => {
-      if (data.content == "Here's a deck") {
 
-        this.chosenDeck = data.chosenDeck;
-        // console.log("my own deck:");
-        // console.log(this.chosenDeck);
-      }
-    })
     this.deckService.decks.subscribe(res => {
       this.decks = [];
       // this.deckService.getDecksByEmail(this.user.email);
@@ -45,8 +38,7 @@ export class BottomDockComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!this.decks) this.creatingDeck = true;
-    else this.creatingDeck = false;
+
   }
 
   ngDoCheck() {
