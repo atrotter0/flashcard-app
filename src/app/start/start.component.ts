@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
-import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
 import { DeckService } from '../services/deck.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';

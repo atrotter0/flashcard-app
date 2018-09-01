@@ -75,11 +75,9 @@ export class AuthenticationService {
   }
 
   checkForValidUser(userData: User) {
-    if (userData) {
-      if (userData.email !== null) {
-        this.subscribeAndStartUserSearch();
-        this.redirectToDecks();
-      }
+    if (userData.email !== null) {
+      this.subscribeAndStartUserSearch();
+      this.redirectToDecks();
     }
   }
 
@@ -103,23 +101,19 @@ export class AuthenticationService {
   findUser(usersFromDb: User[], localUser: User) {
     let userFound = false;
     for (let i = 0; i < usersFromDb.length; i++) {
-      if (localUser) {
-        if (usersFromDb[i].email === localUser.email) {
-          userFound = true;
-          this.localUser = usersFromDb[i];
-          console.log("checking localUser in authService: " + localUser.email);
-        }
+      if (usersFromDb[i].email === localUser.email) {
+        userFound = true;
+        this.localUser = usersFromDb[i];
+        console.log("checking localUser in authService: " + localUser.email);
       }
     }
     if (!userFound) { this.createUser(localUser); }
   }
 
   createUser(userObject) {
-    if (userObject) {
-      const newUser = new User(userObject.email);
-      this.users.push(newUser);
-      this.getUserByEmail(newUser.email);
-    }
+    const newUser = new User(userObject.email);
+    this.users.push(newUser);
+    this.getUserByEmail(newUser.email);
   }
 
   redirectToDecks() {
