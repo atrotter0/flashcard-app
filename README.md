@@ -1,4 +1,4 @@
-# FlashcardApp
+# Flashcard App
 
 #### By David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts, Nick Brown
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-A flash card Web application that allows a user to use, create, delete, and edit note cards.
+A flashcard app where users can create an account, create their own deck, add questions to their deck, and quiz themselves. 
 
 ## Setup on OSX
 
@@ -42,10 +42,6 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 * [Github] https://github.com/atrotter0/flashcard-app  
 * [Firebase App] https://flashcard-app-epicodus.firebaseapp.com/login  
-
-## Support and Contact Details
-
-If you find issues or have any concerns, or have ideas to improve the app, please feel free to submit an issue.
 
 ## License
 
