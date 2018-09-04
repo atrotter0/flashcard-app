@@ -3,7 +3,6 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Deck } from '../models/deck.model';
 import { User } from '../models/user.model';
-import { Decks } from '../models/decks.model';
 import { Question } from '../models/question.model';
 import { QuestionService } from '../services/question.service';
 import { AuthenticationService } from '../services/authentication.service';
