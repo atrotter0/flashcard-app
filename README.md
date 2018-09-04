@@ -1,21 +1,14 @@
 # FlashcardApp
 
-
-
-#### David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown
+#### By David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts, Nick Brown
 
 <img height="300" src="src/assets/Screen%20Shot%20.png">
 
-
 ## Description
-
 
 A flash card Web application that allows a user to use, create, delete, and edit note cards.
 
-
-
 ## Setup on OSX
-
 
 * Install Node.js.
 * Install Angular CLI 1.6.5.
@@ -28,12 +21,10 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 ## Contribution Requirements
 
-
 1. Clone the repo
 1. Make a new branch
 1. Commit and push your changes
 1. Create a PR
-
 
 ## Technologies Used
 
@@ -49,17 +40,15 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 ## Links
 
+[Github] https://github.com/atrotter0/flashcard-app
+[Firebase App] https://flashcard-app-epicodus.firebaseapp.com/login
+
 ## Support and Contact Details
 
-
-
-If you have find issues, ideas to improve the app, or concerns.  Please feel free to ![submit and issue to the github in the issues page.](/issues)
+If you have find issues, ideas to improve the app, or concerns, please feel free to submit and issue to the github in the issues page.
 
 ## License
 
-
-
-
 This software is licensed under the MIT license.
 
-Copyright (c) 2018 **David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts,  Nick Brown**
+Copyright (c) 2018 **David Ngo, Abel Trotter, Kevin Ahn, Devin Mounts, Nick Brown**
