@@ -40,8 +40,8 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 ## Links
 
-[Github] https://github.com/atrotter0/flashcard-app
-[Firebase App] https://flashcard-app-epicodus.firebaseapp.com/login
+* [Github] https://github.com/atrotter0/flashcard-app  
+* [Firebase App] https://flashcard-app-epicodus.firebaseapp.com/login  
 
 ## Support and Contact Details
 
