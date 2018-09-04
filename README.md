@@ -45,7 +45,7 @@ A flash card Web application that allows a user to use, create, delete, and edit
 
 ## Support and Contact Details
 
-If you find issues or concerns, or have ideas to improve the app, please feel free to submit an issue.
+If you find issues or have any concerns, or have ideas to improve the app, please feel free to submit an issue.
 
 ## License
 
