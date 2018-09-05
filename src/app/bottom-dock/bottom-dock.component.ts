@@ -29,13 +29,24 @@ export class BottomDockComponent implements OnInit {
         this.chosenDeck = data.chosenDeck;
       }
     })
-    this.deckService.decks.subscribe(res => {
-      this.decks = [];
-      Object.entries(res).forEach(entry => {
-        if(entry[1].userEmail == this.user.email) {
-          this.decks.push(entry[1]);
-        }
-      })
+    // this.deckService.decks.subscribe(res => {
+      // this.decks = [];
+      // if(this.user) {
+      //   Object.entries(res).forEach(entry => {
+      //     if(entry[1].userEmail == this.user.email) {
+      //       this.decks.push(entry[1]);
+      //     }
+      //   })
+      // }
+      // else {
+        // this.decks = this.authService.localUser.decks;
+      // }
+    // });
+    this.authService.user.subscribe(data => {
+      console.log("subscribed to: ");
+      console.log(data);
+      this.authService.getUserByEmail(data.email);
+
     });
   }
 
@@ -85,5 +96,6 @@ export class BottomDockComponent implements OnInit {
   checker() {
     let email = this.user.email;
     this.authService.getUserByEmail(email);
+    this.decks = this.authService.localUser.decks;
   }
 }
