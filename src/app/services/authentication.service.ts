@@ -31,7 +31,9 @@ export class AuthenticationService {
     this.getAllUsers().subscribe((data) => {
       usersFromDb = data;
       this.searchForEmail(usersFromDb, email);
+      console.log(this.localUser);
     });
+    
   }
 
   searchForEmail(usersFromDb, email: string) {
@@ -39,7 +41,9 @@ export class AuthenticationService {
       if (usersFromDb[i].email === email) {
         this.localUser = usersFromDb[i];
       }
+      
     }
+    
   }
 
   registerUser(email: string, password: string) {

@@ -81,4 +81,9 @@ export class BottomDockComponent implements OnInit {
       this.creatingDeck = true;
     }
   }
+
+  checker() {
+    let email = this.user.email;
+    this.authService.getUserByEmail(email);
+  }
 }
